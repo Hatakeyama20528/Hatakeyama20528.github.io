@@ -64,6 +64,17 @@
                             title: '圧縮方式について',
                             content: `
                                 <p>法線についてはOctahedronEncoding（<a href="https://knarkowicz.wordpress.com/2014/04/16/octahedron-normal-vector-encoding/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">参考サイト</a>）を使用しており、もとの12バイトから4バイトまで圧縮を成功しています。</p>
+                                <div class="flex flex-col md:flex-row gap-4 mt-4">
+                                    <img src="images/Normal1.png" alt="圧縮方式1" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                    <img src="images/Normal2.png" alt="圧縮方式2" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                </div>
+                            `
+                        },
+                        {
+                            title: '画像処理について',
+                            content: `
+                                <p class="mb-4">ガウシアンフィルタ、ソーベルフィルタ、シンプレックスノイズをテストしています。</p>
+                                <img src="images/TextureTest.png" alt="画像処理テスト" class="w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2">
                             `
                         },
                         {
