@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>畠山 岳 ポートフォリオ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <!--スタイルの設定-->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            scroll-behavior: smooth;
+        }
+        #hero-slider {
+            display: flex;
+            align-items: center;
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .slide {
+            flex: 0 0 70%; 
+            margin: 0 3%; 
+            aspect-ratio: 16 / 9;
+            transform: scale(0.85);
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.6s;
+            opacity: 0.5;
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .slide.is-active {
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-lg font-semibold tracking-wide">畠山 岳</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#projects" class="text-gray-600 hover:text-blue-500 transition-colors">Projects</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-500 transition-colors">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="hero-banner" class="relative w-full py-8 bg-gray-100 overflow-hidden">
+            <div id="hero-slider">
+
+            </div>
+            <div class="absolute inset-y-0 left-0 flex items-center">
+                <button id="prev-slide" class="bg-white/50 hover:bg-white/80 transition-colors p-2 rounded-full focus:outline-none ml-4">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center">
+                <button id="next-slide" class="bg-white/50 hover:bg-white/80 transition-colors p-2 rounded-full focus:outline-none mr-4">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+            <div id="slider-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-3">
+
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 py-16 md:py-24">
+
+            <section id="projects" class="mb-16 md:mb-24">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                </div>
+            </section>
+
+            <section id="about" class="max-w-3xl mx-auto p-8 bg-gray-50 rounded-xl">
+                <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+                <div class="text-base space-y-4 text-gray-700">
+                    <p><strong>名前：</strong> 畠山 岳</p>
+                    <p><strong>経歴：</strong> HAL東京昼間部4年生ゲーム制作学科 (2023年4月入学/2027年3月卒業予定)</p>
+                    <p><strong>今後挑戦したい分野：</strong> 特にグラフィックス周りの最適化や、ゲームエンジン内部の構築に強い関心があります。</p>
+                    <div>
+                        <strong>好きなゲーム：</strong>
+                        <ul class="list-disc list-inside mt-1 space-y-1">
+                            <li>モンスターハンターダブルクロス</li>
+                            <li>ラチェット＆クランク</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 bg-gray-100 mt-16">
+        <p class="text-gray-500 text-sm">&copy; 2024 畠山 岳. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const projects = [
+                {
+                    id: 'dx-framework',
+                    title: 'DirectX フレームワーク',
+                    image: 'images/FrameWork.png',
+                    env: 'DirectX11',
+                    period: '2025年1月～',
+                    role: '個人制作',
+                    teamSize: '個人制作'
+                },
+                {
+                    id: 'shadow-collision',
+                    title: 'Shadow Collision',
+                    image: 'images/ShadowCollision.png',
+                    env: 'Unity 2022.3.61',
+                    period: '2025年3月～',
+                    role: 'ゲームのメインシステム',
+                    teamSize: 'プログラマー5人, プランナー2人'
+                },
+                {
+                    id: 'rotate-carry',
+                    title: 'Rotate Carry',
+                    image: 'images/RotateCarry.png',
+                    env: 'DirectX11',
+                    period: '2か月',
+                    role: '個人制作',
+                    teamSize: '個人制作'
+                },
+                {
+                    id: 'pbr-raytracing',
+                    title: 'PBR & レイトレーシング',
+                    image: 'images/DirectX12PBR.png',
+                    env: 'DirectX12',
+                    period: '2025年5月～',
+                    role: '個人制作',
+                    teamSize: '個人制作'
+                }
+            ];
+
+            const slider = document.getElementById('hero-slider');
+            const dotsContainer = document.getElementById('slider-dots');
+            const projectGrid = document.getElementById('projects').querySelector('.grid');
+            let currentSlide = 0;
+            let slideInterval;
+            let slides = [];
+
+            function createSliderAndCards() {
+                projects.forEach((p, index) => {
+                    // Create slides
+                    const slide = document.createElement('a');
+                    slide.href = `project-template.html?project=${p.id}`;
+                    slide.className = 'slide';
+                    slide.dataset.index = index;
+                    slide.innerHTML = `
+                        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-white text-xl md:text-3xl font-bold">${p.title}</h3>
+                            <p class="text-white/80 text-md mt-1 hidden md:block">${p.env}</p>
+                        </div>
+                    `;
+                    slider.appendChild(slide);
+
+                    // Create dots
+                    const dot = document.createElement('button');
+                    dot.className = 'w-2.5 h-2.5 rounded-full transition-colors bg-white/50 hover:bg-white/75';
+                    dot.dataset.index = index;
+                    dotsContainer.appendChild(dot);
+                    
+                    // Create Project Cards
+                    const card = document.createElement('a');
+                    card.href = `project-template.html?project=${p.id}`;
+                    card.className = 'block bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300';
+                    card.innerHTML = `
+                        <div class="aspect-[4/3] bg-gray-200">
+                            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg">${p.title}</h3>
+                            <p class="text-gray-600 text-sm mt-1">${p.env}</p>
+                        </div>
+                    `;
+                    projectGrid.appendChild(card);
+                });
+                slides = slider.querySelectorAll('.slide');
+            }
+
+            function showSlide(index) {
+                if (!slides.length) return;
+
+                const targetSlide = slides[index];
+                const slideWidth = targetSlide.offsetWidth;
+                const slideMargin = parseFloat(window.getComputedStyle(targetSlide).marginLeft) * 2;
+                const offset = -(index * (slideWidth + slideMargin)) + (slider.parentElement.offsetWidth - slideWidth) / 2 - slideMargin/2;
+                
+                slider.style.transform = `translateX(${offset}px)`;
+
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('is-active', i === index);
+                });
+                
+                const dots = dotsContainer.querySelectorAll('button');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('bg-white', i === index);
+                    dot.classList.toggle('bg-white/50', i !== index);
+                });
+                currentSlide = index;
+            }
+
+            function changeSlide(offset) {
+                let newIndex = (currentSlide + offset + projects.length) % projects.length;
+                showSlide(newIndex);
+            }
+
+            function startSlider() {
+                stopSlider();
+                slideInterval = setInterval(() => changeSlide(1), 5000);
+            }
+
+            function stopSlider() {
+                if (slideInterval) clearInterval(slideInterval);
+            }
+
+            document.getElementById('next-slide').addEventListener('click', () => {
+                changeSlide(1);
+                startSlider();
+            });
+            document.getElementById('prev-slide').addEventListener('click', () => {
+                changeSlide(-1);
+                startSlider();
+            });
+            dotsContainer.addEventListener('click', (e) => {
+                if (e.target.matches('button')) {
+                    const index = parseInt(e.target.dataset.index, 10);
+                    showSlide(index);
+                    startSlider();
+                }
+            });
+
+            createSliderAndCards();
+            showSlide(0); // ポジションの初期化
+            startSlider();
+
+            window.addEventListener('resize', () => showSlide(currentSlide));
+        });
+    </script>
+</body>
+</html> 

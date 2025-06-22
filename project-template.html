@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-lg font-semibold tracking-wide hover:text-blue-500 transition-colors">← Back to Home</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 md:py-20">
+        <div id="project-content" class="max-w-4xl mx-auto">
+            <!-- Project details will be injected here by JS -->
+            <div class="text-center py-20">
+                <p class="text-gray-500">Loading project...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 bg-white mt-16">
+        <p class="text-gray-500 text-sm">&copy; 2024 畠山 岳. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const projects = {
+                'dx-framework': {
+                    title: 'DirectX フレームワーク',
+                    image: 'images/FrameWork.png',
+                    description: '今年の進級制作展（就活）作品を制作するためのフレームワークとして準備している作品になります。<br><br>描画まわりについてこだわりたいと思っているので、実現できるように<strong class="font-semibold text-gray-900">ディファ―ドレンダリング</strong>、<strong class="font-semibold text-gray-900">頂点圧縮</strong>、を実装しています。',
+                    details: [
+                        { label: '開発環境', value: 'DirectX11' },
+                        { label: '制作期間', value: '2025年1月～' },
+                        { label: '担当箇所', value: '個人制作' },
+                        { label: '開発人数', value: '個人制作' }
+                    ],
+                    richContent: [
+                        {
+                            title: '頂点圧縮について',
+                            content: `
+                                <p class="mb-4">下記の画像で使用しているモデルの頂点数は 9036個、一個当たり38バイトで合計約335.3KBとなります。<br>圧縮後の頂点は一個当たり20バイトで合計約176.4KBまで圧縮できています。</p>
+                                <img src="images/ConpModel.png" alt="頂点圧縮モデル" class="w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2">
+                            `
+                        },
+                        {
+                            title: '頂点のレイアウトについて',
+                            content: `
+                                <img src="images/Layout.png" alt="頂点レイアウト" class="w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2">
+                            `
+                        },
+                        {
+                            title: '圧縮方式について',
+                            content: `
+                                <p>法線についてはOctahedronEncoding（<a href="https://knarkowicz.wordpress.com/2014/04/16/octahedron-normal-vector-encoding/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">参考サイト</a>）を使用しており、もとの12バイトから4バイトまで圧縮を成功しています。</p>
+                            `
+                        },
+                        {
+                            title: 'オブジェクトまわりの処理について',
+                            content: `
+                                <p>コンポーネント指向を使用しており、各オブジェクトはコンポーネント型の動的配列を保持していて、それらに要素を追加していくことで<strong class="font-semibold text-gray-900">既存のコードを変更することなく新しい機能を実装できるように</strong>制作しています。</p>
+                                <img src="images/Object.png" alt="オブジェクト処理" class="w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2">
+                            `
+                        }
+                    ]
+                },
+                'shadow-collision': {
+                    title: 'Shadow Collision',
+                    image: 'images/ShadowCollision.png',
+                    description: 'グループでコンテストでの受賞を目指して制作している作品になります。<br><br>光と影のギミックをテーマにした2Dパズルアクションゲームです。プレイヤーは光源を操作して影の形を変化させ、道を作りながらゴールを目指します。',
+                    details: [
+                        { label: '開発環境', value: 'Unity 2022.3.61' },
+                        { label: '制作期間', value: '2025年3月～' },
+                        { label: '担当箇所', value: 'ゲームのメインシステム' },
+                        { label: '開発人数', value: 'プログラマー5人, プランナー2人' }
+                    ],
+                    richContent: [
+                        {
+                            title: 'ターンの切り替え',
+                            content: `
+                                <p class="mb-4">このゲームには主に2つのフェーズがありそれぞれ2D、3Dで別れているのでそれの切り替え処理になります。<br>切り替えにはイージングを付けたり、切り替え時に背景に被写界深度を使ってぼかしを付けたり、細かいところを気を付けています。</p>
+                                <div class="flex flex-col md:flex-row gap-4">
+                                    <img src="images/Turn1.png" alt="ターン切り替え 1" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                    <video src="videos/Turn2.mp4" autoplay loop muted playsinline alt="ターン切り替え 2" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1"></video>
+
+                                </div>
+                            `
+                        },
+                        {
+                            title: 'ゴール演出',
+                            content: `
+                                <p class="mb-4">画像の輪郭を検出して切り出し、そのアウトラインを指定色に変更できるようにしてあり、そこにブルームを焚くことで作成しています。<br>輪郭検出アルゴリズムにはソーベルフィルターを採用しており、これを応用して現在の影の当たり判定にも応用しています。</p>
+                                <div class="flex flex-col md:flex-row gap-4">
+                                    <img src="images/Goal1.png" alt="ゴール演出 1" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                    <img src="images/Goal2.png" alt="ゴール演出 2" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                </div>
+                            `
+                        },
+                        {
+                            title: 'オブジェクトの配置',
+                            content: `
+                                <p class="mb-4">前述のとおり、フェーズが分かれているのですが、最初のタイミングで画面上にあるオブジェクトを好きな場所に配置できます。<br>配置に伴い操作周りも作成しました。</p>
+                                <div class="flex flex-col md:flex-row gap-4">
+                                    <img src="images/Grap1.png" alt="オブジェクト配置 1" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                    <img src="images/Grap2.png" alt="オブジェクト配置 2" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                </div>
+                            `
+                        }
+                    ]
+                },
+                'rotate-carry': {
+                    title: 'Rotate Carry',
+                    image: 'images/RotateCarry.png',
+                    description: 'DirectX11を習い始めてから初めての制作ゲームです。<br>学校の課題として制作したので、ジャンルに指定があり落ちものゲームを作りました。',
+                    details: [
+                        { label: '開発環境', value: 'DirectX11' },
+                        { label: '制作期間', value: '2か月' },
+                        { label: '担当箇所', value: '個人制作' },
+                        { label: '開発人数', value: '個人制作' }
+                    ],
+                    richContent: [
+                        {
+                            title: 'ゲーム概要',
+                            content: `
+                                <p class="mb-4">本作ではテトリスを参考にしつつも独自の要素として色を追加しています。<br>落下中にブロックを回転させて色を変え、同じ色が三つ以上揃うことで消すことが出来ます。</p>
+                                <video src="videos/Rotate.mp4" autoplay loop muted playsinline alt="ゲームプレイ動画" class="w-full object-contain rounded-lg shadow-md bg-gray-200 p-1"></video>
+                            `
+                        },
+                        {
+                            title: '詳細：独学での実装要素',
+                            content: `
+                                <p class="mb-4">この作品では夏休みに独学で勉強した3Dモデル、DirectWrite、コントローラを実装しています。</p>
+                                <h4 class="text-xl font-bold mt-6 mb-2 text-gray-800">3Dモデルについて</h4>
+                                <p class="mb-4">DirectX12の魔導書に記載があった.pmdモデルを使用しており、背景のスカイドームとして採用しました。</p>
+                                <h4 class="text-xl font-bold mt-6 mb-2 text-gray-800">DirectWriteについて</h4>
+                                <p class="mb-4">操作UIやスコア、経過時間表示に使用しています。<br>背景が切り替わった際に文字の色も変えて可読性を保つなどの工夫をしています。</p>
+                                <div class="flex flex-col md:flex-row gap-4 mb-4">
+                                    <img src="images/Sky1.png" alt="背景1" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                    <img src="images/Sky2.png" alt="背景2" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                </div>
+                                <h4 class="text-xl font-bold mt-6 mb-2 text-gray-800">コントローラについて</h4>
+                                <p class="mb-4">本作はキーボードとコントローラの両方に対応しており、コントローラの接続が確認出来たら自動的にUIを変えたりしています。</p>
+                                 <div class="flex flex-col md:flex-row gap-4">
+                                    <img src="images/GameUI1.png" alt="ゲームUI 1" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                    <img src="images/GameUI2.png" alt="ゲームUI 2" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                </div>
+                            `
+                        },
+                        {
+                            title: 'その他：ゲームデザインの工夫',
+                            content: `
+                                <p class="mb-4">ゲームポーズ中はブロックを隠すことで配置を考える時間を稼げないようにするなど、実際にテトリスなどの落ちものゲームを遊び研究して取り入れていくことでブラッシュアップしていきました。</p>
+                                <img src="images/Pose.png" alt="ポーズ画面" class="w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2">
+                            `
+                        }
+                    ]
+                },
+                'pbr-raytracing': {
+                    title: 'PBR & レイトレーシング',
+                    image: 'images/DirectX12PBR.png',
+                    description: 'CG検定の勉強をしていた際に目に留まったレイトレーシングを試してみた作品になります。<br><br>調べている際に負荷が高く現状ではゲームには利用することが難しいとの記載がありましたが、<strong class="font-semibold text-gray-900">実際に自身で制作してみてどの部分の処理が重いのか、一部だけでも利用できる部分はないのかなどを思い</strong>制作に至りました。',
+                    details: [
+                        { label: '開発環境', value: 'DirectX12' },
+                        { label: '制作期間', value: '2025年5月～' },
+                        { label: '担当箇所', value: '個人制作' },
+                        { label: '開発人数', value: '個人制作' }
+                    ],
+                    richContent: [
+                        {
+                            title: 'DXR (DirectX Raytracing) による実装',
+                            content: `
+                                <p class="mb-4">作品<a href="project-template.html?project=dx-framework" class="text-blue-500 hover:underline">FrameWork</a>にてPBRはすでに検証済みであったので、本作ではDirextX12に挑戦してDXRを使用し制作してみました。</p>
+                                <img src="images/DXR.png" alt="DXR 実装" class="w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2">
+                            `
+                        },
+                        {
+                            title: '開発での挑戦',
+                            content: `
+                                <p>今までのDirextX11と比べて名称が異なるものや、コマンド処理の違い、マルチスレッドにつまずく部分はありましたが、上記の作品で自習に使っていた参考書がDirextX12の本で合ったことなどが幸いし完成に至りました。</p>
+                            `
+                        },
+                        {
+                            title: '使用しているマテリアル',
+                            content: `
+                                <div class="flex flex-col md:flex-row gap-4">
+                                    <img src="images/Material.png" alt="マテリアル" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                    <img src="images/Ray.png" alt="レイ" class="w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1">
+                                </div>
+                            `
+                        }
+                    ]
+                }
+            };
+
+            const contentContainer = document.getElementById('project-content');
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('project');
+            const project = projects[projectId];
+
+            if (project) {
+                document.title = `${project.title} - Project Details`;
+                let detailsHtml = '';
+                project.details.forEach(detail => {
+                    detailsHtml += `
+                        <div class="flex flex-col sm:flex-row py-3 border-b">
+                            <dt class="sm:w-1/4 font-semibold text-gray-800">${detail.label}</dt>
+                            <dd class="sm:w-3/4 text-gray-600 whitespace-pre-line">${detail.value}</dd>
+                        </div>
+                    `;
+                });
+
+                let mainContentHtml = `
+                    <div class="bg-white p-8 rounded-lg">
+                        <h2 class="text-2xl font-bold mb-4">概要</h2>
+                        <p class="text-gray-700 leading-relaxed mb-8">${project.description}</p>
+                        
+                        <h2 class="text-2xl font-bold mb-4">詳細情報</h2>
+                        <dl class="divide-y divide-gray-200">
+                            ${detailsHtml}
+                        </dl>
+                    </div>
+                `;
+
+                contentContainer.innerHTML = `
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">${project.title}</h1>
+                    <div class="aspect-[16/9] my-8 rounded-lg overflow-hidden shadow-lg bg-gray-200">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
+                    </div>
+                    ${mainContentHtml}
+                `;
+
+                if (project.richContent) {
+                    let richContentHtml = '';
+                    project.richContent.forEach(section => {
+                        richContentHtml += `
+                            <div class="bg-white p-8 rounded-lg mt-8">
+                                <h3 class="text-2xl font-bold mb-4">${section.title}</h3>
+                                <div class="text-gray-700 leading-relaxed space-y-4">${section.content}</div>
+                            </div>
+                        `;
+                    });
+                    contentContainer.innerHTML += richContentHtml;
+                }
+
+            } else {
+                contentContainer.innerHTML = `
+                    <div class="text-center py-20">
+                        <h1 class="text-2xl font-bold">Project Not Found</h1>
+                        <p class="text-gray-500 mt-2">The requested project could not be found.</p>
+                        <a href="index.html" class="mt-6 inline-block bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">Go back to Home</a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+
+</body>
+</html> 
