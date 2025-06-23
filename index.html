@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>畠山 岳 ポートフォリオ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-        <!--スタイルの設定-->
+    <!--スタイルの設定-->
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             scroll-behavior: smooth;
         }
+
         #hero-slider {
             display: flex;
             align-items: center;
             transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
+
         .slide {
-            flex: 0 0 70%; 
-            margin: 0 3%; 
+            flex: 0 0 70%;
+            margin: 0 3%;
             aspect-ratio: 16 / 9;
             transform: scale(0.85);
             transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.6s;
@@ -27,9 +29,14 @@
             overflow: hidden;
             border-radius: 1rem;
         }
-        .slide.is-active {
-            transform: scale(1);
-            opacity: 1;
+
+            .slide.is-active {
+                transform: scale(1);
+                opacity: 1;
+            }
+        /* Modal styles */
+        .modal-bg {
+            background: rgba(0,0,0,0.45);
         }
     </style>
 </head>
@@ -75,7 +82,7 @@
                 </div>
             </section>
 
-            <section id="about" class="max-w-3xl mx-auto p-8 bg-gray-50 rounded-xl">
+            <section id="about" class="max-w-3xl mx-auto p-8 bg-gray-50 rounded-xl relative">
                 <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
                     <!-- プロフィール画像 -->
@@ -95,6 +102,35 @@
                                 <li>ラチェット＆クランク</li>
                             </ul>
                         </div>
+                        <!-- 履歴書表示ボタン -->
+                        <div class="mt-6 flex gap-4">
+                            <button id="open-resume-modal" class="px-4 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition">履歴書を見る</button>
+                            <a href="resume.pdf" download="畠山岳_履歴書.pdf" class="px-4 py-2 bg-green-600 text-white rounded shadow hover:bg-green-700 transition flex items-center" id="download-resume-btn">
+                                <svg class="w-5 h-5 mr-2 -ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                                </svg>
+                                履歴書をダウンロード
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 履歴書モーダル -->
+                <div id="resume-modal" class="fixed inset-0 z-50 flex items-center justify-center modal-bg hidden">
+                    <div class="relative bg-white rounded-xl shadow-lg max-w-2xl w-full mx-4 p-6">
+                        <button id="close-resume-modal" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
+                        <h3 class="text-xl font-bold mb-4 text-center">畠山 岳　履歴書</h3>
+                        <!-- 履歴書PDFを埋め込み表示 -->
+                        <div class="w-full h-[70vh] mb-4 border rounded overflow-hidden">
+                            <iframe src="resume.pdf" class="w-full h-full" frameborder="0"></iframe>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="resume.pdf" download="畠山岳_履歴書.pdf" class="px-4 py-2 bg-green-600 text-white rounded shadow hover:bg-green-700 transition flex items-center">
+                                <svg class="w-5 h-5 mr-2 -ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                                </svg>
+                                履歴書をダウンロード
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -102,7 +138,7 @@
     </main>
 
     <footer class="text-center py-8 bg-gray-100 mt-16">
-        <p class="text-gray-500 text-sm">&copy; 2024 畠山 岳</p>
+        <p class="text-gray-500 text-sm">&copy; 2025 畠山 岳</p>
     </footer>
 
     <script>
@@ -161,13 +197,13 @@
                     slide.className = 'slide';
                     slide.dataset.index = index;
                     slide.innerHTML = `
-                        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 p-6">
-                            <h3 class="text-white text-xl md:text-3xl font-bold">${p.title}</h3>
-                            <p class="text-white/80 text-md mt-1 hidden md:block">${p.env}</p>
-                        </div>
-                    `;
+                            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-6">
+                                <h3 class="text-white text-xl md:text-3xl font-bold">${p.title}</h3>
+                                <p class="text-white/80 text-md mt-1 hidden md:block">${p.env}</p>
+                            </div>
+                        `;
                     slider.appendChild(slide);
 
                     // Create dots
@@ -175,20 +211,20 @@
                     dot.className = 'w-2.5 h-2.5 rounded-full transition-colors bg-white/50 hover:bg-white/75';
                     dot.dataset.index = index;
                     dotsContainer.appendChild(dot);
-                    
+
                     // Create Project Cards
                     const card = document.createElement('a');
                     card.href = `project-template.html?project=${p.id}`;
                     card.className = 'block bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300';
                     card.innerHTML = `
-                        <div class="aspect-[4/3] bg-gray-200">
-                            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg">${p.title}</h3>
-                            <p class="text-gray-600 text-sm mt-1">${p.env}</p>
-                        </div>
-                    `;
+                            <div class="aspect-[4/3] bg-gray-200">
+                                <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-5">
+                                <h3 class="font-bold text-lg">${p.title}</h3>
+                                <p class="text-gray-600 text-sm mt-1">${p.env}</p>
+                            </div>
+                        `;
                     projectGrid.appendChild(card);
                 });
                 slides = slider.querySelectorAll('.slide');
@@ -200,14 +236,14 @@
                 const targetSlide = slides[index];
                 const slideWidth = targetSlide.offsetWidth;
                 const slideMargin = parseFloat(window.getComputedStyle(targetSlide).marginLeft) * 2;
-                const offset = -(index * (slideWidth + slideMargin)) + (slider.parentElement.offsetWidth - slideWidth) / 2 - slideMargin/2;
-                
+                const offset = -(index * (slideWidth + slideMargin)) + (slider.parentElement.offsetWidth - slideWidth) / 2 - slideMargin / 2;
+
                 slider.style.transform = `translateX(${offset}px)`;
 
                 slides.forEach((slide, i) => {
                     slide.classList.toggle('is-active', i === index);
                 });
-                
+
                 const dots = dotsContainer.querySelectorAll('button');
                 dots.forEach((dot, i) => {
                     dot.classList.toggle('bg-white', i === index);
@@ -251,7 +287,28 @@
             startSlider();
 
             window.addEventListener('resize', () => showSlide(currentSlide));
+
+            // === 履歴書ポップアップ関連 ===
+            const openResumeBtn = document.getElementById('open-resume-modal');
+            const closeResumeBtn = document.getElementById('close-resume-modal');
+            const resumeModal = document.getElementById('resume-modal');
+
+            openResumeBtn.addEventListener('click', () => {
+                resumeModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // 背景スクロール禁止
+            });
+            closeResumeBtn.addEventListener('click', () => {
+                resumeModal.classList.add('hidden');
+                document.body.style.overflow = ''; // スクロール解除
+            });
+            // 外クリックで閉じる
+            resumeModal.addEventListener('click', (e) => {
+                if (e.target === resumeModal) {
+                    resumeModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
         });
     </script>
 </body>
-</html> 
+</html>
