@@ -114,25 +114,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- 履歴書モーダル -->
-                <div id="resume-modal" class="fixed inset-0 z-50 flex items-center justify-center modal-bg hidden">
-                    <div class="relative bg-white rounded-xl shadow-lg max-w-2xl w-full mx-4 p-6">
-                        <button id="close-resume-modal" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-xl font-bold">&times;</button>
-                        <h3 class="text-xl font-bold mb-4 text-center">畠山 岳　履歴書</h3>
-                        <!-- 履歴書PDFを埋め込み表示 -->
-                        <div class="w-full h-[70vh] mb-4 border rounded overflow-hidden">
-                            <iframe src="resume.pdf" class="w-full h-full" frameborder="0"></iframe>
-                        </div>
-                        <div class="flex justify-center">
-                            <a href="resume.pdf" download="畠山岳_履歴書.pdf" class="px-4 py-2 bg-green-600 text-white rounded shadow hover:bg-green-700 transition flex items-center">
-                                <svg class="w-5 h-5 mr-2 -ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-                                </svg>
-                                履歴書をダウンロード
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </section>
         </div>
     </main>
@@ -290,24 +271,12 @@
 
             // === 履歴書ポップアップ関連 ===
             const openResumeBtn = document.getElementById('open-resume-modal');
-            const closeResumeBtn = document.getElementById('close-resume-modal');
-            const resumeModal = document.getElementById('resume-modal');
-
-            openResumeBtn.addEventListener('click', () => {
-                resumeModal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // 背景スクロール禁止
-            });
-            closeResumeBtn.addEventListener('click', () => {
-                resumeModal.classList.add('hidden');
-                document.body.style.overflow = ''; // スクロール解除
-            });
-            // 外クリックで閉じる
-            resumeModal.addEventListener('click', (e) => {
-                if (e.target === resumeModal) {
-                    resumeModal.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }
-            });
+            if (openResumeBtn) {
+                openResumeBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.open('resume.pdf', '_blank');
+                });
+            }
         });
     </script>
 </body>
