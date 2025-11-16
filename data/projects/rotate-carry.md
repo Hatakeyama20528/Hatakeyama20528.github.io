@@ -1,43 +1,43 @@
 # Rotate Carry
 
-DirectX11���K���n�߂Ă��珉�߂Ă̐���Q�[���ł��B
+DirectX11を習い始めてから初めての制作ゲームです。
 
-�w�Z�̉ۑ�Ƃ��Đ��삵���̂ŁA�W�������Ɏw�肪���藎�����̃Q�[�������܂����B
+学校の課題として制作したので、ジャンルに指定があり落ちものゲームを作りました。
 
-## �Q�[���T�v
+## ゲーム概要
 
-�{��ł̓e�g���X���Q�l�ɂ����Ǝ��̗v�f�Ƃ��ĐF��ǉ����Ă��܂��B
+本作ではテトリスを参考にしつつも独自の要素として色を追加しています。
 
-�������Ƀu���b�N����]�����ĐF��ς��A�����F���O�ȏ㑵�����Ƃŏ������Ƃ��o���܂��B
+落下中にブロックを回転させて色を変え、同じ色が三つ以上揃うことで消すことが出来ます。
 
 [video:videos/Rotate.mp4]
 
-## �ڍׁF�Ɗw�ł̎����v�f
+## 詳細：独学での実装要素
 
-���̍�i�ł͉ċx�݂ɓƊw�ŕ׋�����3D���f���ADirectWrite�A�R���g���[�����������Ă��܂��B
+この作品では夏休みに独学で勉強した3Dモデル、DirectWrite、コントローラを実装しています。
 
-### 3D���f���ɂ���
+### 3Dモデルについて
 
-DirectX12�̖������ɋL�ڂ�������.pmd���f�����g�p���Ă���A�w�i�̃X�J�C�h�[���Ƃ��č̗p���܂����B
+DirectX12の魔導書に記載があった.pmdモデルを使用しており、背景のスカイドームとして採用しました。
 
-### DirectWrite�ɂ���
+### DirectWriteについて
 
-����UI��X�R�A�A�o�ߎ��ԕ\���Ɏg�p���Ă��܂��B
+操作UIやスコア、経過時間表示に使用しています。
 
-�w�i���؂�ւ�����ۂɕ����̐F���ς��ĉǐ���ۂȂǂ̍H�v�����Ă��܂��B
+背景が切り替わった際に文字の色も変えて可読性を保つなどの工夫をしています。
 
-![�w�i1](images/Sky1.png)
-![�w�i2](images/Sky2.png)
+![背景1](images/Sky1.png)
+![背景2](images/Sky2.png)
 
-### �R���g���[���ɂ���
+### コントローラについて
 
-�{��̓L�[�{�[�h�ƃR���g���[���̗����ɑΉ����Ă���A�R���g���[���̐ڑ����m�F�o�����玩���I��UI��ς����肵�Ă��܂��B
+本作はキーボードとコントローラの両方に対応しており、コントローラの接続が確認出来たら自動的にUIを変えたりしています。
 
-![�Q�[��UI 1](images/GameUI1.png)
-![�Q�[��UI 2](images/GameUI2.png)
+![ゲームUI 1](images/GameUI1.png)
+![ゲームUI 2](images/GameUI2.png)
 
-## ���̑��F�Q�[���f�U�C���̍H�v
+## その他：ゲームデザインの工夫
 
-�Q�[���|�[�Y���̓u���b�N���B�����ƂŔz�u���l���鎞�Ԃ��҂��Ȃ��悤�ɂ���ȂǁA���ۂɃe�g���X�Ȃǂ̗������̃Q�[����V�ь������Ď�����Ă������ƂŃu���b�V���A�b�v���Ă����܂����B
+ゲームポーズ中はブロックを隠すことで配置を考える時間を稼げないようにするなど、実際にテトリスなどの落ちものゲームを遊び研究して取り入れていくことでブラッシュアップしていきました。
 
-![�|�[�Y���](images/Pose.png)
+![ポーズ画面](images/Pose.png)

@@ -1,34 +1,34 @@
-# ‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€
+# ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚·ã‚¹ãƒ†ãƒ 
 
-**ŽŸ¢‘ãƒŒƒ“ƒ_ƒŠƒ“ƒO‹Zp‚Ö‚Ì’§í**
+**æ¬¡ä¸–ä»£ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°æŠ€è¡“ã¸ã®æŒ‘æˆ¦**
 
-Œ»‘ã‚ÌƒQ[ƒ€ƒGƒ“ƒWƒ“iUnreal Engine 5‚ÌNanite‚È‚Çj‚ÅÌ—p‚³‚ê‚Ä‚¢‚é‰¼‘zƒWƒIƒƒgƒŠ‹Zp‚Ì—‰ð‚ÆŽÀ‘•‚ð–ÚŽw‚µ‚½ƒvƒƒWƒFƒNƒg‚Å‚·B
+ç¾ä»£ã®ã‚²ãƒ¼ãƒ ã‚¨ãƒ³ã‚¸ãƒ³ï¼ˆUnreal Engine 5ã®Naniteãªã©ï¼‰ã§æŽ¡ç”¨ã•ã‚Œã¦ã„ã‚‹ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªæŠ€è¡“ã®ç†è§£ã¨å®Ÿè£…ã‚’ç›®æŒ‡ã—ãŸãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã§ã™ã€‚
 
-## ƒvƒƒWƒFƒNƒgŠT—v
+## ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆæ¦‚è¦
 
-]—ˆ‚ÌƒŒƒ“ƒ_ƒŠƒ“ƒOƒpƒCƒvƒ‰ƒCƒ“‚Å‚ÍAƒ‚ƒfƒ‹‚ÌÚ×“xiLODj‚ðŽè“®‚ÅŠÇ—‚µA•`‰æ•‰‰×‚ð’²®‚µ‚Ä‚¢‚Ü‚µ‚½B‚µ‚©‚µA‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€‚Å‚ÍA**”•S–œ`”‰­ƒ|ƒŠƒSƒ“‚ðŽ©“®“I‚ÉŠÇ—**‚µA‰æ–Ê‚É•\Ž¦‚³‚ê‚éƒsƒNƒZƒ‹”‚É‰ž‚¶‚ÄÅ“K‚ÈÚ×“x‚Å•`‰æ‚µ‚Ü‚·B
+å¾“æ¥ã®ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ãƒ‘ã‚¤ãƒ—ãƒ©ã‚¤ãƒ³ã§ã¯ã€ãƒ¢ãƒ‡ãƒ«ã®è©³ç´°åº¦ï¼ˆLODï¼‰ã‚’æ‰‹å‹•ã§ç®¡ç†ã—ã€æç”»è² è·ã‚’èª¿æ•´ã—ã¦ã„ã¾ã—ãŸã€‚ã—ã‹ã—ã€ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚·ã‚¹ãƒ†ãƒ ã§ã¯ã€**æ•°ç™¾ä¸‡ï½žæ•°å„„ãƒãƒªã‚´ãƒ³ã‚’è‡ªå‹•çš„ã«ç®¡ç†**ã—ã€ç”»é¢ã«è¡¨ç¤ºã•ã‚Œã‚‹ãƒ”ã‚¯ã‚»ãƒ«æ•°ã«å¿œã˜ã¦æœ€é©ãªè©³ç´°åº¦ã§æç”»ã—ã¾ã™ã€‚
 
-### ‹Zp“I‚È–Ú•W
+### æŠ€è¡“çš„ãªç›®æ¨™
 
-1. **Ž©“®LOD¶¬**: ƒƒbƒVƒ…ƒNƒ‰ƒXƒ^ƒŠƒ“ƒO‚É‚æ‚éŠK‘w“ILOD
-2. **ƒ\ƒtƒgƒEƒFƒAƒ‰ƒXƒ^ƒ‰ƒCƒU[**: GPUã‚Å‚ÌƒNƒ‰ƒXƒ^ƒJƒŠƒ“ƒO
-3. **‰ÂŽ‹«”»’è‚ÌÅ“K‰»**: ƒrƒ…[ˆË‘¶“I‚ÈƒNƒ‰ƒXƒ^‘I‘ð
-4. **ƒƒ‚ƒŠŒø—¦**: ƒXƒgƒŠ[ƒ~ƒ“ƒO‚Æƒy[ƒWƒ“ƒO‹@\
+1. **è‡ªå‹•LODç”Ÿæˆ**: ãƒ¡ãƒƒã‚·ãƒ¥ã‚¯ãƒ©ã‚¹ã‚¿ãƒªãƒ³ã‚°ã«ã‚ˆã‚‹éšŽå±¤çš„LOD
+2. **ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒ©ã‚¹ã‚¿ãƒ©ã‚¤ã‚¶ãƒ¼**: GPUä¸Šã§ã®ã‚¯ãƒ©ã‚¹ã‚¿ã‚«ãƒªãƒ³ã‚°
+3. **å¯è¦–æ€§åˆ¤å®šã®æœ€é©åŒ–**: ãƒ“ãƒ¥ãƒ¼ä¾å­˜çš„ãªã‚¯ãƒ©ã‚¹ã‚¿é¸æŠž
+4. **ãƒ¡ãƒ¢ãƒªåŠ¹çŽ‡**: ã‚¹ãƒˆãƒªãƒ¼ãƒŸãƒ³ã‚°ã¨ãƒšãƒ¼ã‚¸ãƒ³ã‚°æ©Ÿæ§‹
 
-![‰¼‘zƒWƒIƒƒgƒŠŠT”O}](images/VirtualGeometry_Concept.png)
+![ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªæ¦‚å¿µå›³](images/VirtualGeometry_Concept.png)
 
 ---
 
-## ŽÀ‘•ƒAƒvƒ[ƒ`
+## å®Ÿè£…ã‚¢ãƒ—ãƒ­ãƒ¼ãƒ
 
-### 1. ƒƒbƒVƒ…ƒNƒ‰ƒXƒ^ƒŠƒ“ƒO
+### 1. ãƒ¡ãƒƒã‚·ãƒ¥ã‚¯ãƒ©ã‚¹ã‚¿ãƒªãƒ³ã‚°
 
-‘å‹K–Í‚ÈƒƒbƒVƒ…‚ð¬‚³‚È**ƒNƒ‰ƒXƒ^i128ŽOŠpŒ`’ö“xj**‚É•ªŠ„‚µAŠK‘w\‘¢‚ð\’z‚µ‚Ü‚·B
+å¤§è¦æ¨¡ãªãƒ¡ãƒƒã‚·ãƒ¥ã‚’å°ã•ãª**ã‚¯ãƒ©ã‚¹ã‚¿ï¼ˆ128ä¸‰è§’å½¢ç¨‹åº¦ï¼‰**ã«åˆ†å‰²ã—ã€éšŽå±¤æ§‹é€ ã‚’æ§‹ç¯‰ã—ã¾ã™ã€‚
 
-**ƒƒbƒVƒ…ƒNƒ‰ƒXƒ^‚Ì“Á’¥F**
-- ƒNƒ‰ƒXƒ^ƒTƒCƒY: 64`128ŽOŠpŒ`
-- ‹«ŠEƒ{ƒŠƒ…[ƒ€: AABB‚Ü‚½‚ÍOBB
-- ƒGƒ‰[ƒƒgƒŠƒNƒX: ŠÈ—ª‰»Žž‚ÌŒë·î•ñ
+**ãƒ¡ãƒƒã‚·ãƒ¥ã‚¯ãƒ©ã‚¹ã‚¿ã®ç‰¹å¾´ï¼š**
+- ã‚¯ãƒ©ã‚¹ã‚¿ã‚µã‚¤ã‚º: 64ï½ž128ä¸‰è§’å½¢
+- å¢ƒç•Œãƒœãƒªãƒ¥ãƒ¼ãƒ : AABBã¾ãŸã¯OBB
+- ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒˆãƒªã‚¯ã‚¹: ç°¡ç•¥åŒ–æ™‚ã®èª¤å·®æƒ…å ±
 
 ```cpp
 struct MeshCluster {
@@ -37,28 +37,28 @@ struct MeshCluster {
     uint32 numTriangles;
     Vec3 boundingBoxMin;
     Vec3 boundingBoxMax;
-    float lodError; // eƒNƒ‰ƒXƒ^‚Æ‚ÌŒë·
+    float lodError; // è¦ªã‚¯ãƒ©ã‚¹ã‚¿ã¨ã®èª¤å·®
 };
 ```
 
-![ƒƒbƒVƒ…ƒNƒ‰ƒXƒ^ƒŠƒ“ƒO](images/MeshClustering.png)
+![ãƒ¡ãƒƒã‚·ãƒ¥ã‚¯ãƒ©ã‚¹ã‚¿ãƒªãƒ³ã‚°](images/MeshClustering.png)
 
-### 2. ŠK‘w“ILOD\‘¢
+### 2. éšŽå±¤çš„LODæ§‹é€ 
 
-ƒNƒ‰ƒXƒ^‚ðŠK‘w“I‚ÉŒ‹‡‚µA**DAGi—LŒü”ñ„‰ñƒOƒ‰ƒtj\‘¢**‚ð\’z‚µ‚Ü‚·B
+ã‚¯ãƒ©ã‚¹ã‚¿ã‚’éšŽå±¤çš„ã«çµåˆã—ã€**DAGï¼ˆæœ‰å‘éžå·¡å›žã‚°ãƒ©ãƒ•ï¼‰æ§‹é€ **ã‚’æ§‹ç¯‰ã—ã¾ã™ã€‚
 
-**LODŠK‘w‚Ì¶¬ƒvƒƒZƒXF**
-1. **ƒx[ƒXƒƒbƒVƒ…•ªŠ„**: Œ³‚ÌƒƒbƒVƒ…‚ðƒNƒ‰ƒXƒ^‚É•ªŠ„
-2. **ŠÈ—ª‰»**: —×ÚƒNƒ‰ƒXƒ^‚ðƒ}[ƒW‚µ‚ÄãˆÊLOD‚ð¶¬
-3. **Å“K‰»**: d•¡’¸“_‚Ìíœ‚Æƒƒ‚ƒŠˆ³k
+**LODéšŽå±¤ã®ç”Ÿæˆãƒ—ãƒ­ã‚»ã‚¹ï¼š**
+1. **ãƒ™ãƒ¼ã‚¹ãƒ¡ãƒƒã‚·ãƒ¥åˆ†å‰²**: å…ƒã®ãƒ¡ãƒƒã‚·ãƒ¥ã‚’ã‚¯ãƒ©ã‚¹ã‚¿ã«åˆ†å‰²
+2. **ç°¡ç•¥åŒ–**: éš£æŽ¥ã‚¯ãƒ©ã‚¹ã‚¿ã‚’ãƒžãƒ¼ã‚¸ã—ã¦ä¸Šä½LODã‚’ç”Ÿæˆ
+3. **æœ€é©åŒ–**: é‡è¤‡é ‚ç‚¹ã®å‰Šé™¤ã¨ãƒ¡ãƒ¢ãƒªåœ§ç¸®
 
-![LODŠK‘w](images/LODHierarchy.png)
+![LODéšŽå±¤](images/LODHierarchy.png)
 
-### 3. GPU‹ì“®Œ^ƒŒƒ“ƒ_ƒŠƒ“ƒO
+### 3. GPUé§†å‹•åž‹ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°
 
-**ƒRƒ“ƒsƒ…[ƒgƒVƒF[ƒ_[**‚ðŽg—p‚µ‚ÄAGPU‚Å‰ÂŽ‹«”»’è‚ÆƒNƒ‰ƒXƒ^‘I‘ð‚ðŽÀs‚µ‚Ü‚·B
+**ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ãƒˆã‚·ã‚§ãƒ¼ãƒ€ãƒ¼**ã‚’ä½¿ç”¨ã—ã¦ã€GPUã§å¯è¦–æ€§åˆ¤å®šã¨ã‚¯ãƒ©ã‚¹ã‚¿é¸æŠžã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 
-#### ƒNƒ‰ƒXƒ^ƒJƒŠƒ“ƒOƒpƒCƒvƒ‰ƒCƒ“
+#### ã‚¯ãƒ©ã‚¹ã‚¿ã‚«ãƒªãƒ³ã‚°ãƒ‘ã‚¤ãƒ—ãƒ©ã‚¤ãƒ³
 
 ```hlsl
 // Phase 1: Frustum Culling
@@ -103,83 +103,83 @@ void LODSelectionCS(uint3 threadID : SV_DispatchThreadID)
 }
 ```
 
-![GPUƒJƒŠƒ“ƒO](images/GPUCulling.png)
+![GPUã‚«ãƒªãƒ³ã‚°](images/GPUCulling.png)
 
 ---
 
-## Œ»Ý‚ÌŽÀ‘•ó‹µ
+## ç¾åœ¨ã®å®Ÿè£…çŠ¶æ³
 
-### ? Š®—¹‚µ‚½‹@”\
+### ? å®Œäº†ã—ãŸæ©Ÿèƒ½
 
-1. **ƒƒbƒVƒ…ƒCƒ“ƒ|[ƒg**: FBX/OBJ‚©‚ç‚ÌƒƒbƒVƒ…“Ç‚Ýž‚Ý
-2. **ƒNƒ‰ƒXƒ^¶¬**: K-meansƒx[ƒX‚ÌƒNƒ‰ƒXƒ^ƒŠƒ“ƒO
-3. **Šî–{“I‚ÈƒJƒŠƒ“ƒO**: ƒtƒ‰ƒXƒ^ƒ€ƒJƒŠƒ“ƒOŽÀ‘•
+1. **ãƒ¡ãƒƒã‚·ãƒ¥ã‚¤ãƒ³ãƒãƒ¼ãƒˆ**: FBX/OBJã‹ã‚‰ã®ãƒ¡ãƒƒã‚·ãƒ¥èª­ã¿è¾¼ã¿
+2. **ã‚¯ãƒ©ã‚¹ã‚¿ç”Ÿæˆ**: K-meansãƒ™ãƒ¼ã‚¹ã®ã‚¯ãƒ©ã‚¹ã‚¿ãƒªãƒ³ã‚°
+3. **åŸºæœ¬çš„ãªã‚«ãƒªãƒ³ã‚°**: ãƒ•ãƒ©ã‚¹ã‚¿ãƒ ã‚«ãƒªãƒ³ã‚°å®Ÿè£…
 
-### ?? ŠJ”­’†‚Ì‹@”\
+### ?? é–‹ç™ºä¸­ã®æ©Ÿèƒ½
 
-1. **ŠK‘w“ILOD¶¬**: ƒƒbƒVƒ…ŠÈ—ª‰»ƒAƒ‹ƒSƒŠƒYƒ€
-2. **ƒIƒNƒ‹[ƒWƒ‡ƒ“ƒJƒŠƒ“ƒO**: ƒn[ƒhƒEƒFƒAƒIƒNƒ‹[ƒWƒ‡ƒ“ƒNƒGƒŠ
-3. **ƒXƒgƒŠ[ƒ~ƒ“ƒO**: “®“IƒƒbƒVƒ…ƒ[ƒh
+1. **éšŽå±¤çš„LODç”Ÿæˆ**: ãƒ¡ãƒƒã‚·ãƒ¥ç°¡ç•¥åŒ–ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ 
+2. **ã‚ªã‚¯ãƒ«ãƒ¼ã‚¸ãƒ§ãƒ³ã‚«ãƒªãƒ³ã‚°**: ãƒãƒ¼ãƒ‰ã‚¦ã‚§ã‚¢ã‚ªã‚¯ãƒ«ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¯ã‚¨ãƒª
+3. **ã‚¹ãƒˆãƒªãƒ¼ãƒŸãƒ³ã‚°**: å‹•çš„ãƒ¡ãƒƒã‚·ãƒ¥ãƒ­ãƒ¼ãƒ‰
 
-### ? ¡Œã‚ÌŽÀ‘•—\’è
+### ? ä»Šå¾Œã®å®Ÿè£…äºˆå®š
 
-1. **ƒ\ƒtƒgƒEƒFƒAƒ‰ƒXƒ^ƒ‰ƒCƒU[**: Compute ShaderŽÀ‘•
-2. **‰ÂŽ‹«ƒoƒbƒtƒ@**: ƒ}ƒeƒŠƒAƒ‹ƒfƒJƒbƒvƒŠƒ“ƒO
-3. **ƒƒ‚ƒŠÅ“K‰»**: ‰¼‘zƒeƒNƒXƒ`ƒƒ‚Æ‚Ì“‡
+1. **ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒ©ã‚¹ã‚¿ãƒ©ã‚¤ã‚¶ãƒ¼**: Compute Shaderå®Ÿè£…
+2. **å¯è¦–æ€§ãƒãƒƒãƒ•ã‚¡**: ãƒžãƒ†ãƒªã‚¢ãƒ«ãƒ‡ã‚«ãƒƒãƒ—ãƒªãƒ³ã‚°
+3. **ãƒ¡ãƒ¢ãƒªæœ€é©åŒ–**: ä»®æƒ³ãƒ†ã‚¯ã‚¹ãƒãƒ£ã¨ã®çµ±åˆ
 
 ---
 
-## ƒpƒtƒH[ƒ}ƒ“ƒXƒeƒXƒg
+## ãƒ‘ãƒ•ã‚©ãƒ¼ãƒžãƒ³ã‚¹ãƒ†ã‚¹ãƒˆ
 
-### ƒeƒXƒgƒV[ƒ“: ‘å‹K–ÍX—ÑŠÂ‹«
+### ãƒ†ã‚¹ãƒˆã‚·ãƒ¼ãƒ³: å¤§è¦æ¨¡æ£®æž—ç’°å¢ƒ
 
-- **‘ƒ|ƒŠƒSƒ“”**: –ñ1200–œƒ|ƒŠƒSƒ“
-- **•`‰æ‚³‚ê‚éƒ|ƒŠƒSƒ“”**: –ñ80–œƒ|ƒŠƒSƒ“i“®“I‚É•Ï‰»j
-- **ƒtƒŒ[ƒ€ƒŒ[ƒg**: 60 FPS @ 1080piRTX 3060j
+- **ç·ãƒãƒªã‚´ãƒ³æ•°**: ç´„1200ä¸‡ãƒãƒªã‚´ãƒ³
+- **æç”»ã•ã‚Œã‚‹ãƒãƒªã‚´ãƒ³æ•°**: ç´„80ä¸‡ãƒãƒªã‚´ãƒ³ï¼ˆå‹•çš„ã«å¤‰åŒ–ï¼‰
+- **ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆ**: 60 FPS @ 1080pï¼ˆRTX 3060ï¼‰
 
-![ƒpƒtƒH[ƒ}ƒ“ƒXƒeƒXƒg](images/VirtualGeometry_Performance.png)
+![ãƒ‘ãƒ•ã‚©ãƒ¼ãƒžãƒ³ã‚¹ãƒ†ã‚¹ãƒˆ](images/VirtualGeometry_Performance.png)
 
-### ]—ˆŽè–@‚Æ‚Ì”äŠr
+### å¾“æ¥æ‰‹æ³•ã¨ã®æ¯”è¼ƒ
 
-| Žw•W | ]—ˆ‚ÌLOD | ‰¼‘zƒWƒIƒƒgƒŠ |
+| æŒ‡æ¨™ | å¾“æ¥ã®LOD | ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒª |
 |------|----------|--------------|
-| •`‰æƒ|ƒŠƒSƒ“” | –ñ300–œ | –ñ80–œ |
-| ƒƒ‚ƒŠŽg—p—Ê | 450 MB | 280 MB |
+| æç”»ãƒãƒªã‚´ãƒ³æ•° | ç´„300ä¸‡ | ç´„80ä¸‡ |
+| ãƒ¡ãƒ¢ãƒªä½¿ç”¨é‡ | 450 MB | 280 MB |
 | FPS | 45 FPS | 60 FPS |
-| ƒA[ƒeƒBƒXƒgH” | ‚iŽè“®LODì¬j | ’áiŽ©“®¶¬j |
+| ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆå·¥æ•° | é«˜ï¼ˆæ‰‹å‹•LODä½œæˆï¼‰ | ä½Žï¼ˆè‡ªå‹•ç”Ÿæˆï¼‰ |
 
 ---
 
-## ‹Zp“I‚È‰Û‘è
+## æŠ€è¡“çš„ãªèª²é¡Œ
 
-### 1. ƒƒbƒVƒ…ŠÈ—ª‰»‚Ì¸“x
+### 1. ãƒ¡ãƒƒã‚·ãƒ¥ç°¡ç•¥åŒ–ã®ç²¾åº¦
 
-**–â‘è**: ƒNƒ‰ƒXƒ^“‡Žž‚ÌƒWƒIƒƒgƒŠŒë·
-**‰ðŒˆô**: QEMiQuadric Error Metricsj‚Ì“±“ü
+**å•é¡Œ**: ã‚¯ãƒ©ã‚¹ã‚¿çµ±åˆæ™‚ã®ã‚¸ã‚ªãƒ¡ãƒˆãƒªèª¤å·®
+**è§£æ±ºç­–**: QEMï¼ˆQuadric Error Metricsï¼‰ã®å°Žå…¥
 
-### 2. GPU•‰‰×‚Ì•ªŽU
+### 2. GPUè² è·ã®åˆ†æ•£
 
-**–â‘è**: ƒRƒ“ƒsƒ…[ƒgƒVƒF[ƒ_[‚Ìƒ{ƒgƒ‹ƒlƒbƒN
-**‰ðŒˆô**: Indirect Draw‚É‚æ‚é“®“IƒfƒBƒXƒpƒbƒ`
+**å•é¡Œ**: ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ãƒˆã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã®ãƒœãƒˆãƒ«ãƒãƒƒã‚¯
+**è§£æ±ºç­–**: Indirect Drawã«ã‚ˆã‚‹å‹•çš„ãƒ‡ã‚£ã‚¹ãƒ‘ãƒƒãƒ
 
-### 3. ƒƒ‚ƒŠŠÇ—
+### 3. ãƒ¡ãƒ¢ãƒªç®¡ç†
 
-**–â‘è**: ‘å‹K–ÍƒV[ƒ“‚Å‚ÌVRAM•s‘«
-**‰ðŒˆô**: ƒy[ƒWƒ“ƒO‚ÆƒXƒgƒŠ[ƒ~ƒ“ƒOƒVƒXƒeƒ€
+**å•é¡Œ**: å¤§è¦æ¨¡ã‚·ãƒ¼ãƒ³ã§ã®VRAMä¸è¶³
+**è§£æ±ºç­–**: ãƒšãƒ¼ã‚¸ãƒ³ã‚°ã¨ã‚¹ãƒˆãƒªãƒ¼ãƒŸãƒ³ã‚°ã‚·ã‚¹ãƒ†ãƒ 
 
 ---
 
-## ŽQlŽ‘—¿EŽÀ‘•‚Ìƒqƒ“ƒg
+## å‚è€ƒè³‡æ–™ãƒ»å®Ÿè£…ã®ãƒ’ãƒ³ãƒˆ
 
-### Šwp˜_•¶
+### å­¦è¡“è«–æ–‡
 
 - **Nanite**: [A Deep Dive](https://advances.realtimerendering.com/s2021/Karis_Nanite_SIGGRAPH_Advances_2021_final.pdf)
 - **Cluster-Based Rendering**: Clustered Shading and Virtual Geometry
 
-### ŽÀ‘•ŽQl
+### å®Ÿè£…å‚è€ƒ
 
 ```cpp
-// ƒNƒ‰ƒXƒ^‘I‘ðƒAƒ‹ƒSƒŠƒYƒ€‚Ì‹[Ž—ƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚¿é¸æŠžã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã®æ“¬ä¼¼ã‚³ãƒ¼ãƒ‰
 void SelectClusters(Camera& camera, ClusterTree& tree)
 {
     std::queue<ClusterNode*> queue;
@@ -210,40 +210,40 @@ void SelectClusters(Camera& camera, ClusterTree& tree)
 
 ---
 
-## ƒfƒ‚“®‰æEƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg
+## ãƒ‡ãƒ¢å‹•ç”»ãƒ»ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆ
 
-### ƒNƒ‰ƒXƒ^‰ÂŽ‹‰»
+### ã‚¯ãƒ©ã‚¹ã‚¿å¯è¦–åŒ–
 
-ˆÙ‚È‚éLODƒŒƒxƒ‹‚ðF•ª‚¯‚µ‚Ä•\Ž¦‚µ‚Ä‚¢‚Ü‚·B
+ç•°ãªã‚‹LODãƒ¬ãƒ™ãƒ«ã‚’è‰²åˆ†ã‘ã—ã¦è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚
 
-![ƒNƒ‰ƒXƒ^‰ÂŽ‹‰»](images/ClusterVisualization.png)
+![ã‚¯ãƒ©ã‚¹ã‚¿å¯è¦–åŒ–](images/ClusterVisualization.png)
 
-- **Ô**: LOD 0iÅ‚Ú×“xj
-- **‰©**: LOD 1
-- **—Î**: LOD 2
-- **Â**: LOD 3iÅ’áÚ×“xj
+- **èµ¤**: LOD 0ï¼ˆæœ€é«˜è©³ç´°åº¦ï¼‰
+- **é»„**: LOD 1
+- **ç·‘**: LOD 2
+- **é’**: LOD 3ï¼ˆæœ€ä½Žè©³ç´°åº¦ï¼‰
 
-### “®“ILODØ‚è‘Ö‚¦
+### å‹•çš„LODåˆ‡ã‚Šæ›¿ãˆ
 
-ƒJƒƒ‰‚Ì‹——£‚É‰ž‚¶‚ÄŽ©“®“I‚ÉLOD‚ªØ‚è‘Ö‚í‚è‚Ü‚·B
+ã‚«ãƒ¡ãƒ©ã®è·é›¢ã«å¿œã˜ã¦è‡ªå‹•çš„ã«LODãŒåˆ‡ã‚Šæ›¿ã‚ã‚Šã¾ã™ã€‚
 
 [video:videos/VirtualGeometry_Demo.mp4]
 
 ---
 
-## ¡Œã‚Ì“W–]
+## ä»Šå¾Œã®å±•æœ›
 
-–{‹Zp‚ÍAŽŸ¢‘ã‚ÌƒQ[ƒ€ƒGƒ“ƒWƒ“ŠJ”­‚É‚¨‚¢‚Äd—v‚È—v‘f‚Æ‚È‚è‚Ü‚·B
-«—ˆ“I‚É‚ÍˆÈ‰º‚Ì‹@”\‚Æ‚Ì“‡‚ð–ÚŽw‚µ‚Ä‚¢‚Ü‚·F
+æœ¬æŠ€è¡“ã¯ã€æ¬¡ä¸–ä»£ã®ã‚²ãƒ¼ãƒ ã‚¨ãƒ³ã‚¸ãƒ³é–‹ç™ºã«ãŠã„ã¦é‡è¦ãªè¦ç´ ã¨ãªã‚Šã¾ã™ã€‚
+å°†æ¥çš„ã«ã¯ä»¥ä¸‹ã®æ©Ÿèƒ½ã¨ã®çµ±åˆã‚’ç›®æŒ‡ã—ã¦ã„ã¾ã™ï¼š
 
-- **ƒŒƒCƒgƒŒ[ƒVƒ“ƒO**: BVH‰Á‘¬\‘¢‚Æ‚Ì˜AŒg
-- **“®“IƒIƒuƒWƒFƒNƒg**: •ÏŒ`ƒƒbƒVƒ…‚Ö‚Ì‘Î‰ž
-- **ƒ}ƒ‹ƒ`ƒXƒŒƒbƒhÅ“K‰»**: ƒ^ƒXƒNƒVƒXƒeƒ€‚Æ‚Ì“‡
+- **ãƒ¬ã‚¤ãƒˆãƒ¬ãƒ¼ã‚·ãƒ³ã‚°**: BVHåŠ é€Ÿæ§‹é€ ã¨ã®é€£æº
+- **å‹•çš„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ**: å¤‰å½¢ãƒ¡ãƒƒã‚·ãƒ¥ã¸ã®å¯¾å¿œ
+- **ãƒžãƒ«ãƒã‚¹ãƒ¬ãƒƒãƒ‰æœ€é©åŒ–**: ã‚¿ã‚¹ã‚¯ã‚·ã‚¹ãƒ†ãƒ ã¨ã®çµ±åˆ
 
 ---
 
-## ‚Ü‚Æ‚ß
+## ã¾ã¨ã‚
 
-‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€‚ÍAŒ»‘ã‚ÌƒQ[ƒ€ŠJ”­‚É‚¨‚¢‚Ä**ƒA[ƒeƒBƒXƒg‚Ì¶ŽY«Œüã**‚Æ**ƒpƒtƒH[ƒ}ƒ“ƒX‚ÌÅ“K‰»**‚ð—¼—§‚·‚éd—v‚È‹Zp‚Å‚·B
+ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚·ã‚¹ãƒ†ãƒ ã¯ã€ç¾ä»£ã®ã‚²ãƒ¼ãƒ é–‹ç™ºã«ãŠã„ã¦**ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆã®ç”Ÿç”£æ€§å‘ä¸Š**ã¨**ãƒ‘ãƒ•ã‚©ãƒ¼ãƒžãƒ³ã‚¹ã®æœ€é©åŒ–**ã‚’ä¸¡ç«‹ã™ã‚‹é‡è¦ãªæŠ€è¡“ã§ã™ã€‚
 
-–{ƒvƒƒWƒFƒNƒg‚ð’Ê‚¶‚ÄAÅæ’[‚ÌƒŒƒ“ƒ_ƒŠƒ“ƒO‹Zp‚Ö‚Ì—‰ð‚ð[‚ßAŽÀ‘H“I‚ÈŽÀ‘•ƒXƒLƒ‹‚ðK“¾‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚µ‚½B
+æœ¬ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’é€šã˜ã¦ã€æœ€å…ˆç«¯ã®ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°æŠ€è¡“ã¸ã®ç†è§£ã‚’æ·±ã‚ã€å®Ÿè·µçš„ãªå®Ÿè£…ã‚¹ã‚­ãƒ«ã‚’ç¿’å¾—ã™ã‚‹ã“ã¨ãŒã§ãã¾ã—ãŸã€‚

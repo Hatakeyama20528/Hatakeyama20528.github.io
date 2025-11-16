@@ -1,37 +1,37 @@
-# DirectX ƒtƒŒ[ƒ€ƒ[ƒN
+# DirectX ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯
 
-¡”N‚Ìi‹‰§ì“WiAŠˆjì•i‚ð§ì‚·‚é‚½‚ß‚ÌƒtƒŒ[ƒ€ƒ[ƒN‚Æ‚µ‚Ä€”õ‚µ‚Ä‚¢‚éì•i‚É‚È‚è‚Ü‚·B
+ä»Šå¹´ã®é€²ç´šåˆ¶ä½œå±•ï¼ˆå°±æ´»ï¼‰ä½œå“ã‚’åˆ¶ä½œã™ã‚‹ãŸã‚ã®ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã¨ã—ã¦æº–å‚™ã—ã¦ã„ã‚‹ä½œå“ã«ãªã‚Šã¾ã™ã€‚
 
-•`‰æ‚Ü‚í‚è‚É‚Â‚¢‚Ä‚±‚¾‚í‚è‚½‚¢‚ÆŽv‚Á‚Ä‚¢‚é‚Ì‚ÅAŽÀŒ»‚Å‚«‚é‚æ‚¤‚É**ƒfƒBƒtƒ@[ƒhƒŒƒ“ƒ_ƒŠƒ“ƒO**A**’¸“_ˆ³k**A‚ðŽÀ‘•‚µ‚Ä‚¢‚Ü‚·B
+æç”»ã¾ã‚ã‚Šã«ã¤ã„ã¦ã“ã ã‚ã‚ŠãŸã„ã¨æ€ã£ã¦ã„ã‚‹ã®ã§ã€å®Ÿç¾ã§ãã‚‹ã‚ˆã†ã«**ãƒ‡ã‚£ãƒ•ã‚¡ãƒ¼ãƒ‰ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°**ã€**é ‚ç‚¹åœ§ç¸®**ã€ã‚’å®Ÿè£…ã—ã¦ã„ã¾ã™ã€‚
 
-## ƒvƒƒWƒFƒNƒgŠT—v
+## ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆæ¦‚è¦
 
-–{ƒtƒŒ[ƒ€ƒ[ƒN‚ÍAŽŸ¢‘ã‚ÌƒQ[ƒ€ƒGƒ“ƒWƒ“‹Zp‚ð–ÚŽw‚µ‚ÄAˆÈ‰º‚Ìæi“I‚È‹@”\‚ðŽÀ‘•‚µ‚Ä‚¢‚Ü‚·F
+æœ¬ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã¯ã€æ¬¡ä¸–ä»£ã®ã‚²ãƒ¼ãƒ ã‚¨ãƒ³ã‚¸ãƒ³æŠ€è¡“ã‚’ç›®æŒ‡ã—ã¦ã€ä»¥ä¸‹ã®å…ˆé€²çš„ãªæ©Ÿèƒ½ã‚’å®Ÿè£…ã—ã¦ã„ã¾ã™ï¼š
 
-- **ƒJƒXƒ^ƒ€ƒŒƒ“ƒ_ƒŠƒ“ƒOƒpƒCƒvƒ‰ƒCƒ“**: Šg’£‰Â”\‚ÈƒŒƒ“ƒ_[ƒpƒXƒVƒXƒeƒ€
-- **•¨—‰‰ŽZƒGƒ“ƒWƒ““‡**: Jolt Physics‚É‚æ‚é‚«”\•¨—ƒVƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“
-- **‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€**: ŽŸ¢‘ãƒŒƒ“ƒ_ƒŠƒ“ƒO‹Zp‚ÌŽÀ‘•iŠJ”­’†j
-- **Å“K‰»‚³‚ê‚½’¸“_ƒf[ƒ^ŠÇ—**: ƒƒ‚ƒŠŒø—¦‚ðdŽ‹‚µ‚½ƒf[ƒ^\‘¢
+- **ã‚«ã‚¹ã‚¿ãƒ ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ãƒ‘ã‚¤ãƒ—ãƒ©ã‚¤ãƒ³**: æ‹¡å¼µå¯èƒ½ãªãƒ¬ãƒ³ãƒ€ãƒ¼ãƒ‘ã‚¹ã‚·ã‚¹ãƒ†ãƒ 
+- **ç‰©ç†æ¼”ç®—ã‚¨ãƒ³ã‚¸ãƒ³çµ±åˆ**: Jolt Physicsã«ã‚ˆã‚‹é«˜æ€§èƒ½ç‰©ç†ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³
+- **ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚·ã‚¹ãƒ†ãƒ **: æ¬¡ä¸–ä»£ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°æŠ€è¡“ã®å®Ÿè£…ï¼ˆé–‹ç™ºä¸­ï¼‰
+- **æœ€é©åŒ–ã•ã‚ŒãŸé ‚ç‚¹ãƒ‡ãƒ¼ã‚¿ç®¡ç†**: ãƒ¡ãƒ¢ãƒªåŠ¹çŽ‡ã‚’é‡è¦–ã—ãŸãƒ‡ãƒ¼ã‚¿æ§‹é€ 
 
 ---
 
-## ƒŒƒ“ƒ_ƒŠƒ“ƒOƒpƒCƒvƒ‰ƒCƒ“
+## ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ãƒ‘ã‚¤ãƒ—ãƒ©ã‚¤ãƒ³
 
-### ƒJƒXƒ^ƒ€ƒŒƒ“ƒ_[ƒpƒXƒA[ƒLƒeƒNƒ`ƒƒ
+### ã‚«ã‚¹ã‚¿ãƒ ãƒ¬ãƒ³ãƒ€ãƒ¼ãƒ‘ã‚¹ã‚¢ãƒ¼ã‚­ãƒ†ã‚¯ãƒãƒ£
 
-–{ƒtƒŒ[ƒ€ƒ[ƒN‚Å‚ÍA**Šg’£‰Â”\‚ÈƒŒƒ“ƒ_[ƒpƒXƒVƒXƒeƒ€**‚ðÌ—p‚µ‚Ä‚¢‚Ü‚·BŠeƒŒƒ“ƒ_ƒŠƒ“ƒOƒXƒe[ƒW‚ð“Æ—§‚µ‚½ƒpƒX‚Æ‚µ‚ÄŽÀ‘•‚·‚é‚±‚Æ‚ÅA_“î‚È•`‰æˆ—‚ðŽÀŒ»‚µ‚Ä‚¢‚Ü‚·B
+æœ¬ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã§ã¯ã€**æ‹¡å¼µå¯èƒ½ãªãƒ¬ãƒ³ãƒ€ãƒ¼ãƒ‘ã‚¹ã‚·ã‚¹ãƒ†ãƒ **ã‚’æŽ¡ç”¨ã—ã¦ã„ã¾ã™ã€‚å„ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ã‚¹ãƒ†ãƒ¼ã‚¸ã‚’ç‹¬ç«‹ã—ãŸãƒ‘ã‚¹ã¨ã—ã¦å®Ÿè£…ã™ã‚‹ã“ã¨ã§ã€æŸ”è»Ÿãªæç”»å‡¦ç†ã‚’å®Ÿç¾ã—ã¦ã„ã¾ã™ã€‚
 
-![ƒŒƒ“ƒ_[ƒpƒX\‘¢](images/RenderPassArchitecture.png)
+![ãƒ¬ãƒ³ãƒ€ãƒ¼ãƒ‘ã‚¹æ§‹é€ ](images/RenderPassArchitecture.png)
 
-#### ƒŒƒ“ƒ_[ƒpƒX‚ÌŽí—Þ
+#### ãƒ¬ãƒ³ãƒ€ãƒ¼ãƒ‘ã‚¹ã®ç¨®é¡ž
 
-1. **ClearRenderPass** - ƒŒƒ“ƒ_[ƒ^[ƒQƒbƒg‚ÌƒNƒŠƒA
-2. **OpaqueRenderPass** - •s“§–¾ƒIƒuƒWƒFƒNƒg‚Ì•`‰æ
-3. **SkyboxRenderPass** - ƒXƒJƒCƒ{ƒbƒNƒX‚Ì•`‰æ
-4. **TransparentRenderPass** - ”¼“§–¾ƒIƒuƒWƒFƒNƒg‚Ì•`‰æ
-5. **PostProcessRenderPass** - ƒ|ƒXƒgƒvƒƒZƒXŒø‰Ê
+1. **ClearRenderPass** - ãƒ¬ãƒ³ãƒ€ãƒ¼ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®ã‚¯ãƒªã‚¢
+2. **OpaqueRenderPass** - ä¸é€æ˜Žã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æç”»
+3. **SkyboxRenderPass** - ã‚¹ã‚«ã‚¤ãƒœãƒƒã‚¯ã‚¹ã®æç”»
+4. **TransparentRenderPass** - åŠé€æ˜Žã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æç”»
+5. **PostProcessRenderPass** - ãƒã‚¹ãƒˆãƒ—ãƒ­ã‚»ã‚¹åŠ¹æžœ
 
-ŠeƒpƒX‚Í`RenderPassEvent`‚ÅŽÀsƒ^ƒCƒ~ƒ“ƒO‚ð§Œä‚µA‘Oˆ—EŒãˆ—‚ð_“î‚É‘}“ü‚Å‚«‚Ü‚·B
+å„ãƒ‘ã‚¹ã¯`RenderPassEvent`ã§å®Ÿè¡Œã‚¿ã‚¤ãƒŸãƒ³ã‚°ã‚’åˆ¶å¾¡ã—ã€å‰å‡¦ç†ãƒ»å¾Œå‡¦ç†ã‚’æŸ”è»Ÿã«æŒ¿å…¥ã§ãã¾ã™ã€‚
 
 ```cpp
 enum class RenderPassEvent {
@@ -48,76 +48,76 @@ enum class RenderPassEvent {
 };
 ```
 
-### ƒfƒBƒtƒ@[ƒhƒŒƒ“ƒ_ƒŠƒ“ƒO
+### ãƒ‡ã‚£ãƒ•ã‚¡ãƒ¼ãƒ‰ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°
 
-**Gƒoƒbƒtƒ@**‚ð—p‚¢‚½ƒfƒBƒtƒ@[ƒhƒŒƒ“ƒ_ƒŠƒ“ƒO‚ðŽÀ‘•‚µA•¡”‚Ìƒ‰ƒCƒeƒBƒ“ƒOˆ—‚ðŒø—¦‰»‚µ‚Ä‚¢‚Ü‚·B
+**Gãƒãƒƒãƒ•ã‚¡**ã‚’ç”¨ã„ãŸãƒ‡ã‚£ãƒ•ã‚¡ãƒ¼ãƒ‰ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ã‚’å®Ÿè£…ã—ã€è¤‡æ•°ã®ãƒ©ã‚¤ãƒ†ã‚£ãƒ³ã‚°å‡¦ç†ã‚’åŠ¹çŽ‡åŒ–ã—ã¦ã„ã¾ã™ã€‚
 
-**Gƒoƒbƒtƒ@‚Ì\¬F**
-- **RT0**: ƒAƒ‹ƒxƒhiRGBj+ ƒƒ^ƒŠƒbƒNiAj
-- **RT1**: –@üiRGBj+ ƒ‰ƒtƒlƒXiAj
-- **RT2**: [“x + ƒ[ƒ‹ƒhÀ•W
-- **RT3**: ƒGƒ~ƒbƒVƒu + AO
+**Gãƒãƒƒãƒ•ã‚¡ã®æ§‹æˆï¼š**
+- **RT0**: ã‚¢ãƒ«ãƒ™ãƒ‰ï¼ˆRGBï¼‰+ ãƒ¡ã‚¿ãƒªãƒƒã‚¯ï¼ˆAï¼‰
+- **RT1**: æ³•ç·šï¼ˆRGBï¼‰+ ãƒ©ãƒ•ãƒã‚¹ï¼ˆAï¼‰
+- **RT2**: æ·±åº¦ + ãƒ¯ãƒ¼ãƒ«ãƒ‰åº§æ¨™
+- **RT3**: ã‚¨ãƒŸãƒƒã‚·ãƒ– + AO
 
-![Gƒoƒbƒtƒ@\‘¢](images/GBuffer.png)
-
----
-
-## ˆ³kƒvƒƒOƒ‰ƒ€‚Ìƒ_ƒEƒ“ƒ[ƒh
-
-’¸“_ˆ³k‚ÌƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Í‰º‹L‚æ‚èƒ_ƒEƒ“ƒ[ƒh‚Å‚«‚Ü‚·F
-
-[Google Driveiˆ³kƒvƒƒOƒ‰ƒ€”z•zj](https://drive.google.com/drive/folders/1KpQY3D3uRsKXaaPuWcbWdjbdqgczFl_o?usp=drive_link)
-
-## ’¸“_ˆ³k‚É‚Â‚¢‚Ä
-
-‰º‹L‚Ì‰æ‘œ‚ÅŽg—p‚µ‚Ä‚¢‚éƒ‚ƒfƒ‹‚Ì’¸“_”‚Í 9036ŒÂAˆêŒÂ“–‚½‚è38ƒoƒCƒg‚Å‡Œv–ñ335.3KB‚Æ‚È‚è‚Ü‚·B
-
-ˆ³kŒã‚Ì’¸“_‚ÍˆêŒÂ“–‚½‚è20ƒoƒCƒg‚Å‡Œv–ñ176.4KB‚Ü‚Åˆ³k‚Å‚«‚Ä‚¢‚Ü‚·B
-
-**ˆ³k—¦: –ñ47%‚Ìƒƒ‚ƒŠíŒ¸‚ð’B¬**
-
-![’¸“_ˆ³kƒ‚ƒfƒ‹](images/ConpModel.png)
-
-## ’¸“_‚ÌƒŒƒCƒAƒEƒg‚É‚Â‚¢‚Ä
-
-Å“K‰»‚³‚ê‚½’¸“_ƒŒƒCƒAƒEƒg‚ðÌ—p‚µAGPUƒLƒƒƒbƒVƒ…ƒqƒbƒg—¦‚ÌŒüã‚ð}‚Á‚Ä‚¢‚Ü‚·B
-
-![’¸“_ƒŒƒCƒAƒEƒg](images/Layout.png)
-
-## ˆ³k•ûŽ®‚É‚Â‚¢‚Ä
-
-–@ü‚É‚Â‚¢‚Ä‚ÍOctahedronEncodingi[ŽQlƒTƒCƒg](https://knarkowicz.wordpress.com/2014/04/16/octahedron-normal-vector-encoding/)j‚ðŽg—p‚µ‚Ä‚¨‚èA‚à‚Æ‚Ì12ƒoƒCƒg‚©‚ç4ƒoƒCƒg‚Ü‚Åˆ³k‚ð¬Œ÷‚µ‚Ä‚¢‚Ü‚·B
-
-**ˆ³kƒAƒ‹ƒSƒŠƒYƒ€‚Ì“Á’¥F**
-- Float3i12ƒoƒCƒgj¨ UInt16x2i4ƒoƒCƒgj
-- ¸“x‚Ì‘¹Ž¸‚ðÅ¬ŒÀ‚É—}§
-- ƒfƒR[ƒhˆ—‚Ì‚‘¬‰»
-
-![ˆ³k•ûŽ®1](images/Normal1.png)
-![ˆ³k•ûŽ®2](images/Normal2.png)
+![Gãƒãƒƒãƒ•ã‚¡æ§‹é€ ](images/GBuffer.png)
 
 ---
 
-## •¨—‰‰ŽZƒVƒXƒeƒ€
+## åœ§ç¸®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰
 
-### Jolt Physics“‡
+é ‚ç‚¹åœ§ç¸®ã®ã‚µãƒ³ãƒ—ãƒ«ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ä¸‹è¨˜ã‚ˆã‚Šãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã§ãã¾ã™ï¼š
 
-–{ƒtƒŒ[ƒ€ƒ[ƒN‚Å‚ÍA**Jolt Physics**ƒGƒ“ƒWƒ“‚ð“‡‚µA‚«”\‚È•¨—ƒVƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“‚ðŽÀŒ»‚µ‚Ä‚¢‚Ü‚·B
+[Google Driveï¼ˆåœ§ç¸®ãƒ—ãƒ­ã‚°ãƒ©ãƒ é…å¸ƒï¼‰](https://drive.google.com/drive/folders/1KpQY3D3uRsKXaaPuWcbWdjbdqgczFl_o?usp=drive_link)
 
-**Žå‚È‹@”\F**
-- **ƒŠƒWƒbƒhƒ{ƒfƒBƒVƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“**: “®“IEÃ“IEƒLƒlƒ}ƒeƒBƒbƒNƒIƒuƒWƒFƒNƒg‚ÌƒTƒ|[ƒg
-- **Õ“ËŒŸo**: BroadPhase‚ÆNarrowPhase‚ÌÅ“K‰»
-- **§–ñƒVƒXƒeƒ€**: ƒqƒ“ƒWAƒXƒ‰ƒCƒ_[AŒÅ’èƒWƒ‡ƒCƒ“ƒg‚È‚Ç
-- **ƒLƒƒƒ‰ƒNƒ^[ƒRƒ“ƒgƒ[ƒ‰[**: ƒQ[ƒ€ƒLƒƒƒ‰ƒNƒ^[Œü‚¯‚Ìê—p•¨—§Œä
+## é ‚ç‚¹åœ§ç¸®ã«ã¤ã„ã¦
 
-![•¨—‰‰ŽZƒVƒXƒeƒ€](images/PhysicsIntegration.png)
+ä¸‹è¨˜ã®ç”»åƒã§ä½¿ç”¨ã—ã¦ã„ã‚‹ãƒ¢ãƒ‡ãƒ«ã®é ‚ç‚¹æ•°ã¯ 9036å€‹ã€ä¸€å€‹å½“ãŸã‚Š38ãƒã‚¤ãƒˆã§åˆè¨ˆç´„335.3KBã¨ãªã‚Šã¾ã™ã€‚
 
-### •¨—ƒRƒ“ƒ|[ƒlƒ“ƒgƒA[ƒLƒeƒNƒ`ƒƒ
+åœ§ç¸®å¾Œã®é ‚ç‚¹ã¯ä¸€å€‹å½“ãŸã‚Š20ãƒã‚¤ãƒˆã§åˆè¨ˆç´„176.4KBã¾ã§åœ§ç¸®ã§ãã¦ã„ã¾ã™ã€‚
 
-ƒGƒ“ƒeƒBƒeƒBƒRƒ“ƒ|[ƒlƒ“ƒgƒVƒXƒeƒ€iECSjƒpƒ^[ƒ“‚ðÌ—p‚µAƒQ[ƒ€ƒIƒuƒWƒFƒNƒg‚É•¨—‹““®‚ð_“î‚É’Ç‰Á‚Å‚«‚Ü‚·B
+**åœ§ç¸®çŽ‡: ç´„47%ã®ãƒ¡ãƒ¢ãƒªå‰Šæ¸›ã‚’é”æˆ**
+
+![é ‚ç‚¹åœ§ç¸®ãƒ¢ãƒ‡ãƒ«](images/ConpModel.png)
+
+## é ‚ç‚¹ã®ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆã«ã¤ã„ã¦
+
+æœ€é©åŒ–ã•ã‚ŒãŸé ‚ç‚¹ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆã‚’æŽ¡ç”¨ã—ã€GPUã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ’ãƒƒãƒˆçŽ‡ã®å‘ä¸Šã‚’å›³ã£ã¦ã„ã¾ã™ã€‚
+
+![é ‚ç‚¹ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ](images/Layout.png)
+
+## åœ§ç¸®æ–¹å¼ã«ã¤ã„ã¦
+
+æ³•ç·šã«ã¤ã„ã¦ã¯OctahedronEncodingï¼ˆ[å‚è€ƒã‚µã‚¤ãƒˆ](https://knarkowicz.wordpress.com/2014/04/16/octahedron-normal-vector-encoding/)ï¼‰ã‚’ä½¿ç”¨ã—ã¦ãŠã‚Šã€ã‚‚ã¨ã®12ãƒã‚¤ãƒˆã‹ã‚‰4ãƒã‚¤ãƒˆã¾ã§åœ§ç¸®ã‚’æˆåŠŸã—ã¦ã„ã¾ã™ã€‚
+
+**åœ§ç¸®ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã®ç‰¹å¾´ï¼š**
+- Float3ï¼ˆ12ãƒã‚¤ãƒˆï¼‰â†’ UInt16x2ï¼ˆ4ãƒã‚¤ãƒˆï¼‰
+- ç²¾åº¦ã®æå¤±ã‚’æœ€å°é™ã«æŠ‘åˆ¶
+- ãƒ‡ã‚³ãƒ¼ãƒ‰å‡¦ç†ã®é«˜é€ŸåŒ–
+
+![åœ§ç¸®æ–¹å¼1](images/Normal1.png)
+![åœ§ç¸®æ–¹å¼2](images/Normal2.png)
+
+---
+
+## ç‰©ç†æ¼”ç®—ã‚·ã‚¹ãƒ†ãƒ 
+
+### Jolt Physicsçµ±åˆ
+
+æœ¬ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã§ã¯ã€**Jolt Physics**ã‚¨ãƒ³ã‚¸ãƒ³ã‚’çµ±åˆã—ã€é«˜æ€§èƒ½ãªç‰©ç†ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å®Ÿç¾ã—ã¦ã„ã¾ã™ã€‚
+
+**ä¸»ãªæ©Ÿèƒ½ï¼š**
+- **ãƒªã‚¸ãƒƒãƒ‰ãƒœãƒ‡ã‚£ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³**: å‹•çš„ãƒ»é™çš„ãƒ»ã‚­ãƒãƒžãƒ†ã‚£ãƒƒã‚¯ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚µãƒãƒ¼ãƒˆ
+- **è¡çªæ¤œå‡º**: BroadPhaseã¨NarrowPhaseã®æœ€é©åŒ–
+- **åˆ¶ç´„ã‚·ã‚¹ãƒ†ãƒ **: ãƒ’ãƒ³ã‚¸ã€ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã€å›ºå®šã‚¸ãƒ§ã‚¤ãƒ³ãƒˆãªã©
+- **ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ãƒ¼**: ã‚²ãƒ¼ãƒ ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼å‘ã‘ã®å°‚ç”¨ç‰©ç†åˆ¶å¾¡
+
+![ç‰©ç†æ¼”ç®—ã‚·ã‚¹ãƒ†ãƒ ](images/PhysicsIntegration.png)
+
+### ç‰©ç†ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚¢ãƒ¼ã‚­ãƒ†ã‚¯ãƒãƒ£
+
+ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚·ã‚¹ãƒ†ãƒ ï¼ˆECSï¼‰ãƒ‘ã‚¿ãƒ¼ãƒ³ã‚’æŽ¡ç”¨ã—ã€ã‚²ãƒ¼ãƒ ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ç‰©ç†æŒ™å‹•ã‚’æŸ”è»Ÿã«è¿½åŠ ã§ãã¾ã™ã€‚
 
 ```cpp
-// RigidBodyƒRƒ“ƒ|[ƒlƒ“ƒg‚Ì—á
+// RigidBodyã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã®ä¾‹
 class RigidBodyComponent {
     JPH::BodyID bodyID;
     float mass;
@@ -128,79 +128,79 @@ class RigidBodyComponent {
 
 ---
 
-## ‰æ‘œˆ—‚É‚Â‚¢‚Ä
+## ç”»åƒå‡¦ç†ã«ã¤ã„ã¦
 
-**ƒRƒ“ƒsƒ…[ƒgƒVƒF[ƒ_[**‚ðŠˆ—p‚µ‚½‚“x‚È‰æ‘œˆ—‚ðŽÀ‘•‚µ‚Ä‚¢‚Ü‚·B
+**ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ãƒˆã‚·ã‚§ãƒ¼ãƒ€ãƒ¼**ã‚’æ´»ç”¨ã—ãŸé«˜åº¦ãªç”»åƒå‡¦ç†ã‚’å®Ÿè£…ã—ã¦ã„ã¾ã™ã€‚
 
-**ŽÀ‘•Ï‚ÝƒtƒBƒ‹ƒ^[F**
-- **ƒKƒEƒVƒAƒ“ƒtƒBƒ‹ƒ^**: ƒuƒ‰[Œø‰Ê
-- **ƒ\[ƒxƒ‹ƒtƒBƒ‹ƒ^**: ƒGƒbƒWŒŸo
-- **ƒVƒ“ƒvƒŒƒbƒNƒXƒmƒCƒY**: ƒvƒƒV[ƒWƒƒƒ‹ƒeƒNƒXƒ`ƒƒ¶¬
+**å®Ÿè£…æ¸ˆã¿ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ï¼š**
+- **ã‚¬ã‚¦ã‚·ã‚¢ãƒ³ãƒ•ã‚£ãƒ«ã‚¿**: ãƒ–ãƒ©ãƒ¼åŠ¹æžœ
+- **ã‚½ãƒ¼ãƒ™ãƒ«ãƒ•ã‚£ãƒ«ã‚¿**: ã‚¨ãƒƒã‚¸æ¤œå‡º
+- **ã‚·ãƒ³ãƒ—ãƒ¬ãƒƒã‚¯ã‚¹ãƒŽã‚¤ã‚º**: ãƒ—ãƒ­ã‚·ãƒ¼ã‚¸ãƒ£ãƒ«ãƒ†ã‚¯ã‚¹ãƒãƒ£ç”Ÿæˆ
 
-![‰æ‘œˆ—ƒeƒXƒg](images/TextureTest.png)
-
----
-
-## ƒVƒF[ƒ_[‚É‚Â‚¢‚Ä
-
-### 1. –@üƒfƒR[ƒhˆ—
-
-’¸“_ˆ³k‚ÅŠi”[‚µ‚½–@üƒxƒNƒgƒ‹‚ðƒfƒR[ƒh‚·‚éƒVƒF[ƒ_[ƒR[ƒh—á‚Å‚·B16bit®”‚©‚ç-1`1‚Ì”ÍˆÍ‚É•ÏŠ·‚µA”ª–Ê‘Ìƒ}ƒbƒsƒ“ƒO‚Å•œŒ³‚µ‚Ä‚¢‚Ü‚·B
-
-![–@üƒfƒR[ƒhƒVƒF[ƒ_[](images/Decode.png)
-
-### 2. ƒfƒBƒtƒ@[ƒhƒŒƒ“ƒ_ƒŠƒ“ƒO—pGƒoƒbƒtƒ@‘‚«o‚µ
-
-Gƒoƒbƒtƒ@‚Ö‚Ì‘‚«o‚µ‚ðs‚¤ƒsƒNƒZƒ‹ƒVƒF[ƒ_[‚Ìˆê•”‚Å‚·BƒAƒ‹ƒxƒhA[“xA–@üAƒ}ƒeƒŠƒAƒ‹î•ñ‚ð‚»‚ê‚¼‚ê‚Ìƒ^[ƒQƒbƒg‚Éo—Í‚µ‚Ä‚¢‚Ü‚·B
-
-![Gƒoƒbƒtƒ@‘‚«o‚µƒVƒF[ƒ_[](images/GBuff.png)
-
-### 3. ‚±‚¾‚í‚Á‚½ƒ}ƒeƒŠƒAƒ‹•\Œ»
-
-**PBRi•¨—ƒx[ƒXƒŒƒ“ƒ_ƒŠƒ“ƒOj**‚ðˆÓŽ¯‚µì¬‚µ‚Ü‚µ‚½A’Ç‰Á‚ÅƒAƒEƒgƒ‰ƒCƒ“‚ð•\Ž¦‚µ‚Ä‚¢‚Ü‚·B
-
-**ŽÀ‘•‚µ‚½‹ZpF**
-- **Cook-Torranceƒ‚ƒfƒ‹**: ƒ}ƒCƒNƒƒtƒ@ƒZƒbƒg—˜_‚ÉŠî‚Ã‚­BRDF
-- **GGX•ª•z**: ‚æ‚èŒ»ŽÀ“I‚ÈƒXƒyƒLƒ…ƒ‰ƒnƒCƒ‰ƒCƒg
-- **ƒtƒŒƒlƒ‹”½ŽË**: Schlick‹ßŽ—‚É‚æ‚é‚‘¬ŒvŽZ
-- **”w–Ê–@‚É‚æ‚éƒAƒEƒgƒ‰ƒCƒ“**: ƒZƒ‹ƒVƒF[ƒfƒBƒ“ƒO•—‚Ì•\Œ»
-
-ŠÈˆÕŽÀ‘•‚Æ‚µ‚ÄŽg—p‚µ‚½•û–@‚Í”w–Ê–@‚ÅAŒ»Ýƒ\[ƒxƒ‹ƒtƒBƒ‹ƒ^‚ðŽg‚Á‚½—ÖŠsŒŸo‚ðì¬‚µ‚Ä‚¢‚Ü‚·B
-
-![ƒ}ƒeƒŠƒAƒ‹ƒVƒF[ƒ_[1](images/PBR_PS.png)
-![ƒ}ƒeƒŠƒAƒ‹ƒVƒF[ƒ_[2](images/PBR_Render.png)
-![’Ç‰Áƒ}ƒeƒŠƒAƒ‹‰æ‘œ](images/NewMaterial.png)
+![ç”»åƒå‡¦ç†ãƒ†ã‚¹ãƒˆ](images/TextureTest.png)
 
 ---
 
-## ‰J—±‚Ìƒ|ƒXƒgƒvƒƒZƒX
+## ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã«ã¤ã„ã¦
 
-**ŠJ”­’†**
+### 1. æ³•ç·šãƒ‡ã‚³ãƒ¼ãƒ‰å‡¦ç†
 
-ƒp[ƒeƒBƒNƒ‹ƒVƒXƒeƒ€‚Æ‘g‚Ý‡‚í‚¹‚½A“®“I‚È‰J—±ƒGƒtƒFƒNƒg‚ðŽÀ‘•—\’è‚Å‚·B
+é ‚ç‚¹åœ§ç¸®ã§æ ¼ç´ã—ãŸæ³•ç·šãƒ™ã‚¯ãƒˆãƒ«ã‚’ãƒ‡ã‚³ãƒ¼ãƒ‰ã™ã‚‹ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚³ãƒ¼ãƒ‰ä¾‹ã§ã™ã€‚16bitæ•´æ•°ã‹ã‚‰-1ï½ž1ã®ç¯„å›²ã«å¤‰æ›ã—ã€å…«é¢ä½“ãƒžãƒƒãƒ”ãƒ³ã‚°ã§å¾©å…ƒã—ã¦ã„ã¾ã™ã€‚
+
+![æ³•ç·šãƒ‡ã‚³ãƒ¼ãƒ‰ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼](images/Decode.png)
+
+### 2. ãƒ‡ã‚£ãƒ•ã‚¡ãƒ¼ãƒ‰ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ç”¨Gãƒãƒƒãƒ•ã‚¡æ›¸ãå‡ºã—
+
+Gãƒãƒƒãƒ•ã‚¡ã¸ã®æ›¸ãå‡ºã—ã‚’è¡Œã†ãƒ”ã‚¯ã‚»ãƒ«ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã®ä¸€éƒ¨ã§ã™ã€‚ã‚¢ãƒ«ãƒ™ãƒ‰ã€æ·±åº¦ã€æ³•ç·šã€ãƒžãƒ†ãƒªã‚¢ãƒ«æƒ…å ±ã‚’ãã‚Œãžã‚Œã®ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã«å‡ºåŠ›ã—ã¦ã„ã¾ã™ã€‚
+
+![Gãƒãƒƒãƒ•ã‚¡æ›¸ãå‡ºã—ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼](images/GBuff.png)
+
+### 3. ã“ã ã‚ã£ãŸãƒžãƒ†ãƒªã‚¢ãƒ«è¡¨ç¾
+
+**PBRï¼ˆç‰©ç†ãƒ™ãƒ¼ã‚¹ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ï¼‰**ã‚’æ„è­˜ã—ä½œæˆã—ã¾ã—ãŸã€è¿½åŠ ã§ã‚¢ã‚¦ãƒˆãƒ©ã‚¤ãƒ³ã‚’è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚
+
+**å®Ÿè£…ã—ãŸæŠ€è¡“ï¼š**
+- **Cook-Torranceãƒ¢ãƒ‡ãƒ«**: ãƒžã‚¤ã‚¯ãƒ­ãƒ•ã‚¡ã‚»ãƒƒãƒˆç†è«–ã«åŸºã¥ãBRDF
+- **GGXåˆ†å¸ƒ**: ã‚ˆã‚Šç¾å®Ÿçš„ãªã‚¹ãƒšã‚­ãƒ¥ãƒ©ãƒã‚¤ãƒ©ã‚¤ãƒˆ
+- **ãƒ•ãƒ¬ãƒãƒ«åå°„**: Schlickè¿‘ä¼¼ã«ã‚ˆã‚‹é«˜é€Ÿè¨ˆç®—
+- **èƒŒé¢æ³•ã«ã‚ˆã‚‹ã‚¢ã‚¦ãƒˆãƒ©ã‚¤ãƒ³**: ã‚»ãƒ«ã‚·ã‚§ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°é¢¨ã®è¡¨ç¾
+
+ç°¡æ˜“å®Ÿè£…ã¨ã—ã¦ä½¿ç”¨ã—ãŸæ–¹æ³•ã¯èƒŒé¢æ³•ã§ã€ç¾åœ¨ã‚½ãƒ¼ãƒ™ãƒ«ãƒ•ã‚£ãƒ«ã‚¿ã‚’ä½¿ã£ãŸè¼ªéƒ­æ¤œå‡ºã‚’ä½œæˆã—ã¦ã„ã¾ã™ã€‚
+
+![ãƒžãƒ†ãƒªã‚¢ãƒ«ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼1](images/PBR_PS.png)
+![ãƒžãƒ†ãƒªã‚¢ãƒ«ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼2](images/PBR_Render.png)
+![è¿½åŠ ãƒžãƒ†ãƒªã‚¢ãƒ«ç”»åƒ](images/NewMaterial.png)
 
 ---
 
-## ‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€iŠJ”­’†j
+## é›¨ç²’ã®ãƒã‚¹ãƒˆãƒ—ãƒ­ã‚»ã‚¹
 
-ŽŸ¢‘ã‚ÌƒŒƒ“ƒ_ƒŠƒ“ƒO‹Zp‚Æ‚µ‚ÄA**‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€**‚ÌŽÀ‘•‚ði‚ß‚Ä‚¢‚Ü‚·B
+**é–‹ç™ºä¸­**
 
-**–Ú•WF**
-- ”•S–œƒ|ƒŠƒSƒ“‚ÌƒV[ƒ€ƒŒƒX‚È•`‰æ
-- Ž©“®LODŠÇ—
-- ƒƒ‚ƒŠŒø—¦‚ÌÅ“K‰»
-
-Ú×‚Í [‰¼‘zƒWƒIƒƒgƒŠƒy[ƒW](project-template.html?project=virtual-geometry) ‚ð‚²——‚­‚¾‚³‚¢B
+ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ã‚·ã‚¹ãƒ†ãƒ ã¨çµ„ã¿åˆã‚ã›ãŸã€å‹•çš„ãªé›¨ç²’ã‚¨ãƒ•ã‚§ã‚¯ãƒˆã‚’å®Ÿè£…äºˆå®šã§ã™ã€‚
 
 ---
 
-## ¡Œã‚ÌŠJ”­—\’è
+## ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚·ã‚¹ãƒ†ãƒ ï¼ˆé–‹ç™ºä¸­ï¼‰
 
-- ƒfƒBƒtƒ@[ƒhƒŒƒ“ƒ_ƒŠƒ“ƒO
-- ’¸“_ˆ³k
-- •¨—‰‰ŽZ“‡
-- PBRƒ}ƒeƒŠƒAƒ‹
-- ‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€
-- “®“IƒOƒ[ƒoƒ‹ƒCƒ‹ƒ~ƒl[ƒVƒ‡ƒ“
-- ƒ{ƒŠƒ…ƒƒgƒŠƒbƒNƒ‰ƒCƒeƒBƒ“ƒO
-- ƒŒƒCƒgƒŒ[ƒVƒ“ƒO‘Î‰žiDirectX12 DXRj
+æ¬¡ä¸–ä»£ã®ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°æŠ€è¡“ã¨ã—ã¦ã€**ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚·ã‚¹ãƒ†ãƒ **ã®å®Ÿè£…ã‚’é€²ã‚ã¦ã„ã¾ã™ã€‚
+
+**ç›®æ¨™ï¼š**
+- æ•°ç™¾ä¸‡ãƒãƒªã‚´ãƒ³ã®ã‚·ãƒ¼ãƒ ãƒ¬ã‚¹ãªæç”»
+- è‡ªå‹•LODç®¡ç†
+- ãƒ¡ãƒ¢ãƒªåŠ¹çŽ‡ã®æœ€é©åŒ–
+
+è©³ç´°ã¯ [ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªãƒšãƒ¼ã‚¸](project-template.html?project=virtual-geometry) ã‚’ã”è¦§ãã ã•ã„ã€‚
+
+---
+
+## ä»Šå¾Œã®é–‹ç™ºäºˆå®š
+
+- ãƒ‡ã‚£ãƒ•ã‚¡ãƒ¼ãƒ‰ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°
+- é ‚ç‚¹åœ§ç¸®
+- ç‰©ç†æ¼”ç®—çµ±åˆ
+- PBRãƒžãƒ†ãƒªã‚¢ãƒ«
+- ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚·ã‚¹ãƒ†ãƒ 
+- å‹•çš„ã‚°ãƒ­ãƒ¼ãƒãƒ«ã‚¤ãƒ«ãƒŸãƒãƒ¼ã‚·ãƒ§ãƒ³
+- ãƒœãƒªãƒ¥ãƒ¡ãƒˆãƒªãƒƒã‚¯ãƒ©ã‚¤ãƒ†ã‚£ãƒ³ã‚°
+- ãƒ¬ã‚¤ãƒˆãƒ¬ãƒ¼ã‚·ãƒ³ã‚°å¯¾å¿œï¼ˆDirectX12 DXRï¼‰

@@ -1,20 +1,20 @@
-# PBR & ���C�g���[�V���O
+# PBR & レイトレーシング
 
-CG����̕׋������Ă����ۂɖڂɗ��܂������C�g���[�V���O�������Ă݂���i�ɂȂ�܂��B
+CG検定の勉強をしていた際に目に留まったレイトレーシングを試してみた作品になります。
 
-���ׂĂ���ۂɕ��ׂ���������ł̓Q�[���ɂ͗��p���邱�Ƃ�����Ƃ̋L�ڂ�����܂������A**���ۂɎ��g�Ő��삵�Ă݂Ăǂ̕����̏������d���̂��A�ꕔ�����ł����p�ł��镔���͂Ȃ��̂��Ȃǂ��v��**����Ɏ���܂����B
+調べている際に負荷が高く現状ではゲームには利用することが難しいとの記載がありましたが、**実際に自身で制作してみてどの部分の処理が重いのか、一部だけでも利用できる部分はないのかなどを思い**制作に至りました。
 
-## DXR (DirectX Raytracing) �ɂ�����
+## DXR (DirectX Raytracing) による実装
 
-��i[FrameWork](project-template.html?project=dx-framework)�ɂ�PBR�͂��łɌ��؍ς݂ł������̂ŁA�{��ł�DirectX12�ɒ��킵��DXR���g�p�����삵�Ă݂܂����B
+作品[FrameWork](project-template.html?project=dx-framework)にてPBRはすでに検証済みであったので、本作ではDirectX12に挑戦してDXRを使用し制作してみました。
 
-![DXR ����](images/DXR.png)
+![DXR 実装](images/DXR.png)
 
-## �J���ł̒���
+## 開発での挑戦
 
-���܂ł�DirectX11�Ɣ�ׂĖ��̂��قȂ���̂�A�R�}���h�����̈Ⴂ�A�}���`�X���b�h�ɂ܂��������͂���܂������A��L�̍�i�Ŏ��K�Ɏg���Ă����Q�l����DirectX12�̖{�ō��������ƂȂǂ��K���������Ɏ���܂����B
+今までのDirectX11と比べて名称が異なるものや、コマンド処理の違い、マルチスレッドにつまずく部分はありましたが、上記の作品で自習に使っていた参考書がDirectX12の本で合ったことなどが幸いし完成に至りました。
 
-## �g�p���Ă���}�e���A��
+## 使用しているマテリアル
 
-![�}�e���A��](images/Material.png)
-![���C](images/Ray.png)
+![マテリアル](images/Material.png)
+![レイ](images/Ray.png)
