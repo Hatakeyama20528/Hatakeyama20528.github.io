@@ -1,5 +1,6 @@
 ﻿# PBR & レイトレーシング
 
+<<<<<<< HEAD
 <div style="padding: 2rem 0; margin-bottom: 2rem;">
   <p style="font-size: 1.1rem; line-height: 1.8;">
     CG検定の勉強をしていた際に目に留まったレイトレーシングを試してみた作品になります。
@@ -23,11 +24,21 @@
     <img src="images/DXR.png" alt="DXR 実装" style="width: 100%; border-radius: 8px;">
   </div>
 </div>
+=======
+CG検定の勉強をしていた際に目に留まったレイトレーシングを試してみた作品になります。
 
----
+調べている際に負荷が高く現状ではゲームには利用することが難しいとの記載がありましたが、**実際に自身で制作してみてどの部分の処理が重いのか、一部だけでも利用できる部分はないのかなどを思い**制作に至りました。
+
+## DXR (DirectX Raytracing) による実装
+
+作品[FrameWork](project-template.html?project=dx-framework)にてPBRはすでに検証済みであったので、本作ではDirectX12に挑戦してDXRを使用し制作してみました。
+
+![DXR 実装](images/DXR.png)
+>>>>>>> parent of 899c66b (MDのレイアウトが崩れたので修正)
 
 ## 開発での挑戦
 
+<<<<<<< HEAD
 <p style="font-size: 1.05rem; line-height: 1.7; padding: 1.5rem; background: #f9f9f9; border-radius: 8px; margin: 2rem 0;">
   今までのDirectX11と比べて名称が異なるものや、コマンド処理の違い、マルチスレッドにつまずく部分はありましたが、上記の作品で自習に使っていた参考書がDirectX12の本であったことなどが幸いし完成に至りました。
 </p>
@@ -235,3 +246,11 @@
     今後もレイトレーシング技術の進化を追い、実用的な実装方法を研究していきます。
   </p>
 </div>
+=======
+今までのDirectX11と比べて名称が異なるものや、コマンド処理の違い、マルチスレッドにつまずく部分はありましたが、上記の作品で自習に使っていた参考書がDirectX12の本で合ったことなどが幸いし完成に至りました。
+
+## 使用しているマテリアル
+
+![マテリアル](images/Material.png)
+![レイ](images/Ray.png)
+>>>>>>> parent of 899c66b (MDのレイアウトが崩れたので修正)
