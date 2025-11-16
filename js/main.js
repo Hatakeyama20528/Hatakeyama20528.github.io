@@ -132,7 +132,7 @@ class ProjectManager {
     }
 
     /**
-     * プロジェクトデータを読み込み
+     * プロジェクトデータを読み込む
      */
     async loadProjects() {
         try {
@@ -220,7 +220,7 @@ class TopicManager {
     }
 
     /**
-     * トピックデータを読み込み
+     * トピックデータを読み込む
      */
     async loadTopics() {
         try {
@@ -271,7 +271,7 @@ class TopicManager {
 }
 
 // ======================
-// イベントハンドラー設定
+// イベントハンドラ設定
 // ======================
 function setupEventHandlers(slider) {
     // 次へボタン
@@ -395,7 +395,7 @@ async function initPortfolio() {
         console.warn('No slides found in slider');
     }
 
-    // イベントハンドラー設定
+    // イベントハンドラ設定
     setupEventHandlers(heroSlider);
 
     // トピックセクションの初期化
