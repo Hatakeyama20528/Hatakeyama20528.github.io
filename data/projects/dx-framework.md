@@ -4,6 +4,64 @@
 
 •`‰æ‚Ü‚í‚è‚É‚Â‚¢‚Ä‚±‚¾‚í‚è‚½‚¢‚Æv‚Á‚Ä‚¢‚é‚Ì‚ÅAÀŒ»‚Å‚«‚é‚æ‚¤‚É**ƒfƒBƒtƒ@[ƒhƒŒƒ“ƒ_ƒŠƒ“ƒO**A**’¸“_ˆ³k**A‚ğÀ‘•‚µ‚Ä‚¢‚Ü‚·B
 
+## ƒvƒƒWƒFƒNƒgŠT—v
+
+–{ƒtƒŒ[ƒ€ƒ[ƒN‚ÍAŸ¢‘ã‚ÌƒQ[ƒ€ƒGƒ“ƒWƒ“‹Zp‚ğ–Úw‚µ‚ÄAˆÈ‰º‚Ìæi“I‚È‹@”\‚ğÀ‘•‚µ‚Ä‚¢‚Ü‚·F
+
+- **ƒJƒXƒ^ƒ€ƒŒƒ“ƒ_ƒŠƒ“ƒOƒpƒCƒvƒ‰ƒCƒ“**: Šg’£‰Â”\‚ÈƒŒƒ“ƒ_[ƒpƒXƒVƒXƒeƒ€
+- **•¨—‰‰ZƒGƒ“ƒWƒ““‡**: Jolt Physics‚É‚æ‚é‚«”\•¨—ƒVƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“
+- **‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€**: Ÿ¢‘ãƒŒƒ“ƒ_ƒŠƒ“ƒO‹Zp‚ÌÀ‘•iŠJ”­’†j
+- **Å“K‰»‚³‚ê‚½’¸“_ƒf[ƒ^ŠÇ—**: ƒƒ‚ƒŠŒø—¦‚ğd‹‚µ‚½ƒf[ƒ^\‘¢
+
+---
+
+## ƒŒƒ“ƒ_ƒŠƒ“ƒOƒpƒCƒvƒ‰ƒCƒ“
+
+### ƒJƒXƒ^ƒ€ƒŒƒ“ƒ_[ƒpƒXƒA[ƒLƒeƒNƒ`ƒƒ
+
+–{ƒtƒŒ[ƒ€ƒ[ƒN‚Å‚ÍA**Šg’£‰Â”\‚ÈƒŒƒ“ƒ_[ƒpƒXƒVƒXƒeƒ€**‚ğÌ—p‚µ‚Ä‚¢‚Ü‚·BŠeƒŒƒ“ƒ_ƒŠƒ“ƒOƒXƒe[ƒW‚ğ“Æ—§‚µ‚½ƒpƒX‚Æ‚µ‚ÄÀ‘•‚·‚é‚±‚Æ‚ÅA_“î‚È•`‰æˆ—‚ğÀŒ»‚µ‚Ä‚¢‚Ü‚·B
+
+![ƒŒƒ“ƒ_[ƒpƒX\‘¢](images/RenderPassArchitecture.png)
+
+#### ƒŒƒ“ƒ_[ƒpƒX‚Ìí—Ş
+
+1. **ClearRenderPass** - ƒŒƒ“ƒ_[ƒ^[ƒQƒbƒg‚ÌƒNƒŠƒA
+2. **OpaqueRenderPass** - •s“§–¾ƒIƒuƒWƒFƒNƒg‚Ì•`‰æ
+3. **SkyboxRenderPass** - ƒXƒJƒCƒ{ƒbƒNƒX‚Ì•`‰æ
+4. **TransparentRenderPass** - ”¼“§–¾ƒIƒuƒWƒFƒNƒg‚Ì•`‰æ
+5. **PostProcessRenderPass** - ƒ|ƒXƒgƒvƒƒZƒXŒø‰Ê
+
+ŠeƒpƒX‚Í`RenderPassEvent`‚ÅÀsƒ^ƒCƒ~ƒ“ƒO‚ğ§Œä‚µA‘Oˆ—EŒãˆ—‚ğ_“î‚É‘}“ü‚Å‚«‚Ü‚·B
+
+```cpp
+enum class RenderPassEvent {
+    BeforeRendering,
+    BeforeRenderingOpaques,
+    AfterRenderingOpaques,
+    BeforeRenderingSkybox,
+    AfterRenderingSkybox,
+    BeforeRenderingTransparents,
+    AfterRenderingTransparents,
+    BeforeRenderingPostProcessing,
+    AfterRenderingPostProcessing,
+    AfterRendering
+};
+```
+
+### ƒfƒBƒtƒ@[ƒhƒŒƒ“ƒ_ƒŠƒ“ƒO
+
+**Gƒoƒbƒtƒ@**‚ğ—p‚¢‚½ƒfƒBƒtƒ@[ƒhƒŒƒ“ƒ_ƒŠƒ“ƒO‚ğÀ‘•‚µA•¡”‚Ìƒ‰ƒCƒeƒBƒ“ƒOˆ—‚ğŒø—¦‰»‚µ‚Ä‚¢‚Ü‚·B
+
+**Gƒoƒbƒtƒ@‚Ì\¬F**
+- **RT0**: ƒAƒ‹ƒxƒhiRGBj+ ƒƒ^ƒŠƒbƒNiAj
+- **RT1**: –@üiRGBj+ ƒ‰ƒtƒlƒXiAj
+- **RT2**: [“x + ƒ[ƒ‹ƒhÀ•W
+- **RT3**: ƒGƒ~ƒbƒVƒu + AO
+
+![Gƒoƒbƒtƒ@\‘¢](images/GBuffer.png)
+
+---
+
 ## ˆ³kƒvƒƒOƒ‰ƒ€‚Ìƒ_ƒEƒ“ƒ[ƒh
 
 ’¸“_ˆ³k‚ÌƒTƒ“ƒvƒ‹ƒvƒƒOƒ‰ƒ€‚Í‰º‹L‚æ‚èƒ_ƒEƒ“ƒ[ƒh‚Å‚«‚Ü‚·F
@@ -16,9 +74,13 @@
 
 ˆ³kŒã‚Ì’¸“_‚ÍˆêŒÂ“–‚½‚è20ƒoƒCƒg‚Å‡Œv–ñ176.4KB‚Ü‚Åˆ³k‚Å‚«‚Ä‚¢‚Ü‚·B
 
+**ˆ³k—¦: –ñ47%‚Ìƒƒ‚ƒŠíŒ¸‚ğ’B¬**
+
 ![’¸“_ˆ³kƒ‚ƒfƒ‹](images/ConpModel.png)
 
 ## ’¸“_‚ÌƒŒƒCƒAƒEƒg‚É‚Â‚¢‚Ä
+
+Å“K‰»‚³‚ê‚½’¸“_ƒŒƒCƒAƒEƒg‚ğÌ—p‚µAGPUƒLƒƒƒbƒVƒ…ƒqƒbƒg—¦‚ÌŒüã‚ğ}‚Á‚Ä‚¢‚Ü‚·B
 
 ![’¸“_ƒŒƒCƒAƒEƒg](images/Layout.png)
 
@@ -26,14 +88,58 @@
 
 –@ü‚É‚Â‚¢‚Ä‚ÍOctahedronEncodingi[QlƒTƒCƒg](https://knarkowicz.wordpress.com/2014/04/16/octahedron-normal-vector-encoding/)j‚ğg—p‚µ‚Ä‚¨‚èA‚à‚Æ‚Ì12ƒoƒCƒg‚©‚ç4ƒoƒCƒg‚Ü‚Åˆ³k‚ğ¬Œ÷‚µ‚Ä‚¢‚Ü‚·B
 
+**ˆ³kƒAƒ‹ƒSƒŠƒYƒ€‚Ì“Á’¥F**
+- Float3i12ƒoƒCƒgj¨ UInt16x2i4ƒoƒCƒgj
+- ¸“x‚Ì‘¹¸‚ğÅ¬ŒÀ‚É—}§
+- ƒfƒR[ƒhˆ—‚Ì‚‘¬‰»
+
 ![ˆ³k•û®1](images/Normal1.png)
 ![ˆ³k•û®2](images/Normal2.png)
 
+---
+
+## •¨—‰‰ZƒVƒXƒeƒ€
+
+### Jolt Physics“‡
+
+–{ƒtƒŒ[ƒ€ƒ[ƒN‚Å‚ÍA**Jolt Physics**ƒGƒ“ƒWƒ“‚ğ“‡‚µA‚«”\‚È•¨—ƒVƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“‚ğÀŒ»‚µ‚Ä‚¢‚Ü‚·B
+
+**å‚È‹@”\F**
+- **ƒŠƒWƒbƒhƒ{ƒfƒBƒVƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“**: “®“IEÃ“IEƒLƒlƒ}ƒeƒBƒbƒNƒIƒuƒWƒFƒNƒg‚ÌƒTƒ|[ƒg
+- **Õ“ËŒŸo**: BroadPhase‚ÆNarrowPhase‚ÌÅ“K‰»
+- **§–ñƒVƒXƒeƒ€**: ƒqƒ“ƒWAƒXƒ‰ƒCƒ_[AŒÅ’èƒWƒ‡ƒCƒ“ƒg‚È‚Ç
+- **ƒLƒƒƒ‰ƒNƒ^[ƒRƒ“ƒgƒ[ƒ‰[**: ƒQ[ƒ€ƒLƒƒƒ‰ƒNƒ^[Œü‚¯‚Ìê—p•¨—§Œä
+
+![•¨—‰‰ZƒVƒXƒeƒ€](images/PhysicsIntegration.png)
+
+### •¨—ƒRƒ“ƒ|[ƒlƒ“ƒgƒA[ƒLƒeƒNƒ`ƒƒ
+
+ƒGƒ“ƒeƒBƒeƒBƒRƒ“ƒ|[ƒlƒ“ƒgƒVƒXƒeƒ€iECSjƒpƒ^[ƒ“‚ğÌ—p‚µAƒQ[ƒ€ƒIƒuƒWƒFƒNƒg‚É•¨—‹““®‚ğ_“î‚É’Ç‰Á‚Å‚«‚Ü‚·B
+
+```cpp
+// RigidBodyƒRƒ“ƒ|[ƒlƒ“ƒg‚Ì—á
+class RigidBodyComponent {
+    JPH::BodyID bodyID;
+    float mass;
+    Vec3 centerOfMass;
+    EMotionType motionType; // Static, Kinematic, Dynamic
+};
+```
+
+---
+
 ## ‰æ‘œˆ—‚É‚Â‚¢‚Ä
 
-ƒKƒEƒVƒAƒ“ƒtƒBƒ‹ƒ^Aƒ\[ƒxƒ‹ƒtƒBƒ‹ƒ^AƒVƒ“ƒvƒŒƒbƒNƒXƒmƒCƒY‚ğƒeƒXƒg‚µ‚Ä‚¢‚Ü‚·B
+**ƒRƒ“ƒsƒ…[ƒgƒVƒF[ƒ_[**‚ğŠˆ—p‚µ‚½‚“x‚È‰æ‘œˆ—‚ğÀ‘•‚µ‚Ä‚¢‚Ü‚·B
+
+**À‘•Ï‚İƒtƒBƒ‹ƒ^[F**
+- **ƒKƒEƒVƒAƒ“ƒtƒBƒ‹ƒ^**: ƒuƒ‰[Œø‰Ê
+- **ƒ\[ƒxƒ‹ƒtƒBƒ‹ƒ^**: ƒGƒbƒWŒŸo
+- **ƒVƒ“ƒvƒŒƒbƒNƒXƒmƒCƒY**: ƒvƒƒV[ƒWƒƒƒ‹ƒeƒNƒXƒ`ƒƒ¶¬
 
 ![‰æ‘œˆ—ƒeƒXƒg](images/TextureTest.png)
+
+---
 
 ## ƒVƒF[ƒ_[‚É‚Â‚¢‚Ä
 
@@ -51,14 +157,50 @@ Gƒoƒbƒtƒ@‚Ö‚Ì‘‚«o‚µ‚ğs‚¤ƒsƒNƒZƒ‹ƒVƒF[ƒ_[‚Ìˆê•”‚Å‚·BƒAƒ‹ƒxƒhA[“xA–@üAƒ
 
 ### 3. ‚±‚¾‚í‚Á‚½ƒ}ƒeƒŠƒAƒ‹•\Œ»
 
-PBRi•¨—ƒx[ƒXƒŒƒ“ƒ_ƒŠƒ“ƒOj‚ğˆÓ¯‚µì¬‚µ‚Ü‚µ‚½A’Ç‰Á‚ÅƒAƒEƒgƒ‰ƒCƒ“‚ğ•\¦‚µ‚Ä‚¢‚Ü‚·AŠÈˆÕÀ‘•‚Æ‚µ‚Äg—p‚µ‚½•û–@‚Í”w–Ê–@‚ÅAŒ»İƒ\[ƒxƒ‹ƒtƒBƒ‹ƒ^‚ğg‚Á‚½—ÖŠsŒŸo‚ğì¬‚µ‚Ä‚¢‚Ü‚·B
+**PBRi•¨—ƒx[ƒXƒŒƒ“ƒ_ƒŠƒ“ƒOj**‚ğˆÓ¯‚µì¬‚µ‚Ü‚µ‚½A’Ç‰Á‚ÅƒAƒEƒgƒ‰ƒCƒ“‚ğ•\¦‚µ‚Ä‚¢‚Ü‚·B
 
-‰º‹L‚ÍÀÛ‚Ìƒ}ƒeƒŠƒAƒ‹ŒvZ•”•ª‚ÌƒVƒF[ƒ_[ƒR[ƒh—á‚Å‚·B
+**À‘•‚µ‚½‹ZpF**
+- **Cook-Torranceƒ‚ƒfƒ‹**: ƒ}ƒCƒNƒƒtƒ@ƒZƒbƒg—˜_‚ÉŠî‚Ã‚­BRDF
+- **GGX•ª•z**: ‚æ‚èŒ»À“I‚ÈƒXƒyƒLƒ…ƒ‰ƒnƒCƒ‰ƒCƒg
+- **ƒtƒŒƒlƒ‹”½Ë**: Schlick‹ß—‚É‚æ‚é‚‘¬ŒvZ
+- **”w–Ê–@‚É‚æ‚éƒAƒEƒgƒ‰ƒCƒ“**: ƒZƒ‹ƒVƒF[ƒfƒBƒ“ƒO•—‚Ì•\Œ»
+
+ŠÈˆÕÀ‘•‚Æ‚µ‚Äg—p‚µ‚½•û–@‚Í”w–Ê–@‚ÅAŒ»İƒ\[ƒxƒ‹ƒtƒBƒ‹ƒ^‚ğg‚Á‚½—ÖŠsŒŸo‚ğì¬‚µ‚Ä‚¢‚Ü‚·B
 
 ![ƒ}ƒeƒŠƒAƒ‹ƒVƒF[ƒ_[1](images/PBR_PS.png)
 ![ƒ}ƒeƒŠƒAƒ‹ƒVƒF[ƒ_[2](images/PBR_Render.png)
 ![’Ç‰Áƒ}ƒeƒŠƒAƒ‹‰æ‘œ](images/NewMaterial.png)
 
+---
+
 ## ‰J—±‚Ìƒ|ƒXƒgƒvƒƒZƒX
 
-i“à—e‚ğ’Ç‰Á—\’èj
+**ŠJ”­’†**
+
+ƒp[ƒeƒBƒNƒ‹ƒVƒXƒeƒ€‚Æ‘g‚İ‡‚í‚¹‚½A“®“I‚È‰J—±ƒGƒtƒFƒNƒg‚ğÀ‘•—\’è‚Å‚·B
+
+---
+
+## ‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€iŠJ”­’†j
+
+Ÿ¢‘ã‚ÌƒŒƒ“ƒ_ƒŠƒ“ƒO‹Zp‚Æ‚µ‚ÄA**‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€**‚ÌÀ‘•‚ği‚ß‚Ä‚¢‚Ü‚·B
+
+**–Ú•WF**
+- ”•S–œƒ|ƒŠƒSƒ“‚ÌƒV[ƒ€ƒŒƒX‚È•`‰æ
+- ©“®LODŠÇ—
+- ƒƒ‚ƒŠŒø—¦‚ÌÅ“K‰»
+
+Ú×‚Í [‰¼‘zƒWƒIƒƒgƒŠƒy[ƒW](project-template.html?project=virtual-geometry) ‚ğ‚²——‚­‚¾‚³‚¢B
+
+---
+
+## ¡Œã‚ÌŠJ”­—\’è
+
+- ? ƒfƒBƒtƒ@[ƒhƒŒƒ“ƒ_ƒŠƒ“ƒO
+- ? ’¸“_ˆ³k
+- ? •¨—‰‰Z“‡
+- ? PBRƒ}ƒeƒŠƒAƒ‹
+- ?? ‰¼‘zƒWƒIƒƒgƒŠƒVƒXƒeƒ€
+- ?? “®“IƒOƒ[ƒoƒ‹ƒCƒ‹ƒ~ƒl[ƒVƒ‡ƒ“
+- ?? ƒ{ƒŠƒ…ƒƒgƒŠƒbƒNƒ‰ƒCƒeƒBƒ“ƒO
+- ? ƒŒƒCƒgƒŒ[ƒVƒ“ƒO‘Î‰iDirectX12 DXRj

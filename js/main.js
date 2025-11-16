@@ -10,7 +10,8 @@ const CONFIG = {
     AOS_DURATION: 800,
     AOS_OFFSET: 100,
     PARALLAX_SPEED: 0.5,
-    PROJECTS_DATA_URL: 'data/projects.json'
+    PROJECTS_DATA_URL: 'data/projects.json',
+    TOPICS_DATA_URL: 'data/topics.json'
 };
 
 // ======================
@@ -82,7 +83,7 @@ class HeroSlider {
     /**
      * スライドを変更
      */
-    changeSlide(offset) {
+    changeSlide(offset = 1) {
         const totalSlides = this.slides.length;
         const newIndex = (this.currentSlide + offset + totalSlides) % totalSlides;
         this.showSlide(newIndex);
@@ -93,7 +94,7 @@ class HeroSlider {
      */
     start() {
         this.stop();
-        this.slideInterval = setInterval(() => this.changeSlide(1), CONFIG.SLIDER_INTERVAL);
+        this.slideInterval = setInterval(() => this.changeSlide(), CONFIG.SLIDER_INTERVAL);
     }
 
     /**
@@ -211,6 +212,77 @@ class ProjectManager {
 }
 
 // ======================
+// トピック管理クラス
+// ======================
+class TopicManager {
+    constructor() {
+        this.topics = [];
+    }
+
+    /**
+     * トピックデータを読み込み
+     */
+    async loadTopics() {
+        try {
+            const response = await fetch(CONFIG.TOPICS_DATA_URL);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            this.topics = await response.json();
+            return this.topics;
+        } catch (error) {
+            console.error('トピックデータの読み込みに失敗しました:', error);
+            return [];
+        }
+    }
+
+    /**
+     * トピックカードを作成
+     */
+    createTopicCards(container) {
+        this.topics.forEach((topic, index) => {
+            const card = this.createTopicCard(topic, index);
+            container.appendChild(card);
+        });
+    }
+
+    /**
+     * トピックカードを作成
+     */
+    createTopicCard(topic, index) {
+        const card = Utils.createElement('a', 'topic-card block bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2', {
+            href: `topic-detail.html?topic=${topic.id}`,
+            'data-aos': 'fade-up',
+            'data-aos-delay': (index * 100).toString()
+        });
+
+        card.innerHTML = `
+            <div class="aspect-[16/9] bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+                ${topic.image ? `<img src="${topic.image}" alt="${topic.title}" class="w-full h-full object-cover opacity-80">` : ''}
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute top-4 left-4 text-5xl">${topic.icon}</div>
+                <div class="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 class="text-white text-2xl font-bold mb-2 font-japanese">${topic.title}</h3>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-600 text-sm mb-4 font-japanese line-clamp-2">${topic.description}</p>
+                <div class="flex flex-wrap gap-2">
+                    ${topic.tags.slice(0, 3).map(tag => `
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium font-japanese">
+                            ${tag}
+                        </span>
+                    `).join('')}
+                    ${topic.tags.length > 3 ? `<span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">+${topic.tags.length - 3}</span>` : ''}
+                </div>
+            </div>
+        `;
+
+        return card;
+    }
+}
+
+// ======================
 // イベントハンドラー設定
 // ======================
 function setupEventHandlers(slider) {
@@ -280,6 +352,8 @@ function initAOS() {
 // メイン初期化関数
 // ======================
 async function initPortfolio() {
+    console.log('Portfolio initialization started');
+
     // AOS初期化
     initAOS();
 
@@ -290,27 +364,65 @@ async function initPortfolio() {
     const projectManager = new ProjectManager();
     await projectManager.loadProjects();
 
+    console.log('Loaded projects:', projectManager.projects.length);
+
     // DOM要素取得
     const sliderElement = document.getElementById('hero-slider');
     const dotsContainer = document.getElementById('slider-dots');
     const projectGrid = document.getElementById('projects')?.querySelector('.grid');
 
-    if (!sliderElement || !dotsContainer || !projectGrid) {
-        console.error('必要なDOM要素が見つかりません');
+    console.log('DOM elements:', {
+        slider: !!sliderElement,
+        dots: !!dotsContainer,
+        grid: !!projectGrid
+    });
+
+    if (!sliderElement || !dotsContainer) {
+        console.error('スライダー関連のDOM要素が見つかりません');
+        console.error('slider:', sliderElement);
+        console.error('dots:', dotsContainer);
+        return;
+    }
+
+    if (!projectGrid) {
+        console.error('プロジェクトグリッドが見つかりません');
         return;
     }
 
     // スライダーとカード作成
     projectManager.createSliderAndCards(sliderElement, dotsContainer, projectGrid);
 
+    console.log('Slides created:', sliderElement.querySelectorAll('.slide').length);
+    console.log('Project cards created:', projectGrid.querySelectorAll('.project-card').length);
+
     // スライダー初期化
     const heroSlider = new HeroSlider(sliderElement, dotsContainer);
     heroSlider.updateSlides();
-    heroSlider.showSlide(0);
-    heroSlider.start();
+    
+    if (heroSlider.slides.length > 0) {
+        heroSlider.showSlide(0);
+        heroSlider.start();
+        console.log('Slider initialized with', heroSlider.slides.length, 'slides');
+    } else {
+        console.warn('No slides found in slider');
+    }
 
     // イベントハンドラー設定
     setupEventHandlers(heroSlider);
+
+    // トピックセクションの初期化
+    const topicsGrid = document.getElementById('topics-grid');
+    if (topicsGrid) {
+        const topicManager = new TopicManager();
+        await topicManager.loadTopics();
+        console.log('Loaded topics:', topicManager.topics.length);
+        topicManager.createTopicCards(topicsGrid);
+        console.log('Topic cards created:', topicsGrid.querySelectorAll('.topic-card').length);
+    } else {
+        console.warn('Topics grid not found');
+    }
+
+    console.log('Portfolio initialization completed');
 }
 
 // ======================

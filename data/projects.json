@@ -1,22 +1,32 @@
 [
     {
         "id": "dx-framework",
-        "title": "DirectX ƒtƒŒ[ƒ€ƒ[ƒN",
+        "title": "DirectX ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯",
         "image": "images/FrameWork.png",
         "env": "DirectX11",
-        "period": "2025”N1Œ`",
-        "role": "ŒÂl§ì",
-        "teamSize": "ŒÂl§ì",
+        "period": "2025å¹´1æœˆï½",
+        "role": "å€‹äººé–‹ç™º",
+        "teamSize": "å€‹äººé–‹ç™º",
         "descriptionFile": "data/projects/dx-framework.md"
+    },
+    {
+        "id": "virtual-geometry",
+        "title": "ä»®æƒ³ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚·ã‚¹ãƒ†ãƒ ",
+        "image": "images/VirtualGeometry.png",
+        "env": "DirectX11 (Compute Shader)",
+        "period": "2025å¹´11æœˆï½",
+        "role": "å€‹äººé–‹ç™ºãƒ»æ©Ÿèƒ½é–‹ç™º",
+        "teamSize": "å€‹äººé–‹ç™º",
+        "descriptionFile": "data/projects/virtual-geometry.md"
     },
     {
         "id": "shadow-collision",
         "title": "Shadow Collision",
         "image": "images/ShadowCollision.png",
-        "env": "Unity 2022.3.61",
-        "period": "2025”N3Œ`",
-        "role": "ƒQ[ƒ€‚ÌƒƒCƒ“ƒVƒXƒeƒ€",
-        "teamSize": "ƒvƒƒOƒ‰ƒ}[5l, ƒvƒ‰ƒ“ƒi[2l",
+        "env": "Unity 2022.3.61 URPç’°å¢ƒ",
+        "period": "5ãƒ¶æœˆ",
+        "role": "ã‚²ãƒ¼ãƒ ã®ãƒ¡ã‚¤ãƒ³ã‚·ã‚¹ãƒ†ãƒ ",
+        "teamSize": "ãƒ—ãƒ­ã‚°ãƒ©ãƒãƒ¼5äºº, ãƒ—ãƒ©ãƒ³ãƒŠãƒ¼2äºº",
         "descriptionFile": "data/projects/shadow-collision.md"
     },
     {
@@ -24,19 +34,19 @@
         "title": "Rotate Carry",
         "image": "images/RotateCarry.png",
         "env": "DirectX11",
-        "period": "2‚©Œ",
-        "role": "ŒÂl§ì",
-        "teamSize": "ŒÂl§ì",
+        "period": "2é€±é–“",
+        "role": "å€‹äººé–‹ç™º",
+        "teamSize": "å€‹äººé–‹ç™º",
         "descriptionFile": "data/projects/rotate-carry.md"
     },
     {
         "id": "pbr-raytracing",
-        "title": "PBR & ƒŒƒCƒgƒŒ[ƒVƒ“ƒO",
+        "title": "PBR & ãƒ¬ã‚¤ãƒˆãƒ¬ãƒ¼ã‚·ãƒ³ã‚°ï¼ˆDXRï¼‰",
         "image": "images/DirectX12PBR.png",
         "env": "DirectX12",
-        "period": "2025”N5Œ`",
-        "role": "ŒÂl§ì",
-        "teamSize": "ŒÂl§ì",
+        "period": "2025å¹´5æœˆï½",
+        "role": "å€‹äººé–‹ç™º",
+        "teamSize": "å€‹äººé–‹ç™º",
         "descriptionFile": "data/projects/pbr-raytracing.md"
     }
 ]

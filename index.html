@@ -105,6 +105,15 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
+        .topic-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .topic-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+        }
+
         .parallax-bg {
             transform: translateZ(0);
             will-change: transform;
@@ -112,6 +121,21 @@
 
         .modal-bg {
             background: rgba(0,0,0,0.45);
+        }
+
+        /* Text truncation utility */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -121,6 +145,7 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-lg font-display font-japanese">畠山 岳</a>
             <div class="hidden md:flex items-center space-x-8">
+                <a href="#topics" class="text-gray-600 hover:text-blue-500 transition-colors font-medium">Topics</a>
                 <a href="#projects" class="text-gray-600 hover:text-blue-500 transition-colors font-medium">Projects</a>
                 <a href="#about" class="text-gray-600 hover:text-blue-500 transition-colors font-medium">About</a>
             </div>
@@ -128,34 +153,57 @@
     </header>
 
     <main>
+        <!-- Hero Slider Section -->
         <section id="hero-banner" class="relative w-full py-8 bg-gray-100 overflow-hidden">
             <div class="parallax-bg absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-            <div id="hero-slider">
-
+            
+            <!-- Slider Container -->
+            <div id="hero-slider" class="relative">
+                <!-- スライドはJavaScriptで動的生成されます -->
             </div>
+            
+            <!-- Previous Button -->
             <div class="absolute inset-y-0 left-0 flex items-center">
                 <button id="prev-slide" class="bg-white/50 hover:bg-white/80 transition-colors p-2 rounded-full focus:outline-none ml-4">
                     <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 </button>
             </div>
+            
+            <!-- Next Button -->
             <div class="absolute inset-y-0 right-0 flex items-center">
                 <button id="next-slide" class="bg-white/50 hover:bg-white/80 transition-colors p-2 rounded-full focus:outline-none mr-4">
                     <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
             </div>
+            
+            <!-- Slider Dots -->
             <div id="slider-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-3">
-
+                <!-- ドットはJavaScriptで動的生成されます -->
             </div>
         </section>
 
         <div class="container mx-auto px-4 py-16 md:py-24">
+
+            <!-- Projects Section -->
             <section id="projects" class="mb-16 md:mb-24">
                 <h2 class="text-3xl md:text-4xl text-display text-center mb-12" data-aos="fade-up">Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
+                    <!-- プロジェクトカードはJavaScriptで動的生成されます -->
                 </div>
             </section>
 
+            <!-- Topics Section -->
+            <section id="topics" class="mb-16 md:mb-24">
+                <h2 class="text-3xl md:text-4xl text-display text-center mb-4" data-aos="fade-up">技術トピック</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto font-japanese" data-aos="fade-up" data-aos-delay="100">
+                    実装した技術をカテゴリごとに整理しています。各トピックをクリックすると詳細な技術解説と関連プロジェクトをご覧いただけます。
+                </p>
+                <div id="topics-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- トピックカードはJavaScriptで動的生成されます -->
+                </div>
+            </section>
+
+            <!-- About Section -->
             <section id="about" class="max-w-3xl mx-auto p-8 bg-gray-50 rounded-xl relative" data-aos="fade-up" data-aos-delay="200">
                 <h2 class="text-3xl text-display mb-6 text-center font-japanese">About Me</h2>
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
@@ -165,29 +213,19 @@
                     </div>
                     <!-- プロフィール情報 -->
                     <div class="text-base space-y-4 text-gray-700 flex-1 font-japanese" data-aos="fade-left" data-aos-delay="600">
-                        <p class="text-body"><strong class="font-semibold">名前</strong> </p> 畠山 岳</p>
-                        <p class="text-body"><strong class="font-semibold">経歴</strong> </p>HAL東京昼間部4年生ゲーム制作学科 (2023年4月入学/2027年3月卒業予定)</p>
-                        <p class="text-body"><strong class="font-semibold">今後挑戦したい分野</strong> </p>特にグラフィックス周りの技術や、ゲームエンジン内部の構築に強い関心があります。</p>
-                        <p class="text-body"><strong class="font-semibold">連絡先</strong> hatakeyama20528@gmail.com</p>
+                        <p class="text-body"><strong class="font-semibold">名前：</strong>畠山 岳</p>
+                        <p class="text-body"><strong class="font-semibold">経歴：</strong>HAL東京昼間部4年生ゲーム制作学科 (2023年4月入学/2027年3月卒業予定)</p>
+                        <p class="text-body"><strong class="font-semibold">今後挑戦したい分野：</strong>特にグラフィックス周りの技術や、ゲームエンジン内部の構築に強い関心があります。</p>
+                        <p class="text-body"><strong class="font-semibold">連絡先：</strong>hatakeyama20528@gmail.com</p>
                         <div>
                             <strong class="font-semibold">好きなゲーム：</strong>
                             <ul class="list-disc list-inside mt-1 space-y-1 text-body">
                                 <li>モンスターハンターダブルクロス</li>
                                 <li>ラチェット＆クランク</li>
                             </ul>
-                            <!--</div>-->
-                            <!-- 履歴書表示ボタン -->
-                            <!--<div class="mt-6 flex gap-4">
-            <button id="open-resume-modal" class="px-4 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition">履歴書を見る</button>
-            <a href="resume.pdf" download="畠山岳_履歴書.pdf" class="px-4 py-2 bg-green-600 text-white rounded shadow hover:bg-green-700 transition flex items-center" id="download-resume-btn">
-                <svg class="w-5 h-5 mr-2 -ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-                </svg>
-                履歴書をダウンロード
-            </a>
-        </div>-->
                         </div>
                     </div>
+                </div>
             </section>
         </div>
     </main>
