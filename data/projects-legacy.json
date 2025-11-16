@@ -1,0 +1,118 @@
+{
+    "dx-framework": {
+        "title": "DirectX フレームワーク",
+        "image": "images/FrameWork.png",
+        "description": "今年の進級制作展（就活）作品を制作するためのフレームワークとして準備している作品になります。<br><br>描画まわりについてこだわりたいと思っているので、実現できるように<strong class=\"font-semibold text-gray-900\">ディファードレンダリング</strong>、<strong class=\"font-semibold text-gray-900\">頂点圧縮</strong>、を実装しています。",
+        "details": [
+            { "label": "開発環境", "value": "DirectX11" },
+            { "label": "制作期間", "value": "2025年1月～" },
+            { "label": "担当箇所", "value": "個人制作" },
+            { "label": "開発人数", "value": "個人制作" }
+        ],
+        "richContent": [
+            {
+                "title": "圧縮プログラムのダウンロード",
+                "content": "<p class=\"mb-4\">頂点圧縮のサンプルプログラムは下記よりダウンロードできます：<br><a href=\"https://drive.google.com/drive/folders/1KpQY3D3uRsKXaaPuWcbWdjbdqgczFl_o?usp=drive_link\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-500 hover:underline\">Google Drive（圧縮プログラム配布）</a></p>"
+            },
+            {
+                "title": "頂点圧縮について",
+                "content": "<p class=\"mb-4\">下記の画像で使用しているモデルの頂点数は 9036個、一個当たり38バイトで合計約335.3KBとなります。<br>圧縮後の頂点は一個当たり20バイトで合計約176.4KBまで圧縮できています。</p><img src=\"images/ConpModel.png\" alt=\"頂点圧縮モデル\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
+            },
+            {
+                "title": "頂点のレイアウトについて",
+                "content": "<img src=\"images/Layout.png\" alt=\"頂点レイアウト\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
+            },
+            {
+                "title": "圧縮方式について",
+                "content": "<p>法線についてはOctahedronEncoding（<a href=\"https://knarkowicz.wordpress.com/2014/04/16/octahedron-normal-vector-encoding/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-500 hover:underline\">参考サイト</a>）を使用しており、もとの12バイトから4バイトまで圧縮を成功しています。</p><div class=\"flex flex-col md:flex-row gap-4 mt-4\"><img src=\"images/Normal1.png\" alt=\"圧縮方式1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Normal2.png\" alt=\"圧縮方式2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
+            },
+            {
+                "title": "画像処理について",
+                "content": "<p class=\"mb-4\">ガウシアンフィルタ、ソーベルフィルタ、シンプレックスノイズをテストしています。</p><img src=\"images/TextureTest.png\" alt=\"画像処理テスト\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
+            },
+            {
+                "title": "シェーダーについて",
+                "content": "<h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">1. 法線デコード処理</h4><p class=\"mb-4\">頂点圧縮で格納した法線ベクトルをデコードするシェーダーコード例です。16bit整数から-1～1の範囲に変換し、八面体マッピングで復元しています。</p><img src=\"images/Decode.png\" alt=\"法線デコードシェーダー\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\"><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">2. ディファードレンダリング用Gバッファ書き出し</h4><p class=\"mb-4\">Gバッファへの書き出しを行うピクセルシェーダーの一部です。アルベド、深度、法線、マテリアル情報をそれぞれのターゲットに出力しています。</p><img src=\"images/GBuff.png\" alt=\"Gバッファ書き出しシェーダー\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\"><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">3. こだわったマテリアル表現</h4><p class=\"mb-4\">PBR（物理ベースレンダリング）を意識し作成しました、追加でアウトラインを表示しています、簡易実装として使用した方法は背面法で、現在ソーベルフィルタを使った輪郭検出を作成しています。下記は実際のマテリアル計算部分のシェーダーコード例です。</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/PBR_PS.png\" alt=\"マテリアルシェーダー1\" class=\"w-full md:w-1/3 object-contain rounded-lg shadow-md bg-gray-200 p-2\"><img src=\"images/PBR_Render.png\" alt=\"マテリアルシェーダー2\" class=\"w-full md:w-1/3 object-contain rounded-lg shadow-md bg-gray-200 p-2\"><img src=\"images/NewMaterial.png\" alt=\"追加マテリアル画像\" class=\"w-full md:w-1/3 object-contain rounded-lg shadow-md bg-gray-200 p-2\"></div>"
+            },
+            {
+                "title": "雨粒のポストプロセス",
+                "content": ""
+            }
+        ]
+    },
+    "shadow-collision": {
+        "title": "Shadow Collision",
+        "image": "images/ShadowCollision.png",
+        "description": "グループでコンテストでの受賞を目指して制作している作品になります。<br><br>光と影のギミックをテーマにした2Dパズルアクションゲームです。プレイヤーは光源を操作して影の形を変化させ、道を作りながらゴールを目指します。",
+        "details": [
+            { "label": "開発環境", "value": "Unity 2022.3.61" },
+            { "label": "制作期間", "value": "2025年3月～" },
+            { "label": "担当箇所", "value": "ゲームのメインシステム" },
+            { "label": "開発人数", "value": "プログラマー5人, プランナー2人" }
+        ],
+        "richContent": [
+            {
+                "title": "ターンの切り替え",
+                "content": "<p class=\"mb-4\">このゲームには主に2つのフェーズがありそれぞれ2D、3Dで別れているのでそれの切り替え処理になります。<br>切り替えにはイージングを付けたり、切り替え時に背景に被写界深度を使ってぼかしを付けたり、細かいところを気を付けています。</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Turn1.png\" alt=\"ターン切り替え 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><video src=\"videos/Turn2.mp4\" autoplay loop muted playsinline alt=\"ターン切り替え 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></video></div>"
+            },
+            {
+                "title": "ゴール演出",
+                "content": "<p class=\"mb-4\">画像の輪郭を検出して切り出し、そのアウトラインを指定色に変更できるようにしてあり、そこにブルームを焚くことで作成しています。<br>輪郭検出アルゴリズムにはソーベルフィルターを採用しており、これを応用して現在の影の当たり判定にも応用しています。</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Goal1.png\" alt=\"ゴール演出 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Goal2.png\" alt=\"ゴール演出 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
+            },
+            {
+                "title": "オブジェクトの配置",
+                "content": "<p class=\"mb-4\">前述のとおり、フェーズが分かれているのですが、最初のタイミングで画面上にあるオブジェクトを好きな場所に配置できます。<br>配置に伴い操作周りも作成しました。</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Grap1.png\" alt=\"オブジェクト配置 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Grap2.png\" alt=\"オブジェクト配置 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
+            }
+        ]
+    },
+    "rotate-carry": {
+        "title": "Rotate Carry",
+        "image": "images/RotateCarry.png",
+        "description": "DirectX11を習い始めてから初めての制作ゲームです。<br>学校の課題として制作したので、ジャンルに指定があり落ちものゲームを作りました。",
+        "details": [
+            { "label": "開発環境", "value": "DirectX11" },
+            { "label": "制作期間", "value": "2か月" },
+            { "label": "担当箇所", "value": "個人制作" },
+            { "label": "開発人数", "value": "個人制作" }
+        ],
+        "richContent": [
+            {
+                "title": "ゲーム概要",
+                "content": "<p class=\"mb-4\">本作ではテトリスを参考にしつつも独自の要素として色を追加しています。<br>落下中にブロックを回転させて色を変え、同じ色が三つ以上揃うことで消すことが出来ます。</p><video src=\"videos/Rotate.mp4\" autoplay loop muted playsinline alt=\"ゲームプレイ動画\" class=\"w-full object-contain rounded-lg shadow-md bg-gray-200 p-1\"></video>"
+            },
+            {
+                "title": "詳細：独学での実装要素",
+                "content": "<p class=\"mb-4\">この作品では夏休みに独学で勉強した3Dモデル、DirectWrite、コントローラを実装しています。</p><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">3Dモデルについて</h4><p class=\"mb-4\">DirectX12の魔導書に記載があった.pmdモデルを使用しており、背景のスカイドームとして採用しました。</p><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">DirectWriteについて</h4><p class=\"mb-4\">操作UIやスコア、経過時間表示に使用しています。<br>背景が切り替わった際に文字の色も変えて可読性を保つなどの工夫をしています。</p><div class=\"flex flex-col md:flex-row gap-4 mb-4\"><img src=\"images/Sky1.png\" alt=\"背景1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Sky2.png\" alt=\"背景2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">コントローラについて</h4><p class=\"mb-4\">本作はキーボードとコントローラの両方に対応しており、コントローラの接続が確認出来たら自動的にUIを変えたりしています。</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/GameUI1.png\" alt=\"ゲームUI 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/GameUI2.png\" alt=\"ゲームUI 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
+            },
+            {
+                "title": "その他：ゲームデザインの工夫",
+                "content": "<p class=\"mb-4\">ゲームポーズ中はブロックを隠すことで配置を考える時間を稼げないようにするなど、実際にテトリスなどの落ちものゲームを遊び研究して取り入れていくことでブラッシュアップしていきました。</p><img src=\"images/Pose.png\" alt=\"ポーズ画面\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
+            }
+        ]
+    },
+    "pbr-raytracing": {
+        "title": "PBR & レイトレーシング",
+        "image": "images/DirectX12PBR.png",
+        "description": "CG検定の勉強をしていた際に目に留まったレイトレーシングを試してみた作品になります。<br><br>調べている際に負荷が高く現状ではゲームには利用することが難しいとの記載がありましたが、<strong class=\"font-semibold text-gray-900\">実際に自身で制作してみてどの部分の処理が重いのか、一部だけでも利用できる部分はないのかなどを思い</strong>制作に至りました。",
+        "details": [
+            { "label": "開発環境", "value": "DirectX12" },
+            { "label": "制作期間", "value": "2025年5月～" },
+            { "label": "担当箇所", "value": "個人制作" },
+            { "label": "開発人数", "value": "個人制作" }
+        ],
+        "richContent": [
+            {
+                "title": "DXR (DirectX Raytracing) による実装",
+                "content": "<p class=\"mb-4\">作品<a href=\"project-template.html?project=dx-framework\" class=\"text-blue-500 hover:underline\">FrameWork</a>にてPBRはすでに検証済みであったので、本作ではDirextX12に挑戦してDXRを使用し制作してみました。</p><img src=\"images/DXR.png\" alt=\"DXR 実装\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
+            },
+            {
+                "title": "開発での挑戦",
+                "content": "<p>今までのDirextX11と比べて名称が異なるものや、コマンド処理の違い、マルチスレッドにつまずく部分はありましたが、上記の作品で自習に使っていた参考書がDirextX12の本で合ったことなどが幸いし完成に至りました。</p>"
+            },
+            {
+                "title": "使用しているマテリアル",
+                "content": "<div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Material.png\" alt=\"マテリアル\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Ray.png\" alt=\"レイ\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
+            }
+        ]
+    }
+}

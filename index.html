@@ -22,11 +22,17 @@
     <meta property="twitter:title" content="畠山 岳 ポートフォリオ | ゲーム開発・グラフィックスプログラマー">
     <meta property="twitter:description" content="HAL東京在学中。DirectX、Unity、PBR、レイトレーシングなどのゲーム開発・グラフィックスプログラミングの実績を紹介。">
     <meta property="twitter:image" content="https://hatakeyama20528.github.io/images/og-image.webp">
+    
+    <!-- External Libraries -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
     <style>
         :root {
             --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -122,7 +128,6 @@
     </header>
 
     <main>
-
         <section id="hero-banner" class="relative w-full py-8 bg-gray-100 overflow-hidden">
             <div class="parallax-bg absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
             <div id="hero-slider">
@@ -144,7 +149,6 @@
         </section>
 
         <div class="container mx-auto px-4 py-16 md:py-24">
-
             <section id="projects" class="mb-16 md:mb-24">
                 <h2 class="text-3xl md:text-4xl text-display text-center mb-12" data-aos="fade-up">Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -192,180 +196,8 @@
         <p class="text-gray-500 text-sm font-japanese">&copy; 2025 畠山 岳</p>
     </footer>
 
+    <!-- External Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // AOS初期化
-        AOS.init({
-            duration: 800,
-            easing: "ease-in-out",
-            once: true,
-            offset: 100
-        });
-
-        // パララックス効果
-        window.addEventListener("scroll", () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector(".parallax-bg");
-            if (parallax) {
-                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const projects = [
-                {
-                    id: 'dx-framework',
-                    title: 'DirectX フレームワーク',
-                    image: 'images/FrameWork.png',
-                    env: 'DirectX11',
-                    period: '2025年1月～',
-                    role: '個人制作',
-                    teamSize: '個人制作'
-                },
-                {
-                    id: 'shadow-collision',
-                    title: 'Shadow Collision',
-                    image: 'images/ShadowCollision.png',
-                    env: 'Unity 2022.3.61',
-                    period: '2025年3月～',
-                    role: 'ゲームのメインシステム',
-                    teamSize: 'プログラマー5人, プランナー2人'
-                },
-                {
-                    id: 'rotate-carry',
-                    title: 'Rotate Carry',
-                    image: 'images/RotateCarry.png',
-                    env: 'DirectX11',
-                    period: '2か月',
-                    role: '個人制作',
-                    teamSize: '個人制作'
-                },
-                {
-                    id: 'pbr-raytracing',
-                    title: 'PBR & レイトレーシング',
-                    image: 'images/DirectX12PBR.png',
-                    env: 'DirectX12',
-                    period: '2025年5月～',
-                    role: '個人制作',
-                    teamSize: '個人制作'
-                }
-            ];
-
-            const slider = document.getElementById('hero-slider');
-            const dotsContainer = document.getElementById('slider-dots');
-            const projectGrid = document.getElementById('projects').querySelector('.grid');
-            let currentSlide = 0;
-            let slideInterval;
-            let slides = [];
-
-            function createSliderAndCards() {
-                projects.forEach((p, index) => {
-                    // Create slides
-                    const slide = document.createElement('a');
-                    slide.href = `project-template.html?project=${p.id}`;
-                    slide.className = 'slide';
-                    slide.dataset.index = index;
-                    slide.innerHTML = `
-                            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div class="absolute bottom-0 left-0 p-6">
-                                <h3 class="text-white text-xl md:text-3xl text-display font-japanese">${p.title}</h3>
-                                <p class="text-white/80 text-md mt-1 hidden md:block font-medium">${p.env}</p>
-                            </div>
-                        `;
-                    slider.appendChild(slide);
-
-                    // Create dots
-                    const dot = document.createElement('button');
-                    dot.className = 'w-2.5 h-2.5 rounded-full transition-colors bg-white/50 hover:bg-white/75';
-                    dot.dataset.index = index;
-                    dotsContainer.appendChild(dot);
-
-                    // Create Project Cards
-                    const card = document.createElement('a');
-                    card.href = `project-template.html?project=${p.id}`;
-                    card.className = 'project-card block bg-gray-50 rounded-lg overflow-hidden shadow-md';
-                    card.innerHTML = `
-                            <div class="aspect-[4/3] bg-gray-200">
-                                <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5">
-                                <h3 class="text-display text-lg font-japanese">${p.title}</h3>
-                                <p class="text-gray-600 text-sm mt-1 font-medium">${p.env}</p>
-                            </div>
-                        `;
-                    projectGrid.appendChild(card);
-                });
-                slides = slider.querySelectorAll('.slide');
-            }
-
-            function showSlide(index) {
-                if (!slides.length) return;
-
-                const targetSlide = slides[index];
-                const slideWidth = targetSlide.offsetWidth;
-                const slideMargin = parseFloat(window.getComputedStyle(targetSlide).marginLeft) * 2;
-                const offset = -(index * (slideWidth + slideMargin)) + (slider.parentElement.offsetWidth - slideWidth) / 2 - slideMargin / 2;
-
-                slider.style.transform = `translateX(${offset}px)`;
-
-                slides.forEach((slide, i) => {
-                    slide.classList.toggle('is-active', i === index);
-                });
-
-                const dots = dotsContainer.querySelectorAll('button');
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('bg-white', i === index);
-                    dot.classList.toggle('bg-white/50', i !== index);
-                });
-                currentSlide = index;
-            }
-
-            function changeSlide(offset) {
-                let newIndex = (currentSlide + offset + projects.length) % projects.length;
-                showSlide(newIndex);
-            }
-
-            function startSlider() {
-                stopSlider();
-                slideInterval = setInterval(() => changeSlide(1), 5000);
-            }
-
-            function stopSlider() {
-                if (slideInterval) clearInterval(slideInterval);
-            }
-
-            document.getElementById('next-slide').addEventListener('click', () => {
-                changeSlide(1);
-                startSlider();
-            });
-            document.getElementById('prev-slide').addEventListener('click', () => {
-                changeSlide(-1);
-                startSlider();
-            });
-            dotsContainer.addEventListener('click', (e) => {
-                if (e.target.matches('button')) {
-                    const index = parseInt(e.target.dataset.index, 10);
-                    showSlide(index);
-                    startSlider();
-                }
-            });
-
-            createSliderAndCards();
-            showSlide(0); // ポジションの初期化
-            startSlider();
-
-            window.addEventListener('resize', () => showSlide(currentSlide));
-
-            // === 履歴書ポップアップ関連 ===
-            const openResumeBtn = document.getElementById('open-resume-modal');
-            if (openResumeBtn) {
-                openResumeBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    window.open('resume.pdf', '_blank');
-                });
-            }
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

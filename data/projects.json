@@ -1,0 +1,42 @@
+[
+    {
+        "id": "dx-framework",
+        "title": "DirectX フレームワーク",
+        "image": "images/FrameWork.png",
+        "env": "DirectX11",
+        "period": "2025年1月～",
+        "role": "個人制作",
+        "teamSize": "個人制作",
+        "descriptionFile": "data/projects/dx-framework.md"
+    },
+    {
+        "id": "shadow-collision",
+        "title": "Shadow Collision",
+        "image": "images/ShadowCollision.png",
+        "env": "Unity 2022.3.61",
+        "period": "2025年3月～",
+        "role": "ゲームのメインシステム",
+        "teamSize": "プログラマー5人, プランナー2人",
+        "descriptionFile": "data/projects/shadow-collision.md"
+    },
+    {
+        "id": "rotate-carry",
+        "title": "Rotate Carry",
+        "image": "images/RotateCarry.png",
+        "env": "DirectX11",
+        "period": "2か月",
+        "role": "個人制作",
+        "teamSize": "個人制作",
+        "descriptionFile": "data/projects/rotate-carry.md"
+    },
+    {
+        "id": "pbr-raytracing",
+        "title": "PBR & レイトレーシング",
+        "image": "images/DirectX12PBR.png",
+        "env": "DirectX12",
+        "period": "2025年5月～",
+        "role": "個人制作",
+        "teamSize": "個人制作",
+        "descriptionFile": "data/projects/pbr-raytracing.md"
+    }
+]
