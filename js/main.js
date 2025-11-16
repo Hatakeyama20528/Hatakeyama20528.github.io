@@ -250,31 +250,19 @@ class TopicManager {
      * トピックカードを作成
      */
     createTopicCard(topic, index) {
-        const card = Utils.createElement('a', 'topic-card block bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2', {
+        const card = Utils.createElement('a', 'topic-card block bg-gray-50 rounded-lg overflow-hidden shadow-md', {
             href: `topic-detail.html?topic=${topic.id}`,
             'data-aos': 'fade-up',
             'data-aos-delay': (index * 100).toString()
         });
 
         card.innerHTML = `
-            <div class="aspect-[16/9] bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
-                ${topic.image ? `<img src="${topic.image}" alt="${topic.title}" class="w-full h-full object-cover opacity-80">` : ''}
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div class="absolute top-4 left-4 text-5xl">${topic.icon}</div>
-                <div class="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 class="text-white text-2xl font-bold mb-2 font-japanese">${topic.title}</h3>
-                </div>
+            <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
+                ${topic.image ? `<img src="${topic.image}" alt="${topic.title}" class="w-full h-full object-cover">` : `<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200"><span class="text-6xl">${topic.icon}</span></div>`}
             </div>
-            <div class="p-6">
-                <p class="text-gray-600 text-sm mb-4 font-japanese line-clamp-2">${topic.description}</p>
-                <div class="flex flex-wrap gap-2">
-                    ${topic.tags.slice(0, 3).map(tag => `
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium font-japanese">
-                            ${tag}
-                        </span>
-                    `).join('')}
-                    ${topic.tags.length > 3 ? `<span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">+${topic.tags.length - 3}</span>` : ''}
-                </div>
+            <div class="p-5">
+                <h3 class="text-display text-lg font-japanese mb-1">${topic.title}</h3>
+                <p class="text-gray-600 text-sm font-medium line-clamp-2">${topic.description}</p>
             </div>
         `;
 

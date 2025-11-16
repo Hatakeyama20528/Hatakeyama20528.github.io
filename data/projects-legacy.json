@@ -1,41 +1,41 @@
 {
     "dx-framework": {
-        "title": "DirectX �t���[�����[�N",
+        "title": "DirectX フレームワーク",
         "image": "images/FrameWork.png",
-        "description": "���N�̐i������W�i�A���j��i�𐧍삷�邽�߂̃t���[�����[�N�Ƃ��ď������Ă����i�ɂȂ�܂��B<br><br>�`��܂��ɂ��Ă�����肽���Ǝv���Ă���̂ŁA�����ł���悤��<strong class=\"font-semibold text-gray-900\">�f�B�t�@�[�h�����_�����O</strong>�A<strong class=\"font-semibold text-gray-900\">���_���k</strong>�A���������Ă��܂��B",
+        "description": "独学の進捗管理（ポートフォリオ）を制作するためのフレームワークとして作成している作品になります。<br><br>描画周りについて色々試したいと思っているので、現在できるように<strong class=\"font-semibold text-gray-900\">ディファードレンダリング</strong>、<strong class=\"font-semibold text-gray-900\">影描画</strong>、等実装しています。",
         "details": [
-            { "label": "�J����", "value": "DirectX11" },
-            { "label": "�������", "value": "2025�N1���`" },
-            { "label": "�S���ӏ�", "value": "�l����" },
-            { "label": "�J���l��", "value": "�l����" }
+            { "label": "開発環境", "value": "DirectX11" },
+            { "label": "開発期間", "value": "2025年1月～" },
+            { "label": "担当箇所", "value": "個人開発" },
+            { "label": "開発人数", "value": "個人開発" }
         ],
         "richContent": [
             {
-                "title": "���k�v���O�����̃_�E�����[�h",
-                "content": "<p class=\"mb-4\">���_���k�̃T���v���v���O�����͉��L���_�E�����[�h�ł��܂��F<br><a href=\"https://drive.google.com/drive/folders/1KpQY3D3uRsKXaaPuWcbWdjbdqgczFl_o?usp=drive_link\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-500 hover:underline\">Google Drive�i���k�v���O�����z�z�j</a></p>"
+                "title": "圧縮プログラムのダウンロード",
+                "content": "<p class=\"mb-4\">影描画のサンプルプログラムは下記よりダウンロードできます：<br><a href=\"https://drive.google.com/drive/folders/1KpQY3D3uRsKXaaPuWcbWdjbdqgczFl_o?usp=drive_link\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-500 hover:underline\">Google Drive（圧縮プログラム配布）</a></p>"
             },
             {
-                "title": "���_���k�ɂ���",
-                "content": "<p class=\"mb-4\">���L�̉摜�Ŏg�p���Ă��郂�f���̒��_���� 9036�A�������38�o�C�g�ō��v��335.3KB�ƂȂ�܂��B<br>���k��̒��_�͈������20�o�C�g�ō��v��176.4KB�܂ň��k�ł��Ă��܂��B</p><img src=\"images/ConpModel.png\" alt=\"���_���k���f��\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
+                "title": "影描画について",
+                "content": "<p class=\"mb-4\">下記の画像で使用しているモデルの頂点数は 9036、一頂点38バイトで合計は335.3KBとなります。<br>圧縮後の頂点は一頂点20バイトで合計は176.4KBまで圧縮できています。</p><img src=\"images/ConpModel.png\" alt=\"頂点圧縮モデル\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
             },
             {
-                "title": "���_�̃��C�A�E�g�ɂ���",
-                "content": "<img src=\"images/Layout.png\" alt=\"���_���C�A�E�g\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
+                "title": "頂点のレイアウトについて",
+                "content": "<img src=\"images/Layout.png\" alt=\"頂点レイアウト\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
             },
             {
-                "title": "���k�����ɂ���",
-                "content": "<p>�@���ɂ��Ă�OctahedronEncoding�i<a href=\"https://knarkowicz.wordpress.com/2014/04/16/octahedron-normal-vector-encoding/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-500 hover:underline\">�Q�l�T�C�g</a>�j���g�p���Ă���A���Ƃ�12�o�C�g����4�o�C�g�܂ň��k�𐬌����Ă��܂��B</p><div class=\"flex flex-col md:flex-row gap-4 mt-4\"><img src=\"images/Normal1.png\" alt=\"���k����1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Normal2.png\" alt=\"���k����2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
+                "title": "圧縮方法について",
+                "content": "<p>法線についてはOctahedronEncoding（<a href=\"https://knarkowicz.wordpress.com/2014/04/16/octahedron-normal-vector-encoding/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-blue-500 hover:underline\">参考サイト</a>）を使用しており、元々12バイトから4バイトまで圧縮を成功させています。</p><div class=\"flex flex-col md:flex-row gap-4 mt-4\"><img src=\"images/Normal1.png\" alt=\"圧縮方法1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Normal2.png\" alt=\"圧縮方法2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
             },
             {
-                "title": "�摜�����ɂ���",
-                "content": "<p class=\"mb-4\">�K�E�V�A���t�B���^�A�\�[�x���t�B���^�A�V���v���b�N�X�m�C�Y���e�X�g���Ă��܂��B</p><img src=\"images/TextureTest.png\" alt=\"�摜�����e�X�g\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
+                "title": "画像生成について",
+                "content": "<p class=\"mb-4\">ガウシアンフィルタ、ソーベルフィルタ、シンプレックスノイズ等テストしています。</p><img src=\"images/TextureTest.png\" alt=\"画像生成テスト\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
             },
             {
-                "title": "�V�F�[�_�[�ɂ���",
-                "content": "<h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">1. �@���f�R�[�h����</h4><p class=\"mb-4\">���_���k�Ŋi�[�����@���x�N�g�����f�R�[�h����V�F�[�_�[�R�[�h��ł��B16bit��������-1�`1�͈̔͂ɕϊ����A���ʑ̃}�b�s���O�ŕ������Ă��܂��B</p><img src=\"images/Decode.png\" alt=\"�@���f�R�[�h�V�F�[�_�[\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\"><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">2. �f�B�t�@�[�h�����_�����O�pG�o�b�t�@�����o��</h4><p class=\"mb-4\">G�o�b�t�@�ւ̏����o�����s���s�N�Z���V�F�[�_�[�̈ꕔ�ł��B�A���x�h�A�[�x�A�@���A�}�e���A���������ꂼ��̃^�[�Q�b�g�ɏo�͂��Ă��܂��B</p><img src=\"images/GBuff.png\" alt=\"G�o�b�t�@�����o���V�F�[�_�[\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\"><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">3. ����������}�e���A���\��</h4><p class=\"mb-4\">PBR�i�����x�[�X�����_�����O�j���ӎ����쐬���܂����A�ǉ��ŃA�E�g���C����\�����Ă��܂��A�ȈՎ����Ƃ��Ďg�p�������@�͔w�ʖ@�ŁA���݃\�[�x���t�B���^���g�����֊s���o���쐬���Ă��܂��B���L�͎��ۂ̃}�e���A���v�Z�����̃V�F�[�_�[�R�[�h��ł��B</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/PBR_PS.png\" alt=\"�}�e���A���V�F�[�_�[1\" class=\"w-full md:w-1/3 object-contain rounded-lg shadow-md bg-gray-200 p-2\"><img src=\"images/PBR_Render.png\" alt=\"�}�e���A���V�F�[�_�[2\" class=\"w-full md:w-1/3 object-contain rounded-lg shadow-md bg-gray-200 p-2\"><img src=\"images/NewMaterial.png\" alt=\"�ǉ��}�e���A���摜\" class=\"w-full md:w-1/3 object-contain rounded-lg shadow-md bg-gray-200 p-2\"></div>"
+                "title": "シェーダーについて",
+                "content": "<h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">1. 法線デコード処理</h4><p class=\"mb-4\">頂点圧縮で格納した法線ベクトルをデコードするシェーダーコードです。16bitの整数を-1～1の範囲に変換し、球面上のマッピングで復元しています。</p><img src=\"images/Decode.png\" alt=\"法線デコードシェーダー\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\"><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">2. ディファードレンダリング用Gバッファ書き出し</h4><p class=\"mb-4\">Gバッファへの情報出力を行うピクセルシェーダーの一部です。アルベド、深度、法線、マテリアル情報をそれぞれのターゲットに出力しています。</p><img src=\"images/GBuff.png\" alt=\"Gバッファ書き出しシェーダー\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\"><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">3. 様々なマテリアル表現</h4><p class=\"mb-4\">PBR（物理ベースレンダリング）を意識し作成しましたが、追加でアウトライン表現もしています、簡易実装ということで使用した手法は背景法で、現在ソーベルフィルタを使った輪郭線抽出作成しています。下記は実際のマテリアル演算時のシェーダーコードです。</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/PBR_PS.png\" alt=\"マテリアルシェーダー1\" class=\"w-full md:w-1/3 object-contain rounded-lg shadow-md bg-gray-200 p-2\"><img src=\"images/PBR_Render.png\" alt=\"マテリアルシェーダー2\" class=\"w-full md:w-1/3 object-contain rounded-lg shadow-md bg-gray-200 p-2\"><img src=\"images/NewMaterial.png\" alt=\"追加マテリアル画像\" class=\"w-full md:w-1/3 object-contain rounded-lg shadow-md bg-gray-200 p-2\"></div>"
             },
             {
-                "title": "�J���̃|�X�g�v���Z�X",
+                "title": "カメラのポストプロセス",
                 "content": ""
             }
         ]
@@ -43,75 +43,75 @@
     "shadow-collision": {
         "title": "Shadow Collision",
         "image": "images/ShadowCollision.png",
-        "description": "�O���[�v�ŃR���e�X�g�ł̎�܂�ڎw���Đ��삵�Ă����i�ɂȂ�܂��B<br><br>���Ɖe�̃M�~�b�N���e�[�}�ɂ���2D�p�Y���A�N�V�����Q�[���ł��B�v���C���[�͌����𑀍삵�ĉe�̌`��ω������A�������Ȃ���S�[����ڎw���܂��B",
+        "description": "グループでコンテストでの受賞を目指して制作している作品になります。<br><br>光と影のギミックをテーマにした2Dパズルアクションゲームです。プレイヤーは光源を操作して影の形を変化させ、障害物を乗り越えてゴールを目指します。",
         "details": [
-            { "label": "�J����", "value": "Unity 2022.3.61" },
-            { "label": "�������", "value": "2025�N3���`" },
-            { "label": "�S���ӏ�", "value": "�Q�[���̃��C���V�X�e��" },
-            { "label": "�J���l��", "value": "�v���O���}�[5�l, �v�����i�[2�l" }
+            { "label": "開発環境", "value": "Unity 2022.3.61" },
+            { "label": "開発期間", "value": "2025年3月～" },
+            { "label": "担当箇所", "value": "ゲームのメインシステム" },
+            { "label": "開発人数", "value": "プログラマー5人, プランナー2人" }
         ],
         "richContent": [
             {
-                "title": "�^�[���̐؂�ւ�",
-                "content": "<p class=\"mb-4\">���̃Q�[���ɂ͎��2�̃t�F�[�Y�����肻�ꂼ��2D�A3D�ŕʂ�Ă���̂ł���̐؂�ւ������ɂȂ�܂��B<br>�؂�ւ��ɂ̓C�[�W���O��t������A�؂�ւ����ɔw�i�ɔ�ʊE�[�x���g���Ăڂ�����t������A�ׂ����Ƃ�����C��t���Ă��܂��B</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Turn1.png\" alt=\"�^�[���؂�ւ� 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><video src=\"videos/Turn2.mp4\" autoplay loop muted playsinline alt=\"�^�[���؂�ւ� 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></video></div>"
+                "title": "ターンの切り替え",
+                "content": "<p class=\"mb-4\">このゲームには主に2つのフェーズがありそれぞれ2D、3Dで分かれているのでその切り替えが重要になります。<br>切り替えにはイージングを付けており、切り替わる際に背景に半透明レイヤーを貼って暗くする演出など、細かいところに気を付けています。</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Turn1.png\" alt=\"ターン切り替え 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><video src=\"videos/Turn2.mp4\" autoplay loop muted playsinline alt=\"ターン切り替え 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></video></div>"
             },
             {
-                "title": "�S�[�����o",
-                "content": "<p class=\"mb-4\">�摜�̗֊s�����o���Đ؂�o���A���̃A�E�g���C�����w��F�ɕύX�ł���悤�ɂ��Ă���A�����Ƀu���[���𕰂����Ƃō쐬���Ă��܂��B<br>�֊s���o�A���S���Y���ɂ̓\�[�x���t�B���^�[���̗p���Ă���A��������p���Č��݂̉e�̓����蔻��ɂ����p���Ă��܂��B</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Goal1.png\" alt=\"�S�[�����o 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Goal2.png\" alt=\"�S�[�����o 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
+                "title": "ゴール演出",
+                "content": "<p class=\"mb-4\">画像の輪郭線を抽出して切り抜き、そのアウトラインを指定色に変更できるようにしており、最後にブルームを吹かせることで作成しています。<br>輪郭線抽出、影ズレにはソーベルフィルターをその用いており、後者を用い現在の影の歪み判定にも応用しています。</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Goal1.png\" alt=\"ゴール演出 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Goal2.png\" alt=\"ゴール演出 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
             },
             {
-                "title": "�I�u�W�F�N�g�̔z�u",
-                "content": "<p class=\"mb-4\">�O�q�̂Ƃ���A�t�F�[�Y��������Ă���̂ł����A�ŏ��̃^�C�~���O�ŉ�ʏ�ɂ���I�u�W�F�N�g���D���ȏꏊ�ɔz�u�ł��܂��B<br>�z�u�ɔ������������쐬���܂����B</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Grap1.png\" alt=\"�I�u�W�F�N�g�z�u 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Grap2.png\" alt=\"�I�u�W�F�N�g�z�u 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
+                "title": "オブジェクトの配置",
+                "content": "<p class=\"mb-4\">前述のとおり、フェーズが分かれているのですが、最初のタイミングで画面上にあるオブジェクトを好きな場所に配置できます。<br>配置に伴う処理も作成しました。</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Grap1.png\" alt=\"オブジェクト配置 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Grap2.png\" alt=\"オブジェクト配置 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
             }
         ]
     },
     "rotate-carry": {
         "title": "Rotate Carry",
         "image": "images/RotateCarry.png",
-        "description": "DirectX11���K���n�߂Ă��珉�߂Ă̐���Q�[���ł��B<br>�w�Z�̉ۑ�Ƃ��Đ��삵���̂ŁA�W�������Ɏw�肪���藎�����̃Q�[�������܂����B",
+        "description": "DirectX11を勉強し始めて初めての制作ゲームです。<br>学校の課題として制作したので、仕様は決められた指定があり落ち物のゲームとなりました。",
         "details": [
-            { "label": "�J����", "value": "DirectX11" },
-            { "label": "�������", "value": "2����" },
-            { "label": "�S���ӏ�", "value": "�l����" },
-            { "label": "�J���l��", "value": "�l����" }
+            { "label": "開発環境", "value": "DirectX11" },
+            { "label": "開発期間", "value": "2週間" },
+            { "label": "担当箇所", "value": "個人開発" },
+            { "label": "開発人数", "value": "個人開発" }
         ],
         "richContent": [
             {
-                "title": "�Q�[���T�v",
-                "content": "<p class=\"mb-4\">�{��ł̓e�g���X���Q�l�ɂ����Ǝ��̗v�f�Ƃ��ĐF��ǉ����Ă��܂��B<br>�������Ƀu���b�N����]�����ĐF��ς��A�����F���O�ȏ㑵�����Ƃŏ������Ƃ��o���܂��B</p><video src=\"videos/Rotate.mp4\" autoplay loop muted playsinline alt=\"�Q�[���v���C����\" class=\"w-full object-contain rounded-lg shadow-md bg-gray-200 p-1\"></video>"
+                "title": "ゲーム概要",
+                "content": "<p class=\"mb-4\">本作ではテトリスを参考にし主な要素として色を追加しています。<br>回転することでブロックが回転して色が変わり、同じ色が一定以上揃うことで消滅することができます。</p><video src=\"videos/Rotate.mp4\" autoplay loop muted playsinline alt=\"ゲームプレイ動画\" class=\"w-full object-contain rounded-lg shadow-md bg-gray-200 p-1\"></video>"
             },
             {
-                "title": "�ڍׁF�Ɗw�ł̎����v�f",
-                "content": "<p class=\"mb-4\">���̍�i�ł͉ċx�݂ɓƊw�ŕ׋�����3D���f���ADirectWrite�A�R���g���[�����������Ă��܂��B</p><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">3D���f���ɂ���</h4><p class=\"mb-4\">DirectX12�̖������ɋL�ڂ�������.pmd���f�����g�p���Ă���A�w�i�̃X�J�C�h�[���Ƃ��č̗p���܂����B</p><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">DirectWrite�ɂ���</h4><p class=\"mb-4\">����UI��X�R�A�A�o�ߎ��ԕ\���Ɏg�p���Ă��܂��B<br>�w�i���؂�ւ�����ۂɕ����̐F���ς��ĉǐ���ۂȂǂ̍H�v�����Ă��܂��B</p><div class=\"flex flex-col md:flex-row gap-4 mb-4\"><img src=\"images/Sky1.png\" alt=\"�w�i1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Sky2.png\" alt=\"�w�i2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">�R���g���[���ɂ���</h4><p class=\"mb-4\">�{��̓L�[�{�[�h�ƃR���g���[���̗����ɑΉ����Ă���A�R���g���[���̐ڑ����m�F�o�����玩���I��UI��ς����肵�Ă��܂��B</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/GameUI1.png\" alt=\"�Q�[��UI 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/GameUI2.png\" alt=\"�Q�[��UI 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
+                "title": "詳細：冬休みでの実装要素",
+                "content": "<p class=\"mb-4\">この作品では冬休みに独学で勉強した3Dモデル、DirectWrite、コントローラーを実装しています。</p><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">3Dモデルについて</h4><p class=\"mb-4\">DirectX12の本等に記載されている.pmdモデルを使用しており、背景のスカイドームとして活用しました。</p><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">DirectWriteについて</h4><p class=\"mb-4\">主にUIやスコア、経過時間表示に使用しています。<br>背景が切り替わる際に文字の色を変えて可読性等の工夫もしています。</p><div class=\"flex flex-col md:flex-row gap-4 mb-4\"><img src=\"images/Sky1.png\" alt=\"背景1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Sky2.png\" alt=\"背景2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div><h4 class=\"text-xl font-bold mt-6 mb-2 text-gray-800\">コントローラーについて</h4><p class=\"mb-4\">本作はキーボードとコントローラーの両方に対応しており、コントローラーの接続が確認出来次第自動的にUIを変わるようにしています。</p><div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/GameUI1.png\" alt=\"ゲームUI 1\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/GameUI2.png\" alt=\"ゲームUI 2\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
             },
             {
-                "title": "���̑��F�Q�[���f�U�C���̍H�v",
-                "content": "<p class=\"mb-4\">�Q�[���|�[�Y���̓u���b�N���B�����ƂŔz�u���l���鎞�Ԃ��҂��Ȃ��悤�ɂ���ȂǁA���ۂɃe�g���X�Ȃǂ̗������̃Q�[����V�ь������Ď�����Ă������ƂŃu���b�V���A�b�v���Ă����܂����B</p><img src=\"images/Pose.png\" alt=\"�|�[�Y���\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
+                "title": "その他：ゲームデザインの工夫",
+                "content": "<p class=\"mb-4\">ゲームポーズ中はブロックを透明にすることで配置を考える時間を作らないようにするなど、実際にテトリスなどの落ち物のゲームを参考にして作成したことでブラッシュアップしていきました。</p><img src=\"images/Pose.png\" alt=\"ポーズ画面\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
             }
         ]
     },
     "pbr-raytracing": {
-        "title": "PBR & ���C�g���[�V���O",
+        "title": "PBR & レイトレーシング",
         "image": "images/DirectX12PBR.png",
-        "description": "CG����̕׋������Ă����ۂɖڂɗ��܂������C�g���[�V���O�������Ă݂���i�ɂȂ�܂��B<br><br>���ׂĂ���ۂɕ��ׂ���������ł̓Q�[���ɂ͗��p���邱�Ƃ�����Ƃ̋L�ڂ�����܂������A<strong class=\"font-semibold text-gray-900\">���ۂɎ��g�Ő��삵�Ă݂Ăǂ̕����̏������d���̂��A�ꕔ�����ł����p�ł��镔���͂Ȃ��̂��Ȃǂ��v��</strong>����Ɏ���܂����B",
+        "description": "CG関連の勉強をしている際に目に留まったレイトレーシングを実装してみた作品になります。<br><br>調べている際に勉強するのはゲームには流用することができないとの記載がありましたが、<strong class=\"font-semibold text-gray-900\">実際に自身で制作してみてどの部分の処理が重いのか、一部だけでも応用できる部分はないのかなど思う</strong>ままに作成しました。",
         "details": [
-            { "label": "�J����", "value": "DirectX12" },
-            { "label": "�������", "value": "2025�N5���`" },
-            { "label": "�S���ӏ�", "value": "�l����" },
-            { "label": "�J���l��", "value": "�l����" }
+            { "label": "開発環境", "value": "DirectX12" },
+            { "label": "開発期間", "value": "2025年5月～" },
+            { "label": "担当箇所", "value": "個人開発" },
+            { "label": "開発人数", "value": "個人開発" }
         ],
         "richContent": [
             {
-                "title": "DXR (DirectX Raytracing) �ɂ�����",
-                "content": "<p class=\"mb-4\">��i<a href=\"project-template.html?project=dx-framework\" class=\"text-blue-500 hover:underline\">FrameWork</a>�ɂ�PBR�͂��łɌ��؍ς݂ł������̂ŁA�{��ł�DirextX12�ɒ��킵��DXR���g�p�����삵�Ă݂܂����B</p><img src=\"images/DXR.png\" alt=\"DXR ����\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
+                "title": "DXR (DirectX Raytracing) について理由",
+                "content": "<p class=\"mb-4\">以前<a href=\"project-template.html?project=dx-framework\" class=\"text-blue-500 hover:underline\">FrameWork</a>にてPBRは既に検証済みでしたのので、本作ではDirextX12に挑戦しDXRを使用し制作してみました。</p><img src=\"images/DXR.png\" alt=\"DXR 理由\" class=\"w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2\">"
             },
             {
-                "title": "�J���ł̒���",
-                "content": "<p>���܂ł�DirextX11�Ɣ�ׂĖ��̂��قȂ���̂�A�R�}���h�����̈Ⴂ�A�}���`�X���b�h�ɂ܂��������͂���܂������A��L�̍�i�Ŏ��K�Ɏg���Ă����Q�l����DirextX12�̖{�ō��������ƂȂǂ��K���������Ɏ���܂����B</p>"
+                "title": "開発での注意",
+                "content": "<p>今までのDirextX11と比べて何もかもが異なるので、コマンドリストの違い、マルチスレッドに回すべき処理はあるかなどありましたが、上記の作品で適宜使っていた参考書やDirextX12の本で勉強したことなどを活かし進めました。</p>"
             },
             {
-                "title": "�g�p���Ă���}�e���A��",
-                "content": "<div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Material.png\" alt=\"�}�e���A��\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Ray.png\" alt=\"���C\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
+                "title": "使用しているマテリアル",
+                "content": "<div class=\"flex flex-col md:flex-row gap-4\"><img src=\"images/Material.png\" alt=\"マテリアル\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"><img src=\"images/Ray.png\" alt=\"レイ\" class=\"w-full md:w-1/2 object-contain rounded-lg shadow-md bg-gray-200 p-1\"></div>"
             }
         ]
     }
