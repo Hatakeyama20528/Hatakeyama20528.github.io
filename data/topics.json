@@ -2,7 +2,6 @@
     {
         "id": "rendering",
         "title": "レンダリング技術",
-        "icon": "🎨",
         "description": "ディファードレンダリング、PBR、影描画などの先進的なグラフィックス技術",
         "image": "images/topics/rendering-topic.png",
         "tags": ["ディファードレンダリング", "PBR", "影描画", "シェーダー"],
@@ -11,7 +10,6 @@
     {
         "id": "physics",
         "title": "物理演算",
-        "icon": "⚛️",
         "description": "Jolt Physicsを使用した高速なリジッドボディシミュレーションと衝突検出",
         "image": "images/topics/physics-topic.png",
         "tags": ["Jolt Physics", "リジッドボディ", "衝突検出", "物理システム"],
@@ -20,7 +18,6 @@
     {
         "id": "virtual-geometry",
         "title": "仮想ジオメトリ",
-        "icon": "🔷",
         "description": "大規模メッシュレンダリング技術。メッシュクラスタリングとGPU駆動型レンダリング",
         "image": "images/topics/virtual-geometry-topic.png",
         "tags": ["メッシュクラスタリング", "LOD", "Compute Shader", "GPU Culling"],
@@ -29,7 +26,6 @@
     {
         "id": "shader-effects",
         "title": "シェーダーエフェクト",
-        "icon": "✨",
         "description": "カスタムシェーダーによる高度なビジュアルエフェクトとポストプロセス",
         "image": "images/topics/shader-topic.png",
         "tags": ["ポストプロセス", "アウトライン", "ソーベルフィルタ", "ブルーム"],
@@ -38,7 +34,6 @@
     {
         "id": "procedural",
         "title": "プロシージャル生成",
-        "icon": "🌍",
         "description": "ノイズ関数を使用したテクスチャ生成とプロシージャルコンテンツ",
         "image": "images/topics/procedural-topic.png",
         "tags": ["シンプレックスノイズ", "プロシージャルテクスチャ", "地形生成"],
@@ -47,7 +42,6 @@
     {
         "id": "ui-systems",
         "title": "UI・入力システム",
-        "icon": "🎮",
         "description": "DirectWriteによるテキスト描画とコントローラー対応",
         "image": "images/topics/ui-topic.png",
         "tags": ["DirectWrite", "コントローラー", "入力システム", "UI/UX"],
