@@ -20,6 +20,11 @@ class MarkdownRenderer {
      */
     static async render(markdown) {
         if (typeof marked !== 'undefined') {
+            // 動画記法を事前処理（marked.jsの前に変換）
+            markdown = markdown.replace(/\[video:(.*?)\]/g, (match, videoPath) => {
+                return `<video src="${videoPath}" autoplay loop muted playsinline class="w-full object-contain rounded-lg shadow-md bg-gray-200 p-1"></video>`;
+            });
+
             // marked.jsが利用可能な場合
             marked.setOptions({
                 breaks: true,

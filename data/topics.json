@@ -3,7 +3,7 @@
         "id": "rendering",
         "title": "レンダリング技術",
         "description": "ディファードレンダリング、PBR、頂点圧縮などのグラフィックス技術",
-        "image": "images/topics/rendering-topic.png",
+        "image": "images/rendering-topic.png",
         "tags": [ "ディファードレンダリング", "PBR", "頂点圧縮", "シェーダー" ],
         "relatedProjects": [ "dx-framework", "pbr-raytracing" ]
     },
@@ -11,7 +11,7 @@
         "id": "physics",
         "title": "物理演算",
         "description": "Jolt Physicsを使用した高速なリジッドボディシミュレーションと衝突検出",
-        "image": "images/topics/physics-topic.png",
+        "image": "images/physics-topic.png",
         "tags": [ "Jolt Physics", "リジッドボディ", "衝突検出", "物理システム" ],
         "relatedProjects": [ "dx-framework" ]
     },
@@ -19,7 +19,7 @@
         "id": "virtual-geometry",
         "title": "仮想ジオメトリ",
         "description": "大規模メッシュレンダリング技術。メッシュクラスタリングとGPU駆動型レンダリング",
-        "image": "images/topics/virtual-geometry-topic.png",
+        "image": "images/comingsoon.png",
         "tags": [ "メッシュクラスタリング", "LOD", "Compute Shader", "GPU Culling" ],
         "relatedProjects": [ "virtual-geometry" ]
     },
@@ -27,7 +27,7 @@
         "id": "atmosphere",
         "title": "大気シミュレーション",
         "description": "レイマーチを使った散乱計算と最適化",
-        "image": "images/topics/atmosphere-topic.png",
+        "image": "images/atmosphere-topic.png",
         "tags": [ "atmosphere", "最適化", "PS", "レイマーチ" ],
         "relatedProjects": [ "dx-framework" ]
     },
@@ -35,7 +35,7 @@
         "id": "shader-effects",
         "title": "シェーダーエフェクト",
         "description": "カスタムシェーダーによる高度なビジュアルエフェクトとポストプロセス",
-        "image": "images/topics/shader-topic.png",
+        "image": "images/shader-topic.png",
         "tags": [ "ポストプロセス", "アウトライン", "ソーベルフィルタ", "ブルーム" ],
         "relatedProjects": [ "shadow-collision", "dx-framework" ]
     },
@@ -43,7 +43,7 @@
         "id": "procedural",
         "title": "プロシージャル生成",
         "description": "ノイズ関数を使用したテクスチャ生成とプロシージャルコンテンツ",
-        "image": "images/topics/procedural-topic.png",
+        "image": "images/procedural-topic.png",
         "tags": [ "シンプレックスノイズ", "プロシージャルテクスチャ", "地形生成" ],
         "relatedProjects": [ "dx-framework" ]
     },
@@ -51,7 +51,7 @@
         "id": "ui-systems",
         "title": "UI・入力システム",
         "description": "DirectWriteによるテキスト描画とコントローラー対応",
-        "image": "images/topics/ui-topic.png",
+        "image": "images/GameUI1.png",
         "tags": [ "DirectWrite", "コントローラー", "入力システム", "UI/UX" ],
         "relatedProjects": [ "rotate-carry", "dx-framework" ]
     }
