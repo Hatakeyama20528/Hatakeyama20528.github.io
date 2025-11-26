@@ -21,6 +21,12 @@ class MarkdownRenderer {
     static async render(markdown) {
         if (typeof marked !== 'undefined') {
             // marked.jsが利用可能な場合
+            marked.setOptions({
+                breaks: true,
+                gfm: true,
+                headerIds: true,
+                mangle: false
+            });
             return marked.parse(markdown);
         } else {
             // フォールバック：簡易的な変換
@@ -35,29 +41,25 @@ class MarkdownRenderer {
         let html = markdown;
         
         // 見出し
-        html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold mt-6 mb-2 text-gray-800">$1</h3>');
-        html = html.replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-900">$1</h2>');
-        html = html.replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold mt-10 mb-6 text-gray-900">$1</h1>');
+        html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+        html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+        html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
         
         // 太字
-        html = html.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-gray-900">$1</strong>');
+        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         
         // リンク
-        html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>');
+        html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
         
         // 画像
-        html = html.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="w-full object-contain my-4 rounded-lg shadow-md bg-gray-200 p-2 cursor-pointer">');
+        html = html.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="cursor-pointer">');
         
         // 動画
         html = html.replace(/\[video:(.*?)\]/g, '<video src="$1" autoplay loop muted playsinline class="w-full object-contain rounded-lg shadow-md bg-gray-200 p-1"></video>');
         
         // 段落
-        html = html.replace(/\n\n/g, '</p><p class="mb-4">');
-        html = '<p class="mb-4">' + html + '</p>';
-        
-        // 改行
-        html = html.replace(/<\/p><p class="mb-4"><h/g, '</p><h');
-        html = html.replace(/<\/h[1-6]><p class="mb-4">/g, '</h3>');
+        html = html.replace(/\n\n/g, '</p><p>');
+        html = '<p>' + html + '</p>';
         
         return html;
     }
@@ -137,9 +139,8 @@ class ProjectDetailManager {
             // Markdownファイルから読み込み
             const content = await MarkdownRenderer.loadAndRender(project.descriptionFile);
             descriptionHtml = `
-                <div class="bg-white p-8 rounded-lg mt-8">
-                    <h2 class="text-2xl font-bold mb-4">詳細</h2>
-                    <div class="prose max-w-none">${content}</div>
+                <div class="markdown-body mt-8">
+                    ${content}
                 </div>
             `;
         } else if (project.description) {
@@ -227,6 +228,15 @@ class ProjectDetailManager {
             ${detailsContent}
         `;
 
+        // シンタックスハイライトを適用
+        if (typeof hljs !== 'undefined') {
+            setTimeout(() => {
+                document.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightElement(block);
+                });
+            }, 100);
+        }
+
         // 画像クリックイベントを設定
         this.setupImageModal();
     }
@@ -255,8 +265,8 @@ class ProjectDetailManager {
             modalImg.style.transform = 'scale(1) translate(0px, 0px)';
         };
 
-        // 画像クリックで拡大
-        document.querySelectorAll('img').forEach(img => {
+        // 画像クリックで拡大（markdown-body内の画像のみ）
+        document.querySelectorAll('.markdown-body img').forEach(img => {
             img.addEventListener('click', function() {
                 resetModalImage();
                 modalImg.src = this.src;
