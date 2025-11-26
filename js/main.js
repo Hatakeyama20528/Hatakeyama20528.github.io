@@ -258,7 +258,7 @@ class TopicManager {
 
         card.innerHTML = `
             <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                ${topic.image ? `<img src="${topic.image}" alt="${topic.title}" class="w-full h-full object-cover">` : `<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200"><span class="text-6xl">${topic.icon}</span></div>`}
+                <img src="${topic.image}" alt="${topic.title}" class="w-full h-full object-cover">
             </div>
             <div class="p-5">
                 <h3 class="text-display text-lg font-japanese mb-1">${topic.title}</h3>

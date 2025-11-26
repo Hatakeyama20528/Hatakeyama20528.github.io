@@ -76,7 +76,6 @@ class TopicDetailManager {
         // ヘッダーセクション
         const headerHtml = `
             <div class="text-center mb-12" data-aos="fade-up">
-                <div class="text-6xl mb-4">${topic.icon}</div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-4 font-japanese">${topic.title}</h1>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto font-japanese">${topic.description}</p>
             </div>
