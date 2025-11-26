@@ -1,9 +1,9 @@
 /**
- * ƒgƒsƒbƒNÚ×ƒy[ƒW‚ÌJavaScript
+ * ãƒˆãƒ”ãƒƒã‚¯è©³ç´°ãƒšãƒ¼ã‚¸ã®JavaScript
  */
 
 // ======================
-// ’è”’è‹`
+// å®šæ•°å®šç¾©
 // ======================
 const TOPIC_CONFIG = {
     TOPICS_DATA_URL: 'data/topics.json',
@@ -11,7 +11,7 @@ const TOPIC_CONFIG = {
 };
 
 // ======================
-// ƒgƒsƒbƒNÚ×ŠÇ—ƒNƒ‰ƒX
+// ãƒˆãƒ”ãƒƒã‚¯è©³ç´°ç®¡ç†ã‚¯ãƒ©ã‚¹
 // ======================
 class TopicDetailManager {
     constructor() {
@@ -20,11 +20,11 @@ class TopicDetailManager {
     }
 
     /**
-     * ƒgƒsƒbƒN‚ÆƒvƒƒWƒFƒNƒgƒf[ƒ^‚ğ“Ç‚İ‚İ
+     * ãƒˆãƒ”ãƒƒã‚¯ã¨ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãƒ‡ãƒ¼ã‚¿ã‚’èª­ã¿è¾¼ã¿
      */
     async loadData() {
         try {
-            // ƒgƒsƒbƒNƒf[ƒ^‚ğ“Ç‚İ‚İ
+            // ãƒˆãƒ”ãƒƒã‚¯ãƒ‡ãƒ¼ã‚¿ã‚’èª­ã¿è¾¼ã¿
             const topicsResponse = await fetch(TOPIC_CONFIG.TOPICS_DATA_URL);
             if (topicsResponse.ok) {
                 const topicsArray = await topicsResponse.json();
@@ -33,7 +33,7 @@ class TopicDetailManager {
                 });
             }
 
-            // ƒvƒƒWƒFƒNƒgƒf[ƒ^‚ğ“Ç‚İ‚İ
+            // ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãƒ‡ãƒ¼ã‚¿ã‚’èª­ã¿è¾¼ã¿
             const projectsResponse = await fetch(TOPIC_CONFIG.PROJECTS_DATA_URL);
             if (projectsResponse.ok) {
                 const projectsArray = await projectsResponse.json();
@@ -42,19 +42,19 @@ class TopicDetailManager {
                 });
             }
         } catch (error) {
-            console.error('ƒf[ƒ^‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½:', error);
+            console.error('ãƒ‡ãƒ¼ã‚¿ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸ:', error);
         }
     }
 
     /**
-     * ƒgƒsƒbƒNID‚©‚çƒgƒsƒbƒNƒf[ƒ^‚ğæ“¾
+     * ãƒˆãƒ”ãƒƒã‚¯IDã‹ã‚‰ãƒˆãƒ”ãƒƒã‚¯ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—
      */
     getTopic(topicId) {
         return this.topics[topicId] || null;
     }
 
     /**
-     * ƒgƒsƒbƒNÚ×ƒy[ƒW‚ğƒŒƒ“ƒ_ƒŠƒ“ƒO
+     * ãƒˆãƒ”ãƒƒã‚¯è©³ç´°ãƒšãƒ¼ã‚¸ã‚’ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°
      */
     renderTopicPage(topicId, container) {
         const topic = this.getTopic(topicId);
@@ -70,10 +70,10 @@ class TopicDetailManager {
             return;
         }
 
-        // ƒ^ƒCƒgƒ‹‚ğXV
-        document.title = `${topic.title} - ‹ZpƒgƒsƒbƒNÚ×`;
+        // ã‚¿ã‚¤ãƒˆãƒ«ã‚’æ›´æ–°
+        document.title = `${topic.title} - æŠ€è¡“ãƒˆãƒ”ãƒƒã‚¯è©³ç´°`;
 
-        // ƒwƒbƒ_[ƒZƒNƒVƒ‡ƒ“
+        // ãƒ˜ãƒƒãƒ€ãƒ¼ã‚»ã‚¯ã‚·ãƒ§ãƒ³
         const headerHtml = `
             <div class="text-center mb-12" data-aos="fade-up">
                 <div class="text-6xl mb-4">${topic.icon}</div>
@@ -82,7 +82,7 @@ class TopicDetailManager {
             </div>
         `;
 
-        // ƒ^ƒOƒZƒNƒVƒ‡ƒ“
+        // ã‚¿ã‚°ã‚»ã‚¯ã‚·ãƒ§ãƒ³
         const tagsHtml = `
             <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up" data-aos-delay="100">
                 ${topic.tags.map(tag => `
@@ -93,14 +93,14 @@ class TopicDetailManager {
             </div>
         `;
 
-        // ƒƒCƒ“‰æ‘œƒZƒNƒVƒ‡ƒ“
+        // ãƒ¡ã‚¤ãƒ³ç”»åƒã‚»ã‚¯ã‚·ãƒ§ãƒ³
         const imageHtml = topic.image ? `
             <div class="aspect-[16/9] mb-12 rounded-lg overflow-hidden shadow-lg bg-gray-200" data-aos="fade-up" data-aos-delay="200">
                 <img src="${topic.image}" alt="${topic.title}" class="w-full h-full object-cover">
             </div>
         ` : '';
 
-        // ŠÖ˜AƒvƒƒWƒFƒNƒgƒZƒNƒVƒ‡ƒ“
+        // é–¢é€£ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚»ã‚¯ã‚·ãƒ§ãƒ³
         const relatedProjectsHtml = this.buildRelatedProjects(topic.relatedProjects);
 
         container.innerHTML = `
@@ -110,14 +110,14 @@ class TopicDetailManager {
             ${relatedProjectsHtml}
         `;
 
-        // AOSƒAƒjƒ[ƒVƒ‡ƒ“‚ğÄ‰Šú‰»
+        // AOSã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å†åˆæœŸåŒ–
         if (typeof AOS !== 'undefined') {
             AOS.refresh();
         }
     }
 
     /**
-     * ŠÖ˜AƒvƒƒWƒFƒNƒgƒZƒNƒVƒ‡ƒ“‚ğ\’z
+     * é–¢é€£ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚»ã‚¯ã‚·ãƒ§ãƒ³ã‚’æ§‹ç¯‰
      */
     buildRelatedProjects(projectIds) {
         if (!projectIds || projectIds.length === 0) {
@@ -142,8 +142,8 @@ class TopicDetailManager {
                             <span class="text-sm text-gray-500 font-japanese">${project.env}</span>
                         </div>
                         <div class="text-sm text-gray-600 font-japanese">
-                            <p><strong>ŠúŠÔ:</strong> ${project.period}</p>
-                            <p><strong>’S“–:</strong> ${project.role}</p>
+                            <p><strong>æœŸé–“:</strong> ${project.period}</p>
+                            <p><strong>æ‹…å½“:</strong> ${project.role}</p>
                         </div>
                     </div>
                 </a>
@@ -152,7 +152,7 @@ class TopicDetailManager {
 
         return `
             <div class="mt-16">
-                <h2 class="text-3xl font-bold text-center mb-8 font-japanese" data-aos="fade-up">ŠÖ˜AƒvƒƒWƒFƒNƒg</h2>
+                <h2 class="text-3xl font-bold text-center mb-8 font-japanese" data-aos="fade-up">é–¢é€£ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     ${projectsHtml}
                 </div>
@@ -162,10 +162,10 @@ class TopicDetailManager {
 }
 
 // ======================
-// ƒƒCƒ“‰Šú‰»ŠÖ”
+// ãƒ¡ã‚¤ãƒ³åˆæœŸåŒ–é–¢æ•°
 // ======================
 async function initTopicDetail() {
-    // AOS‰Šú‰»
+    // AOSåˆæœŸåŒ–
     if (typeof AOS !== 'undefined') {
         AOS.init({
             duration: 800,
@@ -177,11 +177,11 @@ async function initTopicDetail() {
 
     const contentContainer = document.getElementById('topic-content');
     if (!contentContainer) {
-        console.error('topic-content—v‘f‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ');
+        console.error('topic-contentè¦ç´ ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“');
         return;
     }
 
-    // URLƒpƒ‰ƒ[ƒ^‚©‚çƒgƒsƒbƒNID‚ğæ“¾
+    // URLãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‹ã‚‰ãƒˆãƒ”ãƒƒã‚¯IDã‚’å–å¾—
     const urlParams = new URLSearchParams(window.location.search);
     const topicId = urlParams.get('topic');
 
@@ -196,13 +196,13 @@ async function initTopicDetail() {
         return;
     }
 
-    // ƒgƒsƒbƒNÚ×‚ğ“Ç‚İ‚ñ‚Å•\¦
+    // ãƒˆãƒ”ãƒƒã‚¯è©³ç´°ã‚’èª­ã¿è¾¼ã‚“ã§è¡¨ç¤º
     const manager = new TopicDetailManager();
     await manager.loadData();
     manager.renderTopicPage(topicId, contentContainer);
 }
 
 // ======================
-// ƒy[ƒW“Ç‚İ‚İ‚ÉÀs
+// ãƒšãƒ¼ã‚¸èª­ã¿è¾¼ã¿æ™‚ã«å®Ÿè¡Œ
 // ======================
 document.addEventListener('DOMContentLoaded', initTopicDetail);
