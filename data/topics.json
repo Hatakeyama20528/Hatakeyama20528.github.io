@@ -5,7 +5,7 @@
         "description": "ディファードレンダリング、PBR、頂点圧縮などのグラフィックス技術",
         "image": "images/rendering-topic.png",
         "tags": [ "ディファードレンダリング", "PBR", "頂点圧縮", "シェーダー" ],
-        "relatedProjects": [ "dx-framework", "pbr-raytracing" ]
+        "relatedProjects": [ "dx-framework", "pbr-raytracing", "sskk-intern" ]
     },
     {
         "id": "physics",
@@ -37,7 +37,7 @@
         "description": "カスタムシェーダーによる高度なビジュアルエフェクトとポストプロセス",
         "image": "images/shader-topic.png",
         "tags": [ "ポストプロセス", "アウトライン", "ソーベルフィルタ", "ブルーム" ],
-        "relatedProjects": [ "shadow-collision", "dx-framework" ]
+        "relatedProjects": [ "shadow-collision", "dx-framework", "sskk-intern" ]
     },
     {
         "id": "procedural",
@@ -45,7 +45,7 @@
         "description": "ノイズ関数を使用したテクスチャ生成とプロシージャルコンテンツ",
         "image": "images/procedural-topic.png",
         "tags": [ "シンプレックスノイズ", "プロシージャルテクスチャ", "地形生成" ],
-        "relatedProjects": [ "dx-framework" ]
+        "relatedProjects": [ "dx-framework", "sskk-intern" ]
     },
     {
         "id": "ui-systems",

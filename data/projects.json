@@ -44,9 +44,19 @@
         "title": "PBR & レイトレーシング（DXR）",
         "image": "images/DirectX12PBR.png",
         "env": "DirectX12",
-        "period": "2025年5月～",
+        "period": "2025年5月～6月",
         "role": "個人開発",
         "teamSize": "個人開発",
         "descriptionFile": "data/projects/pbr-raytracing.md"
+    },
+    {
+        "id": "sskk-intern",
+        "title": "シリコンスタジオ様インターン作品　　（掲載許可あり）",
+        "image": "images/sskk-00.png",
+        "env": "Unity6 6000.0.58f1 URP環境",
+        "period": "2025年10/01～11/01",
+        "role": "チーム開発",
+        "teamSize": "グラフィック一人,ルックデブ二人",
+        "descriptionFile": "data/projects/sskk-intern.md"
     }
 ]
