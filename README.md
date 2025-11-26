@@ -17,27 +17,27 @@
 
 各技術分野をカテゴリ化し、関連プロジェクトとともに紹介しています：
 
-### 1. レンダリング技術 ??
+### 1. レンダリング技術
 - ディファードレンダリング、PBR、頂点圧縮などの先進的なグラフィックス技術
 - 関連プロジェクト: DirectX フレームワーク、PBR & レイトレーシング
 
-### 2. 物理演算 ??
+### 2. 物理演算
 - Jolt Physicsを使用した高性能なリジッドボディシミュレーションと衝突検出
 - 関連プロジェクト: DirectX フレームワーク
 
-### 3. 仮想ジオメトリ ??
+### 3. 仮想ジオメトリ
 - 次世代レンダリング技術。メッシュクラスタリングとGPU駆動型レンダリング
 - 関連プロジェクト: 仮想ジオメトリシステム
 
-### 4. シェーダーエフェクト ?
+### 4. シェーダーエフェクト
 - カスタムシェーダーによる高度なビジュアルエフェクトとポストプロセス
 - 関連プロジェクト: Shadow Collision、DirectX フレームワーク
 
-### 5. プロシージャル生成 ??
+### 5. プロシージャル生成
 - ノイズ関数を使用したテクスチャ生成とプロシージャルコンテンツ
 - 関連プロジェクト: DirectX フレームワーク
 
-### 6. UI・入力システム ??
+### 6. UI・入力システム
 - DirectWriteによるテキスト描画とコントローラー対応
 - 関連プロジェクト: Rotate Carry、DirectX フレームワーク
 
@@ -102,118 +102,7 @@ Hatakeyama20528.github.io/
 └── README.md                       # このファイル
 ```
 
-## トピックの追加方法
-
-### ステップ1: トピックデータを追加
-
-`data/topics.json` にトピック情報を追加します：
-
-```json
-{
-    "id": "new-topic",
-    "title": "新しいトピック",
-    "icon": "??",
-    "description": "新しい技術分野の説明",
-    "image": "images/topics/new-topic.png",
-    "tags": ["タグ1", "タグ2", "タグ3"],
-    "relatedProjects": ["project-id-1", "project-id-2"]
-}
-```
-
-### ステップ2: トピック画像を追加
-
-`images/topics/` フォルダにトピックのサムネイル画像を追加します。
-推奨サイズ: 1200x675px (16:9)
-
-## プロジェクトの追加方法
-
-### 1. Markdown形式で追加（推奨）
-
-#### ステップ1: プロジェクトデータを追加
-
-`data/projects.json` にプロジェクト情報を追加します：
-
-```json
-{
-    "id": "new-project",
-    "title": "新しいプロジェクト",
-    "image": "images/new-project.png",
-    "env": "Unity 2023",
-    "period": "2025年4月～",
-    "role": "メインプログラマー",
-    "teamSize": "5人",
-    "descriptionFile": "data/projects/new-project.md"
-}
-```
-
-#### ステップ2: Markdownファイルを作成
-
-`data/projects/new-project.md` を作成してプロジェクトの詳細を記述します：
-
-```markdown
-# 新しいプロジェクト
-
-プロジェクトの概要を記述します。
-
-## 技術的な特徴
-
-- 特徴1
-- 特徴2
-
-## 実装の詳細
-
-詳細な説明を記述します。
-
-![スクリーンショット](images/screenshot.png)
-
-## 使用技術
-
-- Unity 2023
-- C#
-```
-
-#### Markdownの書き方
-
-- **見出し**: `#`, `##`, `###` を使用
-- **太字**: `**テキスト**`
-- **リンク**: `[リンクテキスト](URL)`
-- **画像**: `![代替テキスト](画像パス)`
-- **動画**: `[video:動画パス]` （カスタム記法）
-- **コードブロック**: ` ```言語名 ` で開始、` ``` ` で終了
-
-### 2. レガシー形式で追加（HTML形式）
-
-`data/projects-legacy.json` に直接HTMLを含む形式で追加することも可能です。
-詳細は既存のプロジェクトデータを参照してください。
-
-## カスタマイズ
-
-### スライダーとトピックの設定変更
-
-`js/main.js` の `CONFIG` オブジェクトで設定を変更できます：
-
-```javascript
-const CONFIG = {
-    SLIDER_INTERVAL: 5000,          // スライダーの自動切り替え間隔（ミリ秒）
-    AOS_DURATION: 800,              // アニメーション時間（ミリ秒）
-    AOS_OFFSET: 100,                // アニメーション開始位置（ピクセル）
-    PARALLAX_SPEED: 0.5,            // パララックス効果の速度
-    PROJECTS_DATA_URL: 'data/projects.json',  // プロジェクトデータのURL
-    TOPICS_DATA_URL: 'data/topics.json'       // トピックデータのURL
-};
-```
-
-### スタイルのカスタマイズ
-
-- `index.html` の `<style>` タグ内でCSSをカスタマイズ
-- Tailwind CSSのクラスを使用してデザインを調整
-
 ## 技術スタック
-
-### フロントエンド
-- **HTML5**: セマンティックマークアップ
-- **Tailwind CSS**: ユーティリティファーストCSSフレームワーク
-- **JavaScript (ES6+)**: モダンなJavaScript構文
 
 ### ライブラリ
 - **AOS (Animate On Scroll)**: スクロールアニメーション
@@ -237,22 +126,11 @@ const CONFIG = {
 └── About セクション
 ```
 
-## ブラウザ対応
-
-- Chrome (最新版)
-- Firefox (最新版)
-- Safari (最新版)
-- Edge (最新版)
-
 ## 使用ライブラリ
 
 - [Tailwind CSS](https://tailwindcss.com/) - CSSフレームワーク
 - [AOS](https://michalsnik.github.io/aos/) - スクロールアニメーション
 - [marked.js](https://marked.js.org/) - Markdownパーサー
-
-## ライセンス
-
-? 2025 畠山 岳
 
 ## 連絡先
 
