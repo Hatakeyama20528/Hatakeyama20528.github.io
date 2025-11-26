@@ -11,11 +11,11 @@
     },
     {
         "id": "virtual-geometry",
-        "title": "仮想ジオメトリシステム",
+        "title": "仮想ジオメトリシステム掲示予定",
         "image": "images/VirtualGeometry.png",
-        "env": "DirectX11 (Compute Shader)",
-        "period": "2025年11月～",
-        "role": "個人開発・機能開発",
+        "env": "DirectX11",
+        "period": "2025年10月～",
+        "role": "個人開発・研究",
         "teamSize": "個人開発",
         "descriptionFile": "data/projects/virtual-geometry.md"
     },
