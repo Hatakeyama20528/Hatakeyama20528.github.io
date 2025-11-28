@@ -102,8 +102,8 @@ enum class RenderPassEvent {
 
 頂点圧縮のサンプルプログラムは下記よりダウンロードできます：
 
-[Google Drive（圧縮プログラム配布）](https://drive.google.com/drive/folders/1KpQY3D3uRsKXaaPuWcbWdjbdqgczFl_o?usp=drive_link)
-[GitHub（圧縮プログラム配布）](https://github.com/Hatakeyama20528/PMD_Export)
+[Google Drive](https://drive.google.com/drive/folders/1KpQY3D3uRsKXaaPuWcbWdjbdqgczFl_o?usp=drive_link)
+[GitHub](https://github.com/Hatakeyama20528/PMD_Export)
 ---
 
 ## 物理演算システム
