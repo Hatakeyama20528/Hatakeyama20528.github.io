@@ -12,10 +12,20 @@ CG検定の勉強をしていた際に目に留まったレイトレーシング
 
 ![DXR 実装](images/DXR.png)
 
-## 開発での挑戦
-今までのDirectX11と比べて名称が異なるものや、コマンド処理の違い、マルチスレッドにつまずく部分はありましたが、上記の作品で自習に使っていた参考書がDirectX12の本で合ったことなどが幸いし完成に至りました。
-
 ## 使用しているマテリアル
 
 ![マテリアル](images/Material.png)
-![レイ](images/Ray.png)
+
+## BRDFについて
+
+### CookTorrance
+![DXR 実装](images/BRDF_CookTorrance.png)
+
+### DisneyPrincipled
+![DXR 実装](images/BRDF_DisneyPrincipled.png)
+
+### OrenNayar.png
+![DXR 実装](images/BRDF_OrenNayar.png)
+
+### AshikhminShirley.png
+![DXR 実装](images/BRDF_AshikhminShirley.png)
