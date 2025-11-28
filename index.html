@@ -137,6 +137,20 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+
+        /* 動画スライド用のスタイル */
+        .slide video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background: #000;
+        }
+
+        /* 動画のフォーカス時や再生中の微調整 */
+        .slide video:focus {
+            outline: none;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">

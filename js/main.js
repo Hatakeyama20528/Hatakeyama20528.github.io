@@ -1,9 +1,9 @@
 /**
- * ƒ|[ƒgƒtƒHƒŠƒIƒTƒCƒg‚ÌƒƒCƒ“JavaScript
+ * ãƒãƒ¼ãƒˆãƒ•ã‚©ãƒªã‚ªã‚µã‚¤ãƒˆã®ãƒ¡ã‚¤ãƒ³JavaScript
  */
 
 // ======================
-// ’è”’è‹`
+// å®šæ•°å®šç¾©
 // ======================
 const CONFIG = {
     SLIDER_INTERVAL: 5000,
@@ -15,11 +15,11 @@ const CONFIG = {
 };
 
 // ======================
-// ƒ†[ƒeƒBƒŠƒeƒBŠÖ”
+// ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£é–¢æ•°
 // ======================
 const Utils = {
     /**
-     * —v‘f‚ğì¬‚µ‚ÄƒvƒƒpƒeƒB‚ğİ’è
+     * è¦ç´ ã‚’ä½œæˆã—ã¦å±æ€§ã‚’è¨­å®š
      */
     createElement(tag, className, attributes = {}) {
         const element = document.createElement(tag);
@@ -31,7 +31,7 @@ const Utils = {
     },
 
     /**
-     * ƒf[ƒ^‘®«‚ğİ’è
+     * ãƒ‡ãƒ¼ã‚¿å±æ€§ã‚’è¨­å®š
      */
     setDataAttribute(element, key, value) {
         element.dataset[key] = value;
@@ -39,7 +39,7 @@ const Utils = {
 };
 
 // ======================
-// ƒXƒ‰ƒCƒ_[ŠÇ—ƒNƒ‰ƒX
+// ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ç®¡ç†ã‚¯ãƒ©ã‚¹
 // ======================
 class HeroSlider {
     constructor(sliderElement, dotsContainer) {
@@ -51,7 +51,7 @@ class HeroSlider {
     }
 
     /**
-     * ƒXƒ‰ƒCƒh‚ğ•\¦
+     * ã‚¹ãƒ©ã‚¤ãƒ‰ã‚’è¡¨ç¤º
      */
     showSlide(index) {
         if (!this.slides.length) return;
@@ -65,12 +65,24 @@ class HeroSlider {
 
         this.slider.style.transform = `translateX(${offset}px)`;
 
-        // ƒXƒ‰ƒCƒh‚ÌƒAƒNƒeƒBƒuó‘Ô‚ğXV
+        // ã‚¹ãƒ©ã‚¤ãƒ‰ã®ã‚¢ã‚¯ãƒ†ã‚£ãƒ–çŠ¶æ…‹ã‚’æ›´æ–°
         this.slides.forEach((slide, i) => {
-            slide.classList.toggle('is-active', i === index);
+            const isActive = i === index;
+            slide.classList.toggle('is-active', isActive);
+            
+            // å‹•ç”»ã®å†ç”Ÿåˆ¶å¾¡
+            const video = slide.querySelector('video');
+            if (video) {
+                if (isActive) {
+                    video.currentTime = 0;
+                    video.play().catch(() => { /* è‡ªå‹•å†ç”Ÿã§ããªã„å ´åˆã¯ç„¡è¦– */ });
+                } else {
+                    video.pause();
+                }
+            }
         });
 
-        // ƒhƒbƒg‚Ìó‘Ô‚ğXV
+        // ãƒ‰ãƒƒãƒˆã®çŠ¶æ…‹ã‚’æ›´æ–°
         const dots = this.dotsContainer.querySelectorAll('button');
         dots.forEach((dot, i) => {
             dot.classList.toggle('bg-white', i === index);
@@ -81,7 +93,7 @@ class HeroSlider {
     }
 
     /**
-     * ƒXƒ‰ƒCƒh‚ğ•ÏX
+     * ã‚¹ãƒ©ã‚¤ãƒ‰ã‚’å¤‰æ›´
      */
     changeSlide(offset = 1) {
         const totalSlides = this.slides.length;
@@ -90,7 +102,7 @@ class HeroSlider {
     }
 
     /**
-     * ©“®ƒXƒ‰ƒCƒh‚ğŠJn
+     * è‡ªå‹•ã‚¹ãƒ©ã‚¤ãƒ‰ã‚’é–‹å§‹
      */
     start() {
         this.stop();
@@ -98,7 +110,7 @@ class HeroSlider {
     }
 
     /**
-     * ©“®ƒXƒ‰ƒCƒh‚ğ’â~
+     * è‡ªå‹•ã‚¹ãƒ©ã‚¤ãƒ‰ã‚’åœæ­¢
      */
     stop() {
         if (this.slideInterval) {
@@ -108,14 +120,14 @@ class HeroSlider {
     }
 
     /**
-     * ƒXƒ‰ƒCƒhƒŠƒXƒg‚ğXV
+     * ã‚¹ãƒ©ã‚¤ãƒ‰ãƒªã‚¹ãƒˆã‚’æ›´æ–°
      */
     updateSlides() {
         this.slides = this.slider.querySelectorAll('.slide');
     }
 
     /**
-     * ƒŠƒTƒCƒYƒCƒxƒ“ƒgƒnƒ“ƒhƒ‰
+     * ãƒªã‚µã‚¤ã‚ºã‚¤ãƒ™ãƒ³ãƒˆãƒãƒ³ãƒ‰ãƒ©
      */
     handleResize() {
         this.showSlide(this.currentSlide);
@@ -123,7 +135,7 @@ class HeroSlider {
 }
 
 // ======================
-// ƒvƒƒWƒFƒNƒgŠÇ—ƒNƒ‰ƒX
+// ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆç®¡ç†ã‚¯ãƒ©ã‚¹
 // ======================
 class ProjectManager {
     constructor() {
@@ -132,7 +144,7 @@ class ProjectManager {
     }
 
     /**
-     * ƒvƒƒWƒFƒNƒgƒf[ƒ^‚ğ“Ç‚İ‚Ş
+     * ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãƒ‡ãƒ¼ã‚¿ã‚’èª­ã¿è¾¼ã¿
      */
     async loadProjects() {
         try {
@@ -143,13 +155,13 @@ class ProjectManager {
             this.projects = await response.json();
             return this.projects;
         } catch (error) {
-            console.error('ƒvƒƒWƒFƒNƒgƒf[ƒ^‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½:', error);
+            console.error('ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãƒ‡ãƒ¼ã‚¿ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸ:', error);
             return [];
         }
     }
 
     /**
-     * ƒXƒ‰ƒCƒ_[‚ÆƒJ[ƒh‚ğì¬
+     * ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã¨ã‚«ãƒ¼ãƒ‰ã‚’ä½œæˆ
      */
     createSliderAndCards(sliderElement, dotsContainer, projectGrid) {
         this.projects.forEach((project, index) => {
@@ -160,7 +172,7 @@ class ProjectManager {
     }
 
     /**
-     * ƒXƒ‰ƒCƒh‚ğì¬
+     * ã‚¹ãƒ©ã‚¤ãƒ‰ã‚’ä½œæˆ
      */
     createSlide(container, project, index) {
         const slide = Utils.createElement('a', 'slide', {
@@ -168,10 +180,24 @@ class ProjectManager {
         });
         Utils.setDataAttribute(slide, 'index', index);
         
+        let mediaContent = '';
+        if (project.video) {
+            // å‹•ç”»ã®å ´åˆ
+            mediaContent = `
+                <video class="w-full h-full object-cover" muted playsinline loop poster="${project.image || ''}">
+                    <source src="${project.video}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+        } else {
+            // ç”»åƒã®å ´åˆ
+            mediaContent = `<img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">`;
+        }
+
         slide.innerHTML = `
-            <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 p-6">
+            ${mediaContent}
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 p-6 pointer-events-none">
                 <h3 class="text-white text-xl md:text-3xl text-display font-japanese">${project.title}</h3>
                 <p class="text-white/80 text-md mt-1 hidden md:block font-medium">${project.env}</p>
             </div>
@@ -181,7 +207,7 @@ class ProjectManager {
     }
 
     /**
-     * ƒhƒbƒg‚ğì¬
+     * ãƒ‰ãƒƒãƒˆã‚’ä½œæˆ
      */
     createDot(container, index) {
         const dot = Utils.createElement('button', 'w-2.5 h-2.5 rounded-full transition-colors bg-white/50 hover:bg-white/75');
@@ -190,7 +216,7 @@ class ProjectManager {
     }
 
     /**
-     * ƒvƒƒWƒFƒNƒgƒJ[ƒh‚ğì¬
+     * ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚«ãƒ¼ãƒ‰ã‚’ä½œæˆ
      */
     createProjectCard(container, project) {
         const card = Utils.createElement('a', 'project-card block bg-gray-50 rounded-lg overflow-hidden shadow-md', {
@@ -212,7 +238,7 @@ class ProjectManager {
 }
 
 // ======================
-// ƒgƒsƒbƒNŠÇ—ƒNƒ‰ƒX
+// ãƒˆãƒ”ãƒƒã‚¯ç®¡ç†ã‚¯ãƒ©ã‚¹
 // ======================
 class TopicManager {
     constructor() {
@@ -220,7 +246,7 @@ class TopicManager {
     }
 
     /**
-     * ƒgƒsƒbƒNƒf[ƒ^‚ğ“Ç‚İ‚Ş
+     * ãƒˆãƒ”ãƒƒã‚¯ãƒ‡ãƒ¼ã‚¿ã‚’èª­ã¿è¾¼ã¿
      */
     async loadTopics() {
         try {
@@ -231,13 +257,13 @@ class TopicManager {
             this.topics = await response.json();
             return this.topics;
         } catch (error) {
-            console.error('ƒgƒsƒbƒNƒf[ƒ^‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½:', error);
+            console.error('ãƒˆãƒ”ãƒƒã‚¯ãƒ‡ãƒ¼ã‚¿ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸ:', error);
             return [];
         }
     }
 
     /**
-     * ƒgƒsƒbƒNƒJ[ƒh‚ğì¬
+     * ãƒˆãƒ”ãƒƒã‚¯ã‚«ãƒ¼ãƒ‰ã‚’ä½œæˆ
      */
     createTopicCards(container) {
         this.topics.forEach((topic, index) => {
@@ -247,7 +273,7 @@ class TopicManager {
     }
 
     /**
-     * ƒgƒsƒbƒNƒJ[ƒh‚ğì¬
+     * ãƒˆãƒ”ãƒƒã‚¯ã‚«ãƒ¼ãƒ‰ã‚’ä½œæˆ
      */
     createTopicCard(topic, index) {
         const card = Utils.createElement('a', 'topic-card block bg-gray-50 rounded-lg overflow-hidden shadow-md', {
@@ -271,22 +297,22 @@ class TopicManager {
 }
 
 // ======================
-// ƒCƒxƒ“ƒgƒnƒ“ƒhƒ‰İ’è
+// ã‚¤ãƒ™ãƒ³ãƒˆãƒãƒ³ãƒ‰ãƒ©è¨­å®š
 // ======================
 function setupEventHandlers(slider) {
-    // Ÿ‚Öƒ{ƒ^ƒ“
+    // æ¬¡ã¸ãƒœã‚¿ãƒ³
     document.getElementById('next-slide')?.addEventListener('click', () => {
         slider.changeSlide(1);
         slider.start();
     });
 
-    // ‘O‚Öƒ{ƒ^ƒ“
+    // å‰ã¸ãƒœã‚¿ãƒ³
     document.getElementById('prev-slide')?.addEventListener('click', () => {
         slider.changeSlide(-1);
         slider.start();
     });
 
-    // ƒhƒbƒgƒNƒŠƒbƒN
+    // ãƒ‰ãƒƒãƒˆã‚¯ãƒªãƒƒã‚¯
     const dotsContainer = document.getElementById('slider-dots');
     dotsContainer?.addEventListener('click', (e) => {
         if (e.target.matches('button')) {
@@ -296,10 +322,10 @@ function setupEventHandlers(slider) {
         }
     });
 
-    // ƒŠƒTƒCƒYƒCƒxƒ“ƒg
+    // ãƒªã‚µã‚¤ã‚ºã‚¤ãƒ™ãƒ³ãƒˆ
     window.addEventListener('resize', () => slider.handleResize());
 
-    // —š—ğ‘ƒ{ƒ^ƒ“i‘¶İ‚·‚éê‡j
+    // å±¥æ­´æ›¸ãƒœã‚¿ãƒ³ï¼ˆå­˜åœ¨ã™ã‚‹å ´åˆï¼‰
     const resumeBtn = document.getElementById('open-resume-modal');
     if (resumeBtn) {
         resumeBtn.addEventListener('click', (e) => {
@@ -310,7 +336,7 @@ function setupEventHandlers(slider) {
 }
 
 // ======================
-// ƒpƒ‰ƒ‰ƒbƒNƒXŒø‰Ê
+// ãƒ‘ãƒ©ãƒ©ãƒƒã‚¯ã‚¹å‡¦ç†
 // ======================
 function setupParallax() {
     window.addEventListener('scroll', () => {
@@ -323,7 +349,7 @@ function setupParallax() {
 }
 
 // ======================
-// AOS‰Šú‰»
+// AOSåˆæœŸåŒ–
 // ======================
 function initAOS() {
     if (typeof AOS !== 'undefined') {
@@ -337,24 +363,24 @@ function initAOS() {
 }
 
 // ======================
-// ƒƒCƒ“‰Šú‰»ŠÖ”
+// ãƒ¡ã‚¤ãƒ³åˆæœŸåŒ–é–¢æ•°
 // ======================
 async function initPortfolio() {
     console.log('Portfolio initialization started');
 
-    // AOS‰Šú‰»
+    // AOSåˆæœŸåŒ–
     initAOS();
 
-    // ƒpƒ‰ƒ‰ƒbƒNƒXŒø‰Êİ’è
+    // ãƒ‘ãƒ©ãƒ©ãƒƒã‚¯ã‚¹åˆæœŸè¨­å®š
     setupParallax();
 
-    // ƒvƒƒWƒFƒNƒgƒ}ƒl[ƒWƒƒ[‰Šú‰»
+    // ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãƒãƒãƒ¼ã‚¸ãƒ£ãƒ¼åˆæœŸåŒ–
     const projectManager = new ProjectManager();
     await projectManager.loadProjects();
 
     console.log('Loaded projects:', projectManager.projects.length);
 
-    // DOM—v‘fæ“¾
+    // DOMè¦ç´ å–å¾—
     const sliderElement = document.getElementById('hero-slider');
     const dotsContainer = document.getElementById('slider-dots');
     const projectGrid = document.getElementById('projects')?.querySelector('.grid');
@@ -366,24 +392,24 @@ async function initPortfolio() {
     });
 
     if (!sliderElement || !dotsContainer) {
-        console.error('ƒXƒ‰ƒCƒ_[ŠÖ˜A‚ÌDOM—v‘f‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ');
+        console.error('ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼é–¢é€£ã®DOMè¦ç´ ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“');
         console.error('slider:', sliderElement);
         console.error('dots:', dotsContainer);
         return;
     }
 
     if (!projectGrid) {
-        console.error('ƒvƒƒWƒFƒNƒgƒOƒŠƒbƒh‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ');
+        console.error('ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚°ãƒªãƒƒãƒ‰ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“');
         return;
     }
 
-    // ƒXƒ‰ƒCƒ_[‚ÆƒJ[ƒhì¬
+    // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã¨ã‚«ãƒ¼ãƒ‰ä½œæˆ
     projectManager.createSliderAndCards(sliderElement, dotsContainer, projectGrid);
 
     console.log('Slides created:', sliderElement.querySelectorAll('.slide').length);
     console.log('Project cards created:', projectGrid.querySelectorAll('.project-card').length);
 
-    // ƒXƒ‰ƒCƒ_[‰Šú‰»
+    // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼åˆæœŸåŒ–
     const heroSlider = new HeroSlider(sliderElement, dotsContainer);
     heroSlider.updateSlides();
     
@@ -395,10 +421,10 @@ async function initPortfolio() {
         console.warn('No slides found in slider');
     }
 
-    // ƒCƒxƒ“ƒgƒnƒ“ƒhƒ‰İ’è
+    // ã‚¤ãƒ™ãƒ³ãƒˆãƒãƒ³ãƒ‰ãƒ©è¨­å®š
     setupEventHandlers(heroSlider);
 
-    // ƒgƒsƒbƒNƒZƒNƒVƒ‡ƒ“‚Ì‰Šú‰»
+    // ãƒˆãƒ”ãƒƒã‚¯ã‚»ã‚¯ã‚·ãƒ§ãƒ³ã®åˆæœŸåŒ–
     const topicsGrid = document.getElementById('topics-grid');
     if (topicsGrid) {
         const topicManager = new TopicManager();
@@ -414,6 +440,6 @@ async function initPortfolio() {
 }
 
 // ======================
-// ƒy[ƒW“Ç‚İ‚İ‚ÉÀs
+// ãƒšãƒ¼ã‚¸èª­ã¿è¾¼ã¿æ™‚ã«å®Ÿè¡Œ
 // ======================
 document.addEventListener('DOMContentLoaded', initPortfolio);

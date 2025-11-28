@@ -3,6 +3,7 @@
         "id": "dx-framework",
         "title": "DirectX フレームワーク",
         "image": "images/FrameWork.png",
+        "video": "videos/DirectXFramework.mp4",
         "env": "DirectX11",
         "period": "2025年1月～",
         "role": "個人開発",

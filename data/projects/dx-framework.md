@@ -22,6 +22,7 @@
 ### 大気シミュレーション
 シェーダー内でRayleigh散乱とMie散乱を計算し、時間帯に応じた色変化を表現しています。
 寄与する割合の高い一次散乱のみをレイマーチで計算し、全体の15%ほどの多重散乱は近似計算で表現しています。
+[video:videos/DirectXFrameWork.mp4]
 ![大気シミュレーション](images/atmosphereTexture.png)
 
 ![大気シミュレーション2](images/SkyboxRead.png)
@@ -172,6 +173,7 @@ PBRマテリアルに対応し、メタリック・ラフネス・法線マッ�
 
 雨粒エフェクトをポストプロセスとして実装しました。
 既に書いてある物が雨粒で歪むなど細部にこだわっています。
+[video:videos/RainEffect.mp4]
 ![雨粒エフェクト](images/RainDropEffect.png)
 
 ---
