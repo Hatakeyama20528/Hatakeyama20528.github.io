@@ -19,13 +19,13 @@ CG検定の勉強をしていた際に目に留まったレイトレーシング
 ## BRDFについて
 
 ### CookTorrance
-![DXR 実装](images/BRDF_CookTorrance.png)
+![BRDF1](images/BRDF_CookTorrance.png)
 
 ### DisneyPrincipled
-![DXR 実装](images/BRDF_DisneyPrincipled.png)
+![BRDF2](images/BRDF_DisneyPrincipled.png)
 
-### OrenNayar.png
-![DXR 実装](images/BRDF_OrenNayar.png)
+### OrenNayar
+![BRDF3](images/BRDF_OrenNayar.png)
 
-### AshikhminShirley.png
-![DXR 実装](images/BRDF_AshikhminShirley.png)
+### AshikhminShirley
+![BRDF4](images/BRDF_AshikhminShirley.png)
